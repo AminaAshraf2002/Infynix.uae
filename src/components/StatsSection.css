@@ -1,0 +1,76 @@
+.stats-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 5% 100px; /* Reduced top padding */
+  font-family: "Vanilla Sans", Arial, sans-serif;
+}
+
+.stats-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stats-header h2 {
+  font-family: "Vanilla Sans", Arial, sans-serif;
+  font-size: clamp(.9rem, 3.9vw, 1.9rem);
+  font-weight: 500;
+  color: var(--ix-dark);
+  margin-bottom: 80px;
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-number-wrapper {
+  color: var(--ix-primary); /* Green color */
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.stat-suffix {
+  font-size: clamp(2rem, 4vw, 3rem); /* Slightly smaller than the numbers */
+}
+
+.stat-label {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .stat-number-wrapper {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .stat-suffix {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}

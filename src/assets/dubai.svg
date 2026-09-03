@@ -1,0 +1,54 @@
+<svg width="200" height="83" viewBox="0 0 200 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground line -->
+  <path d="M5 78H195" stroke="white" stroke-width="0.6" stroke-linecap="round"/>
+
+  <!-- Left blocky skyscraper -->
+  <path d="M15 78V48H32V78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M20 48V78" stroke="white" stroke-width="0.5" stroke-dasharray="1 2"/>
+  <path d="M27 48V78" stroke="white" stroke-width="0.5" stroke-dasharray="1 2"/>
+
+  <!-- Burj Al Arab (Sail shape) -->
+  <path d="M42 78V30C42 30 52 35 56 42C60 48 62 60 62 78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M42 30L62 78" stroke="white" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M42 40H52M42 50H58M42 60H61M42 70H62" stroke="white" stroke-width="0.5"/>
+  <!-- Exoskeleton diagonal/back support -->
+  <path d="M38 78L42 30L46 78" stroke="white" stroke-width="0.5"/>
+  <!-- Top mast/helipad -->
+  <path d="M42 30H48M42 33H54" stroke="white" stroke-width="0.5"/>
+
+  <!-- Medium Tower -->
+  <path d="M70 78V42H82V78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M70 42L76 34L82 42" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+
+  <!-- Burj Khalifa (Stepped central skyscraper) -->
+  <!-- Base structure -->
+  <path d="M92 78V58H118V78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- Tier 1 -->
+  <path d="M96 58V42H114V58" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- Tier 2 -->
+  <path d="M100 42V28H110V42" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- Tier 3 -->
+  <path d="M102 28V16H108V28" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- Spire -->
+  <path d="M105 16V2" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
+  
+  <!-- Architectural detail lines on Burj Khalifa -->
+  <path d="M105 78V16" stroke="white" stroke-width="0.4" stroke-opacity="0.7"/>
+  <path d="M101 78V42" stroke="white" stroke-width="0.4" stroke-opacity="0.7"/>
+  <path d="M109 78V42" stroke="white" stroke-width="0.4" stroke-opacity="0.7"/>
+
+  <!-- Twist/Cayan Tower style building on the right -->
+  <path d="M130 78V45C130 45 133 46 136 50C139 54 139 65 142 78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M142 78V45C142 45 139 46 136 50C133 54 133 65 130 78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M130 55H142M130 65H142" stroke="white" stroke-width="0.5" stroke-opacity="0.6"/>
+
+  <!-- Right spire highrise -->
+  <path d="M152 78V36H166V78" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M159 36V22" stroke="white" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M155 36H163" stroke="white" stroke-width="0.5"/>
+
+  <!-- Far right background shapes -->
+  <path d="M174 78V52H186V78" stroke="white" stroke-width="0.5" stroke-opacity="0.8" stroke-linejoin="round"/>
+  <path d="M174 52L180 46L186 52" stroke="white" stroke-width="0.5" stroke-opacity="0.8"/>
+  <path d="M180 78V46" stroke="white" stroke-width="0.4" stroke-opacity="0.5"/>
+</svg>

@@ -1,0 +1,79 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Uses the original green gradient from index.css */
+  background: var(--hero-bg, linear-gradient(160deg, #f0fdf4 0%, #dcfce7 40%, #bbf7d0 75%, #86efac 100%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 120px 20px;
+  z-index: 101;
+}
+
+.threejs-wrapper {
+  position: absolute;
+  left: -20%;
+  bottom: -55%;
+  width: 95%;
+  height: 130%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .threejs-wrapper {
+    width: 120%;
+    height: 80%;
+    left: -35%;
+    bottom: -40%;
+  }
+}
+
+.hero-slime {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.75) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 2; /* Sits over the 3D canvas for a subtle glow */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none; /* Let pointer pass through to the 3D canvas */
+}
+
+/* Re-enable pointer events for buttons */
+.hero-content > * {
+  pointer-events: auto;
+}
+
+.nav-cta {
+  background-color: #1F2937;
+  color: white;
+  border-radius: 100px;
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 30px rgba(31,41,55,0.15);
+}
+.nav-cta:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(31,41,55,0.25);
+}
+
+.nav-secondary {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.nav-secondary:hover {
+  background-color: #1F2937 !important;
+  color: white !important;
+}
