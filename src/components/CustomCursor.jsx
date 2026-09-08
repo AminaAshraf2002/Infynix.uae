@@ -5,6 +5,11 @@ const CustomCursor = () => {
   const ringRef = useRef(null);
 
   useEffect(() => {
+    // Disable on touch screens / mobile devices
+    if (window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 1024) {
+      return;
+    }
+
     const cursor = cursorRef.current;
     const ring = ringRef.current;
     if (!cursor || !ring) return;

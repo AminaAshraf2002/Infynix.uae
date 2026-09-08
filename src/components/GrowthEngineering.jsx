@@ -1,33 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import SEOManager from './SEOManager';
-import EngineeringMethod from './EngineeringMethod';
+import Seo from '../seo/Seo';
+import { organizationSchema, breadcrumbSchema } from '../seo/schema';
 import './InfynixDesign.css';
 
-/* â”€â”€ DATA â”€â”€ */
+/* ── DATA ── */
 const stages = [
-  { n: '01', title: 'Discover', body: 'Identify bottlenecks in your customer acquisition, data latency, and engineering flows.' },
-  { n: '02', title: 'Diagnose', body: 'Audit system logs, conversion paths, and technical gaps across software systems.' },
-  { n: '03', title: 'Engineer', body: 'Blueprint dynamic integrations, speed optimizations, and CRM databases.' },
-  { n: '04', title: 'Build', body: 'Write clean, scalable, production-ready code with continuous integration.' },
-  { n: '05', title: 'Deploy', body: 'Seamlessly push integrations complete with GA4 and lead attribution analytics.' },
-  { n: '06', title: 'Optimize', body: 'Tune load speeds, run conversion rate optimization audits, and fix user drops.' },
-  { n: '07', title: 'Scale', body: 'Introduce self-evolving AI automation models to handle high volumes.' },
+  { n: '01', title: 'Audit', body: 'We review your site speed, search rankings, ad setup, and software tools to spot exact fixes.' },
+  { n: '02', title: 'Plan', body: 'We map out a clear roadmap for search engineering, paid media, and software improvements.' },
+  { n: '03', title: 'Design', body: 'We create clean layouts, brand visual assets, and high-converting landing pages.' },
+  { n: '04', title: 'Build', body: 'We write clean, production-ready code in React, Next.js, and Node.js built for sub-second speeds.' },
+  { n: '05', title: 'Launch', body: 'We roll out static pre-rendered pages with complete search tags and analytics tracking.' },
+  { n: '06', title: 'Optimize', body: 'We refine user flows, speed up load times, and tune ad campaigns to lower acquisition costs.' },
+  { n: '07', title: 'Scale', body: 'We add automated software workflows and AI agents to handle higher client volumes.' },
 ];
 
-const marqueeItems = [
-  'Discover', 'Diagnose', 'Engineer', 'Build', 'Deploy', 'Optimize', 'Scale',
-  'Discover', 'Diagnose', 'Engineer', 'Build', 'Deploy', 'Optimize', 'Scale',
-];
-
-const stats = [
-  { num: '7x', label: 'Stage Method' },
-  { num: '3x', label: 'Avg. Revenue Lift' },
-  { num: '98%', label: 'Client Retention' },
-  { num: '150+', label: 'Systems Built' },
-];
-
-/* â”€â”€ HOOKS â”€â”€ */
+/* ── HOOKS ── */
 function useIxReveal() {
   useEffect(() => {
     const els = document.querySelectorAll('.ix-reveal, .ix-reveal-left, .ix-reveal-right, .ix-reveal-scale');
@@ -40,35 +28,6 @@ function useIxReveal() {
   }, []);
 }
 
-/* â”€â”€ ACCORDION â”€â”€ */
-function Accordion({ items, dark }) {
-  const [open, setOpen] = useState(null);
-  return (
-    <div>
-      {items.map((item, i) => (
-        <div
-          key={i}
-          className={dark ? 'ix-accordion-item ix-accordion-item--dark' : 'ix-accordion-item'}
-        >
-          <button
-            className="ix-accordion-btn"
-            onClick={() => setOpen(open === i ? null : i)}
-            aria-expanded={open === i}
-          >
-            <span className={dark ? 'ix-accordion-q ix-accordion-q--dark' : 'ix-accordion-q'}>
-              {item.q}
-            </span>
-            <span className={`ix-accordion-icon${dark ? ' ix-accordion-icon--dark' : ''}${open === i ? ' open' : ''}`}>+</span>
-          </button>
-          <div className={`ix-accordion-body${open === i ? ' open' : ''}`}>
-            <p className={dark ? 'ix-accordion-a ix-accordion-a--dark' : 'ix-accordion-a'}>{item.a}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 /* ── ARROW ICON ── */
 const Arrow = () => (
   <svg viewBox="0 0 14 14" fill="none" width="13" height="13">
@@ -76,10 +35,6 @@ const Arrow = () => (
   </svg>
 );
 
-
-/* ════════════════════════════════════════════════════════════════════════
-   MAIN COMPONENT
-   ════════════════════════════════════════════════════════════════════════ */
 const GrowthEngineering = () => {
   useIxReveal();
 
@@ -87,34 +42,39 @@ const GrowthEngineering = () => {
 
   const whyTabsData = [
     {
-      title: "Technology",
-      mockupIcon: "fa-solid fa-diagram-project",
-      body: "Websites, software and tools operate in isolation, forcing teams into manual work instead of growth.",
-      heading: "When technology operates as one connected system, decisions get faster and execution gets sharper."
+      title: "Search Infrastructure",
+      mockupIcon: "fa-solid fa-magnifying-glass",
+      capability: "Search Infrastructure & Web Development",
+      details: "Built by our web development team using React and modern frameworks — fast, pre-rendered sites engineered to perform in competitive UAE search results.",
+      heading: "Turn search engines into your primary driver of commercial growth across the UAE."
     },
     {
-      title: "Marketing",
+      title: "Infynix Agency",
       mockupIcon: "fa-solid fa-bullhorn",
-      body: "Campaigns run disconnected from the rest of the business, wasting budget and diluting the message before it reaches the right customer.",
-      heading: "Marketing engineered as a system compounds results instead of resetting every month."
+      capability: "Performance Marketing",
+      details: "As a performance marketing agency working with UAE brands, we run targeted Meta, LinkedIn, and Google Ads campaigns backed by conversion tracking and transparent reporting.",
+      heading: "Targeted Meta, LinkedIn, and Google Ads campaigns backed by conversion tracking."
     },
     {
-      title: "Customer Experience",
-      mockupIcon: "fa-solid fa-comments",
-      body: "When customer experience isn't connected across every touchpoint, prospects fall through the cracks instead of converting.",
-      heading: "A connected customer experience turns every interaction into a reason to stay, not leave."
+      title: "Infynix Media",
+      mockupIcon: "fa-solid fa-film",
+      capability: "Branding & Visual Content",
+      details: "Visual identity and video production that builds credibility for UAE and international businesses alike.",
+      heading: "Visual identity and video production that commands authority in the UAE market."
     },
     {
-      title: "Operations",
-      mockupIcon: "fa-solid fa-gears",
-      body: "Manual processes and scattered tools slow down delivery and cap how much the business can take on.",
-      heading: "Automated, connected operations let you scale without adding complexity or headcount."
+      title: "Infynix Development",
+      mockupIcon: "fa-solid fa-code",
+      capability: "Custom Software & CRM Integration",
+      details: "CRM integration for HubSpot, Salesforce, and Zoho, paired with custom web applications built for UAE operational needs.",
+      heading: "Bespoke web applications and CRM integrations built for UAE operational needs."
     },
     {
-      title: "Data",
-      mockupIcon: "fa-solid fa-database",
-      body: "When data lives in separate systems, decisions get made on guesses instead of evidence.",
-      heading: "Unified data turns every decision — marketing, product, operations — into an informed one."
+      title: "AI Automation",
+      mockupIcon: "fa-solid fa-robot",
+      capability: "AI Automation & Computer Vision",
+      details: "AI automation agency UAE solutions — custom workflow pipelines, automated client intake, and real-time computer vision security models.",
+      heading: "Automate complex manual workflows and scale without linear headcount costs."
     }
   ];
 
@@ -135,10 +95,6 @@ const GrowthEngineering = () => {
       if (whyRef.current) {
         const rect = whyRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-
-        // The wrapper is 150vh tall. 
-        // The sticky container is 100vh tall.
-        // Therefore, we have 50vh of "pinned" scrolling time.
         const scrollDistance = windowHeight * 0.5;
 
         if (rect.top > 0) {
@@ -156,22 +112,29 @@ const GrowthEngineering = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    'name': 'Growth Engineering',
-    'provider': { '@type': 'Organization', 'name': 'Infynix', 'url': 'https://infynix.com' },
-    'description': 'Category page describing the Infynix Growth Engineering Method: Attract, Engage, Convert, Optimize, Scale.',
-    'serviceType': 'Growth Engineering',
-  };
-
   return (
     <>
-      <SEOManager
-        title="Growth Engineering Company | Infynix"
-        description="Businesses don't struggle because they lack ambition. They struggle because technology, marketing, operations and data operate independently. Infynix engineers these into one system."
-        canonicalUrl="https://infynix.com/growth-engineering"
-        schemaData={schema}
+      <Seo
+        title="Web Development, AI Automation & CRM Integration | UAE"
+        description="Explore Infynix's growth stack for UAE businesses: web development, CRM integration, performance marketing, and AI automation."
+        path="/growth-engineering"
+        ogType="website"
+        schema={[
+          organizationSchema(),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Growth Engineering', path: '/growth-engineering' },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Growth Engineering Agency Dubai",
+            "provider": { "@type": "Organization", "name": "Infynix Solutions", "url": "https://www.infynixsolutions.ae" },
+            "description": "Explore Infynix's growth stack for UAE businesses: web development, CRM integration, performance marketing, and AI automation.",
+            "serviceType": "Growth Engineering",
+            "areaServed": "United Arab Emirates"
+          }
+        ]}
       />
 
       {/* ══ HERO SECTION ══ */}
@@ -192,50 +155,30 @@ const GrowthEngineering = () => {
             zIndex: 4,
             pointerEvents: "none",
           }}>
+            <span style={{ fontFamily: 'var(--ix-font-body)', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: GREEN, fontWeight: 700, display: 'block', marginBottom: '0.8rem', marginTop: '20px' }}>
+              GROWTH ENGINEERING COMPANY
+            </span>
             <h1 className="ge-hero-h1" style={{
               fontFamily: '"Montserrat", Arial, sans-serif',
               fontWeight: 700,
-              fontSize: "clamp(2.5rem, 4.9vw, 4.7rem)",
-              lineHeight: 1.04,
+              fontSize: "clamp(2.2rem, 4.2vw, 4.2rem)",
+              lineHeight: 1.08,
               letterSpacing: "-0.03em",
-              color: "#4d4c4c",
-              whiteSpace: "nowrap",
+              color: "#353434",
             }}>
-              Growth{" "}
+              The Growth Engineering Company for{" "}
               <em style={{
                 fontFamily: "var(--ix-font-serif)",
                 fontStyle: "italic",
                 fontWeight: 400,
                 color: GREEN,
               }}>
-                Engineering
+                UAE Businesses
               </em>
             </h1>
 
-            <h2 className="ge-hero-h2" style={{
-              fontFamily: '"Montserrat", Arial, sans-serif',
-              fontWeight: 800,
-              fontSize: "clamp(1.4rem, 3vw, 3.2rem)",
-              lineHeight: 1.15,
-              letterSpacing: "-0.01em",
-              color: "#353434",
-            }}>
-              Attract → Engage → Convert
-              <br />
-              <em style={{
-                fontFamily: "var(--ix-font-serif)",
-                fontStyle: "italic",
-                fontWeight: 400,
-                color: "#353434",
-                marginTop: "10px",
-                display: 'inline-block'
-              }}>
-                Optimize & Scale Systems
-              </em>
-            </h2>
-
-            <p className="ge-hero-p" style={{ fontFamily: "var(--ix-font-body)", fontSize: "1.05rem", color: "#666", lineHeight: 1.6 }}>
-              Unifying technology, marketing, operations and data into one intelligent system.
+            <p className="ge-hero-p" style={{ fontFamily: "var(--ix-font-body)", fontSize: "1.1rem", color: "#555", lineHeight: 1.6, marginTop: "1rem" }}>
+              Software, AI vision, and retail growth systems — built for companies scaling across the UAE.
             </p>
           </div>
 
@@ -247,7 +190,7 @@ const GrowthEngineering = () => {
           }}>
             <img
               src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
-              alt="Global tech network"
+              alt="Infynix Growth Engineering"
               style={{
                 width: "100%", height: "100%",
                 objectFit: "cover", objectPosition: "center 20%",
@@ -264,7 +207,7 @@ const GrowthEngineering = () => {
             zIndex: 3,
             pointerEvents: settled ? "auto" : "none",
           }}>
-            <span style={{ fontFamily: 'var(--ix-font-body)', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#888', display: 'block', marginBottom: '1.5rem' }}>The Discipline</span>
+            <span style={{ fontFamily: 'var(--ix-font-body)', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#888', display: 'block', marginBottom: '1.5rem' }}>Our Work</span>
             <h2 style={{
               fontFamily: "var(--ix-font-display)",
               fontWeight: 800,
@@ -274,7 +217,7 @@ const GrowthEngineering = () => {
               color: "#424242",
               marginBottom: "0.8rem",
             }}>
-              Engineering Intelligent
+              SEO Engineering &
               <br />
               <em style={{
                 fontFamily: "var(--ix-font-serif)",
@@ -282,53 +225,45 @@ const GrowthEngineering = () => {
                 fontWeight: 400,
                 color: "#424242",
               }}>
-                Growth Blueprints
+                Connected Systems
               </em>
             </h2>
-            <p style={{ fontFamily: "var(--ix-font-body)", fontSize: "1.05rem", color: "#666", lineHeight: 1.6 }}>Engineering intelligent business systems that attract, engage, convert, and scale.</p>
+            <p style={{ fontFamily: "var(--ix-font-body)", fontSize: "1.05rem", color: "#666", lineHeight: 1.6 }}>Building clean digital systems that help your business rank high and get clients.</p>
           </div>
 
-          <div style={{
+          <div className={`ge-hero-text-3 ${settled ? 'settled' : ''}`} style={{
             position: "absolute",
-            left: "8vw",
-            right: "8vw",
-            top: settled ? "calc(66vh + 5vh)" : "calc(105vh)",
             opacity: settled ? 1 : 0,
-            transform: settled ? "translateY(0px)" : "translateY(10px)",
-            transition: "opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.5s, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.5s",
             pointerEvents: settled ? "auto" : "none",
             zIndex: 3,
             marginTop: "40px",
+            transition: "opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.5s, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.5s",
           }}>
-            <div style={{ maxWidth: 1200, margin: '0 auto', background: '#f5f5f5', borderRadius: 16, padding: '2rem 3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-              <p style={{ fontFamily: 'var(--ix-font-body)', fontSize: '0.95rem', color: '#555', lineHeight: 1.6, flex: '1 1 500px', margin: 0 }}>
-                Infynix engineers high-performance tech stacks, CRM dashboards, and AI agents that support long-term business growth.
+            <div className="ge-hero-box-inner" style={{ maxWidth: 1200, margin: '0 auto', background: '#f5f5f5', borderRadius: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+              <p className="ge-hero-box-text" style={{ fontFamily: 'var(--ix-font-body)', fontSize: '0.95rem', color: '#555', lineHeight: 1.6, margin: 0 }}>
+                Infynix Solutions builds search infrastructure, high-speed web apps, paid media campaigns, and AI security systems designed for long-term growth.
               </p>
               <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.75rem 1.5rem', background: '#fff', color: '#111', textDecoration: 'none', borderRadius: 30, border: '1px solid #ddd', fontWeight: 600, fontSize: '0.9rem', transition: 'all 0.2s', whiteSpace: 'nowrap' }}>
-                Book a Discovery Call <Arrow />
+                Book a Call <Arrow />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══ LIME QUOTE SECTION ══ */}
+      {/* ══ LIME BANNER ══ */}
       <section className="ix-section ge-lime-section" data-aos="fade-up" style={{ position: "relative", background: 'rgb(198, 255, 109)', textAlign: 'left', padding: 'clamp(60px, 8vw, 100px) 20px', overflow: 'hidden' }}>
         <div className="ge-lime-quote-container" style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          <span style={{ position: 'absolute', top: -30, left: '-10px', fontSize: '5rem', color: 'var(--ix-lime)', lineHeight: 1, fontFamily: 'var(--font-display)', opacity: 0.8 }}>"</span>
           <blockquote style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 400, color: '#000000ff', lineHeight: 1.4, margin: '2rem 0' }}>
-            Growth isn't achieved through isolated services. It is built through connected systems, strategic thinking, and continuous improvement. Technology × AI × Performance × Automation = Sustainable Business Growth.
+            Real growth comes from clear engineering. We connect your search, media, and software so your business works smoothly every day.
           </blockquote>
           <p style={{ fontFamily: 'var(--ix-font-body)', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(0, 0, 0, 0.9)', marginTop: '3rem' }}>
-            Infynix Growth Engineers
+            Infynix Solutions — UAE
           </p>
-          <span style={{ position: 'absolute', bottom: -10, right: '40px', fontSize: '5rem', color: 'var(--ix-lime)', lineHeight: 1, fontFamily: "'Playfair Display', serif", opacity: 0.8 }}>"</span>
         </div>
       </section>
 
-
-
-      {/* ══ WHY SECTION (ZENDESK-STYLE PINNED SCROLL) ══ */}
+      {/* ══ PINNED SCROLL SHOWCASE ══ */}
       <div ref={whyRef} style={{ position: 'relative', height: '200vh' }}>
         <div style={{
           position: 'sticky',
@@ -352,7 +287,7 @@ const GrowthEngineering = () => {
 
               {/* Header part */}
               <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto', marginBottom: '2.5rem' }}>
-                <h2 data-aos="fade-up" style={{
+                <h2 data-aos="fade-up" className="ge-capabilities-title" style={{
                   fontFamily: '"Montserrat", Arial, sans-serif',
                   fontWeight: 600,
                   fontSize: 'clamp(2.1rem, 3.7vw, 2.3rem)',
@@ -361,13 +296,10 @@ const GrowthEngineering = () => {
                   letterSpacing: '-0.02em',
                   marginBottom: '1.5rem',
                 }}>
-                  Why Businesses <em style={{
-                    fontStyle: 'normal',
-                    fontWeight: 600
-                  }}>Stop Growing</em>
+                  The End-to-End Growth Stack for <em style={{ fontStyle: 'normal', fontWeight: 600 }}>UAE Businesses</em>
                 </h2>
                 <p data-aos-delay="100" data-aos="fade-up" style={{ fontFamily: '"Montserrat", Arial, sans-serif', fontSize: '1.05rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6, marginBottom: '2.5rem' }}>
-                  Businesses don't struggle because they lack ambition. They struggle because technology, marketing, customer experience, operations and data often operate independently.
+                  Explore Infynix's growth stack for UAE businesses: web development, CRM integration, performance marketing, and AI automation.
                 </p>
                 <div data-aos-delay="200" data-aos="fade-up" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                   <Link to="/contact" style={{
@@ -379,8 +311,8 @@ const GrowthEngineering = () => {
                     fontWeight: 600,
                     fontFamily: '"Montserrat", Arial, sans-serif',
                     transition: 'background 0.3s'
-                  }}>Start the Conversation</Link>
-                  <Link to="/about" style={{
+                  }}>Talk with Us</Link>
+                  <Link to="/solutions" style={{
                     border: '1px solid rgba(255,255,255,0.3)',
                     color: '#fff',
                     padding: '14px 28px',
@@ -389,7 +321,7 @@ const GrowthEngineering = () => {
                     fontWeight: 500,
                     fontFamily: '"Montserrat", Arial, sans-serif',
                     transition: 'background 0.3s'
-                  }}>Learn more</Link>
+                  }}>View Solutions</Link>
                 </div>
               </div>
 
@@ -446,9 +378,9 @@ const GrowthEngineering = () => {
                   <div key={activeWhyTab} style={{
                     background: '#1b231c',
                     borderRadius: '24px',
-                    padding: '8px',
+                    padding: '16px',
                     width: '100%',
-                    maxWidth: '240px',
+                    maxWidth: '280px',
                     height: '340px',
                     boxShadow: '0 0 60px rgba(167, 214, 0, 0.25)',
                     position: 'relative',
@@ -456,59 +388,30 @@ const GrowthEngineering = () => {
                     animation: 'ix-fade-up 0.4s ease-out forwards',
                     fontFamily: '"Montserrat", Arial, sans-serif'
                   }}>
-                    {/* Floating Icon */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '-16px',
-                      transform: 'translateY(-50%)',
-                      background: '#000',
-                      width: '32px',
-                      height: '32px',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#fff',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-                      zIndex: 10
-                    }}>
-                      <i className={whyTabsData[activeWhyTab].mockupIcon}></i>
-                    </div>
-
-                    {/* Phone Screen */}
                     <div style={{
                       background: '#fff',
                       borderRadius: '16px',
                       height: '100%',
+                      padding: '20px 16px',
                       display: 'flex',
                       flexDirection: 'column',
+                      gap: '12px',
                       overflow: 'hidden'
                     }}>
-                      <div style={{ padding: '24px 16px', flex: 1, display: 'flex', flexDirection: 'column', gap: '20px' }}>
-
-                        {/* User Bubble */}
-                        <div style={{ alignSelf: 'flex-end', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', maxWidth: '85%' }}>
-                          <div style={{ fontSize: '0.65rem', color: '#555', fontWeight: 600 }}>Client</div>
-                          <div style={{ background: '#f3f4f6', color: '#111', padding: '12px 14px', borderRadius: '16px 16px 4px 16px', fontSize: '0.8rem', lineHeight: 1.4 }}>
-                            We're struggling with <span style={{ background: 'rgba(167, 214, 0, 0.3)', padding: '2px 4px', borderRadius: '4px' }}>{whyTabsData[activeWhyTab].title.toLowerCase()}</span>. Can you help?
-                          </div>
-                        </div>
-
-                        {/* AI Agent Bubble */}
-                        <div style={{ alignSelf: 'flex-start', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '4px', maxWidth: '90%' }}>
-                          <div style={{ fontSize: '0.65rem', color: '#555', fontWeight: 600 }}>Infynix AI</div>
-                          <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', color: '#111', padding: '12px 14px', borderRadius: '16px 16px 16px 4px', fontSize: '0.8rem', lineHeight: 1.5 }}>
-                            {whyTabsData[activeWhyTab].body}
-                          </div>
-                        </div>
-
+                      <div style={{ fontSize: '0.75rem', color: '#007A5E', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        {whyTabsData[activeWhyTab].title}
+                      </div>
+                      <div style={{ fontSize: '0.95rem', color: '#111', fontWeight: 800, lineHeight: 1.3 }}>
+                        {whyTabsData[activeWhyTab].capability}
+                      </div>
+                      <div style={{ fontSize: '0.8rem', color: '#555', lineHeight: 1.5, flex: 1 }}>
+                        {whyTabsData[activeWhyTab].details}
                       </div>
                     </div>
                   </div>
 
-                  <div key={`heading-${activeWhyTab}`} style={{ marginTop: '2.5rem', textAlign: 'center', maxWidth: '500px', animation: 'ix-fade-up 0.5s ease-out forwards' }}>
-                    <p style={{ fontFamily: '"Montserrat", Arial, sans-serif', fontSize: '1.05rem', color: '#fff', lineHeight: 1.5, margin: 0 }}>
+                  <div key={`heading-${activeWhyTab}`} style={{ marginTop: '2rem', textAlign: 'center', maxWidth: '500px', animation: 'ix-fade-up 0.5s ease-out forwards' }}>
+                    <p style={{ fontFamily: '"Montserrat", Arial, sans-serif', fontSize: '1rem', color: '#fff', lineHeight: 1.5, margin: 0 }}>
                       {whyTabsData[activeWhyTab].heading}
                     </p>
                   </div>
@@ -519,9 +422,7 @@ const GrowthEngineering = () => {
         </div>
       </div>
 
-
-
-      {/* ══ 7-STAGE METHOD ══ */}
+      {/* ── METHODOLOGY SECTION (7-STAGE METHOD) ── */}
       <section id="method" className="ix-section" style={{ background: '#fff', position: 'relative' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <div style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
@@ -537,6 +438,9 @@ const GrowthEngineering = () => {
               The Infynix Growth<br />
               <em style={{ fontFamily: 'var(--ix-font-serif)', fontStyle: 'italic', fontWeight: 400 }}>Engineering Method</em>
             </h2>
+            <p data-aos="fade-up" data-aos-delay="100" style={{ fontFamily: 'var(--ix-font-body)', fontSize: '1.05rem', color: '#555', marginTop: '1rem', maxWidth: '750px', lineHeight: 1.6 }}>
+              A process used by growth teams across the UAE and internationally to replace guesswork with measurable systems.
+            </p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1px', background: 'rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 20, overflow: 'hidden' }}>
@@ -578,7 +482,7 @@ const GrowthEngineering = () => {
         </div>
       </section>
 
-      {/* ══ FULL-BLEED IMAGE COMBINED ══ */}
+      {/* ── FULL-BLEED IMAGE COMBINED ── */}
       <section style={{ minHeight: '85vh', overflow: 'hidden', position: 'relative', display: 'flex', alignItems: 'center', background: 'rgb(59, 34, 93)' }}>
 
         <div style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '4rem', padding: '10vh 5vw', minHeight: '70vh' }}>
@@ -608,7 +512,7 @@ const GrowthEngineering = () => {
         </div>
       </section>
 
-      {/* ══ CONNECT FORM (WHITE LAYOUT) ══ */}
+      {/* ── CONNECT FORM (WHITE LAYOUT) ── */}
       <section id="download" className="ix-section" style={{ background: '#fafafa', position: 'relative', overflow: 'hidden', padding: 'clamp(60px, 8vw, 100px) 20px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <h2 data-aos-delay="100" data-aos="fade-up" style={{
@@ -628,7 +532,7 @@ const GrowthEngineering = () => {
 
           <div data-aos-delay="300" data-aos="fade-up" style={{ padding: '0' }}>
             <h3 style={{ fontFamily: 'var(--ix-font-display)', fontSize: '1.4rem', fontWeight: 800, color: '#111', marginBottom: '2.5rem' }}>Schedule a Session</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem 4rem' }}>
+            <div className="ge-connect-grid">
               {[
                 { label: 'Name', type: 'text' },
                 { label: 'Work Email', type: 'email' },
@@ -658,7 +562,7 @@ const GrowthEngineering = () => {
               ))}
             </div>
             <button style={{
-              marginTop: '4rem',
+              marginTop: '3rem',
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
@@ -686,4 +590,3 @@ const GrowthEngineering = () => {
 };
 
 export default GrowthEngineering;
-

@@ -247,7 +247,7 @@ const Navbar = () => {
               <Link to="/growth-engineering" className="mobile-menu-link stagger-2" onClick={() => setMenuOpen(false)}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                   <span className="mobile-link-num">02</span>
-                  <span className="mobile-link-text">Engineering</span>
+                  <span className="mobile-link-text">Growth Engineering</span>
                 </div>
                 <span className="mobile-link-arrow">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

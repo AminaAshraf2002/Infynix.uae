@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { solutionsData, caseStudiesData } from '../lib/contentData';
-import SEOManager from './SEOManager';
+import Seo from '../seo/Seo';
+import { organizationSchema, serviceSchema, breadcrumbSchema } from '../seo/schema';
 import defaultHeroBg from '../assets/hero_bg_abstract.jpg';
 import capImg1 from '../assets/cap_img_1.jpg';
 import capImg2 from '../assets/cap_img_2.jpg';
@@ -9,6 +10,16 @@ import capImg3 from '../assets/cap_img_3.jpg';
 import caseStudy1 from '../assets/menucard.jpeg';
 import caseStudy2 from '../assets/case_study_2.jpg';
 import caseStudy3 from '../assets/visiting.jpeg';
+import caseStudyDevImg from '../assets/case-study-development.jpg';
+import caseStudyAgency from '../assets/case-study-agency.jpg';
+import caseStudyLoop from '../assets/case-study-loop.jpg';
+import caseStudyTask from '../assets/tms.jpeg';
+import caseStudyMenucard from '../assets/case-study-menucard.jpg';
+import caseStudyCampaign from '../assets/case-study-campaign.jpg';
+import caseStudyVisiting from '../assets/case-study-visiting.jpg';
+import salonImg from '../assets/salon.jpeg';
+import tmsImg from '../assets/tms.jpeg';
+import aiImg from '../assets/serv.png';
 
 // Import images for main layer pages
 import agencyBg from '../assets/mark.png';
@@ -160,8 +171,27 @@ const SolutionsPage = () => {
     window.scrollTo(0, 0);
   }, [activeSlug]);
 
-  const data = solutionsData[activeSlug];
-  if (!data) return <div style={{ padding: '20vh 5%', textAlign: 'center', fontSize: '2rem' }}>Solution not found.</div>;
+  const normalizeSlug = (s) => (s || '').toLowerCase().trim().replace(/[^a-z0-9]/g, '');
+
+  let data = solutionsData[activeSlug];
+  if (!data) {
+    const normActive = normalizeSlug(activeSlug);
+    const matchedKey = Object.keys(solutionsData).find(k => normalizeSlug(k) === normActive);
+    if (matchedKey) {
+      data = solutionsData[matchedKey];
+    } else {
+      const partialKey = Object.keys(solutionsData).find(k => {
+        const nk = normalizeSlug(k);
+        return nk.length > 3 && (normActive.includes(nk) || nk.includes(normActive));
+      });
+      if (partialKey) data = solutionsData[partialKey];
+    }
+  }
+
+  // Fallback if still not found
+  if (!data) {
+    data = solutionsData['website-development'] || Object.values(solutionsData)[0];
+  }
 
   const currentHeroBg = bgMap[activeSlug] || defaultHeroBg;
 
@@ -225,10 +255,24 @@ const SolutionsPage = () => {
           }
         }
       `}} />
-      <SEOManager
+      <Seo
         title={`${data.title} | Infynix Solutions`}
-        description={data.description}
-        canonicalUrl={`https://infynix.com/solutions/${slug}`}
+        description={data.description || data.subtitle}
+        path={`/solutions/${activeSlug}`}
+        schema={[
+          organizationSchema(),
+          serviceSchema({
+            name: data.title,
+            description: data.description || data.subtitle,
+            path: `/solutions/${activeSlug}`,
+            areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'United Arab Emirates', 'Middle East'],
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Solutions', path: '/solutions' },
+            { name: data.title, path: `/solutions/${activeSlug}` },
+          ]),
+        ]}
       />
 
       {/* ══ 1. HERO SECTION ══ */}
@@ -406,36 +450,43 @@ const SolutionsPage = () => {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             
-            {/* Left Image */}
-            <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
-              <img src={caseStudy1} alt="Case Study 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', bottom: '20px', left: '20px', display: 'flex', gap: '8px' }}>
-                <span style={{ background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>Marketing</span>
-                <span style={{ background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>Menucard</span>
-              </div>
-            </div>
+            {(() => {
+              const devCaseStudies = [
+                { title: 'Salon OS', label1: 'Development', label2: 'SaaS', img: salonImg, slug: 'beyond-demands' },
+                { title: 'Agency OS', label1: 'Development', label2: 'Platform', img: caseStudyAgency, slug: 'agency-os' },
+                { title: 'AI Surveillance Security System', label1: 'Development', label2: 'AI Security', img: aiImg, slug: 'ai-surveillance' },
+                { title: 'Task Management System', label1: 'Development', label2: 'Management', img: tmsImg, slug: 'task-management-system' }
+              ];
+            
+              const defaultCaseStudies = [
+                { title: 'Salon Service Menu', label1: 'Media', label2: 'Menucard', img: caseStudy1, slug: 'salon-branding-menucard' },
+                { title: 'Campaign', label1: 'Marketing', label2: 'Campaign', isVideo: false, img: caseStudyCampaign, slug: 'performance-ad-campaign' },
+                { title: 'Salon Visiting Card', label1: 'Branding', label2: 'Visiting Card', img: caseStudy3, slug: 'corporate-brand-identity' }
+              ];
+            
+              const caseStudiesToDisplay = (data.category === 'Growth' || data.category === 'Development') ? devCaseStudies : defaultCaseStudies;
 
-            {/* Center Video/Image (Using poster image, ready for video src) */}
-            <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
-              <video autoPlay loop muted playsInline poster={caseStudy2} style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                {/* <source src="/path-to-your-video.mp4" type="video/mp4" /> */}
-              </video>
-              <div style={{ position: 'absolute', bottom: '20px', left: '20px', display: 'flex', gap: '8px' }}>
-                <span style={{ background: 'rgba(200,200,200,0.6)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>Marketing</span>
-                <span style={{ background: 'rgba(200,200,200,0.6)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>Campaign</span>
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
-              <img src={caseStudy3} alt="Case Study 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', bottom: '20px', left: '20px', display: 'flex', gap: '8px' }}>
-                <span style={{ background: 'rgba(200,50,50,0.6)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>Branding</span>
-                <span style={{ background: 'rgba(200,50,50,0.6)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>Visiting Card</span>
-              </div>
-            </div>
+              return caseStudiesToDisplay.map((cs, i) => (
+                <Link key={i} to={cs.slug ? `/case-studies/${cs.slug}` : '/case-studies'} style={{ textDecoration: 'none', position: 'relative', aspectRatio: '3/4', overflow: 'hidden', display: 'block' }}>
+                  {cs.isVideo ? (
+                    <video autoPlay loop muted playsInline poster={cs.img} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  ) : (
+                    <img src={cs.img} alt={cs.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  )}
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0,0,0,0.85), transparent)', padding: '40px 20px 20px 20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <h3 style={{ margin: 0, color: '#fff', fontFamily: 'var(--ix-font-display)', fontSize: '1.4rem', fontWeight: 500, letterSpacing: '-0.01em' }}>
+                      {cs.title}
+                    </h3>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <span style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>{cs.label1}</span>
+                      <span style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', color: '#fff', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)' }}>{cs.label2}</span>
+                    </div>
+                  </div>
+                </Link>
+              ));
+            })()}
 
           </div>
 

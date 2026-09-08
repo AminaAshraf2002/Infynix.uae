@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Seo from "../seo/Seo";
+import { organizationSchema, breadcrumbSchema } from "../seo/schema";
 import "./Contact.css";
 import kochiImage from "../assets/kochi-office.jpg";
 
@@ -16,21 +18,21 @@ const LocationIcon = () => (
 
 const offices = [
     {
-        city: "London",
-        label: "UK Headquarters",
-        desc: "1-75 Shelton St, London, WC2H 9JQ. Our global executive headquarters directing international operations, technology consulting, and enterprise client strategy across European and American regions.",
-        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=900&q=80",
-    },
-    {
         city: "Dubai",
         label: "UAE Office",
-        desc: "Business Bay, Dubai, UAE. Our strategic regional office managing partnerships, cloud growth projects, and AI system installations across the Middle East and GCC countries.",
+        desc: "Business Bay, Dubai, UAE. Our client-facing and strategy headquarters working directly with UAE businesses on growth engineering, web development, and AI automation.",
         image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=80",
     },
     {
+        city: "London",
+        label: "UK Office",
+        desc: "1-75 Shelton St, London, WC2H 9JQ. Our European delivery and consulting center directing international operations and strategy.",
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=900&q=80",
+    },
+    {
         city: "Kochi",
-        label: "Kerala Office",
-        desc: "7th Floor, National Pearl Star Building, Edappally, Kochi, Kerala 682024. Our core engineering powerhouse and development center delivering robust backend growth architecture.",
+        label: "India Office",
+        desc: "3rd Floor, Oberon Mall, Padivattom, Edappally, Ernakulam, Kochi, Kerala 682024. Our core engineering powerhouse delivering robust web, cloud, and AI systems.",
         image: kochiImage,
         mapUrl: "https://share.google/KX27eRrKxncrDFibN"
     },
@@ -59,6 +61,19 @@ export default function Contact() {
 
     return (
         <div className="contact-page">
+            <Seo
+                title="Contact Infynix | Dubai Growth Engineering Agency"
+                description="Get in touch with Infynix's Dubai office to discuss web development, AI automation, or performance marketing for your UAE business."
+                path="/contact"
+                ogType="website"
+                schema={[
+                    organizationSchema(),
+                    breadcrumbSchema([
+                        { name: 'Home', path: '/' },
+                        { name: 'Contact', path: '/contact' },
+                    ]),
+                ]}
+            />
             {/* ── HERO SECTION ── */}
             <section className="contact-form-section">
                 <div className="contact-form-section-bg-text">CONTACT</div>
@@ -66,14 +81,11 @@ export default function Contact() {
                 <div className="contact-hero-top-inner" style={{position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', width: '100%'}}>
                     <div className="contact-header-wrap" style={{textAlign: 'center', marginBottom: '2rem', marginTop: '2.7rem'}}>
                         <h1 className="contact-headline-dark">
-                            Let's work together.
+                            Ready to Engineer Your Growth Infrastructure?
                         </h1>
-                        <p className="contact-italic-dark" style={{fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontWeight: "300", fontSize: "clamp(2rem, 4vw, 3.5rem)", color: "#00e6b0", marginBottom: "1rem"}}>Tell us what you need.</p>
+                        <p className="contact-italic-dark" style={{fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontWeight: "300", fontSize: "clamp(2rem, 4vw, 3.5rem)", color: "#00e6b0", marginBottom: "1rem"}}>Partner with our Dubai team.</p>
                         <p className="contact-subtitle-dark" style={{marginBottom: "0.5rem", maxWidth: '600px', margin: '0 auto 0.5rem'}}>
-                            Send us a message to see how our tools can help your business.
-                        </p>
-                        <p className="contact-subtitle-dark" style={{marginBottom: "0.5rem", maxWidth: '600px', margin: '0 auto 0.5rem'}}>
-                            Whether you need a fast website, smart AI, or better marketing, we can help.
+                            Book a discovery call to discuss web development, AI automation, or performance marketing for your UAE business.
                         </p>
                         <p className="contact-subtitle-dark" style={{marginBottom: "2rem", maxWidth: '600px', margin: '0 auto 2rem'}}>
                             We will reply within 24 hours.

@@ -4,24 +4,33 @@ import { caseStudiesData } from '../lib/contentData';
 import SEOManager from './SEOManager';
 import "./FutureOfRetail.css";
 
+import salonImg from '../assets/salon.jpeg';
+import tmsImg from '../assets/tms.jpeg';
+import agencyImg from '../assets/case-study-agency.jpg';
+import loopImg from '../assets/case-study-loop.jpg';
+import aiImg from '../assets/serv.png';
+import menucardImg from '../assets/menucard.jpeg';
+import visitingImg from '../assets/visiting.jpeg';
+import campaignImg from '../assets/case-study-campaign.jpg';
+
 const GREEN = "#007A5E";
 const LIGHT_BG = "#f4f8f6"; 
 const TEXT_DARK = "#1F2937";
 
 const caseImages = {
-  'task-management-system': {
-    desktop: '/tms_dashboard.png',
-    mobile: '/tms_app.png'
-  },
-  'beyond-demands': {
-    desktop: '/salon_dashboard.png',
-    mobile: null
-  }
+  'beyond-demands': { desktop: salonImg, mobile: null },
+  'task-management-system': { desktop: tmsImg, mobile: null },
+  'agency-os': { desktop: agencyImg, mobile: null },
+  'loop-loyalty': { desktop: loopImg, mobile: null },
+  'ai-surveillance': { desktop: aiImg, mobile: null },
+  'salon-branding-menucard': { desktop: menucardImg, mobile: null },
+  'restaurant-branding-menucard': { desktop: menucardImg, mobile: null },
+  'corporate-brand-identity': { desktop: visitingImg, mobile: null },
+  'performance-ad-campaign': { desktop: campaignImg, mobile: null }
 };
 
 function useReveal(dependency) {
   useEffect(() => {
-    // Only target elements that are static (like the filter bar) to avoid React state-swap conflicts
     const els = document.querySelectorAll(".static-reveal");
     const obs = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
@@ -32,25 +41,19 @@ function useReveal(dependency) {
   }, [dependency]);
 }
 
+const categories = ['All', 'Development', 'Media', 'Agency'];
+
 const CaseStudiesPage = () => {
   const { slug } = useParams();
-  const activeSlug = slug || 'task-management-system';
+  const activeSlug = slug || caseStudiesData[0].slug;
   const targetStudy = caseStudiesData.find((item) => item.slug === activeSlug) || caseStudiesData[0];
   
-  // Custom states to animate slide transitions on content switch
   const [currentStudy, setCurrentStudy] = useState(targetStudy);
-  const [slideState, setSlideState] = useState('idle'); // 'idle', 'sliding-out', 'sliding-in', 'entering'
+  const [selectedCategory, setSelectedCategory] = useState(targetStudy.category || 'All');
+  const [slideState, setSlideState] = useState('idle');
 
   useReveal(currentStudy.slug);
 
-  // Track the slug the animation is currently running for in a ref instead of
-  // depending on `currentStudy` state directly. Previously this effect depended
-  // on [targetStudy, currentStudy], but the effect itself calls setCurrentStudy()
-  // inside timer1 — that state change re-triggered the effect mid-animation,
-  // and React's cleanup ran before the re-run, clearing timer2/timer3 before
-  // they fired. That left slideState stuck on 'sliding-in' (opacity: 0) forever,
-  // i.e. the new case study content was invisible until a full page refresh
-  // reset everything. Depending only on targetStudy.slug avoids that loop.
   const animatingSlugRef = useRef(currentStudy.slug);
 
   useEffect(() => {
@@ -60,6 +63,7 @@ const CaseStudiesPage = () => {
 
       const timer1 = setTimeout(() => {
         setCurrentStudy(targetStudy);
+        if (targetStudy.category) setSelectedCategory(targetStudy.category);
         setSlideState('sliding-in');
       }, 300);
 
@@ -79,11 +83,13 @@ const CaseStudiesPage = () => {
     }
   }, [targetStudy]);
 
-  // Resolve the current page images based on the slug
-  const pageImages = caseImages[currentStudy.slug] || caseImages['task-management-system'];
+  const filteredStudies = selectedCategory === 'All'
+    ? caseStudiesData
+    : caseStudiesData.filter(s => s.category === selectedCategory);
+
+  const pageImages = caseImages[currentStudy.slug] || { desktop: salonImg, mobile: null };
   const techTags = currentStudy.technology ? currentStudy.technology.split(',').map(t => t.trim()) : [];
 
-  // Determine transition styles based on slide state
   let transitionStyle = { transform: 'none', opacity: 1, transition: 'none', width: '100%' };
   if (slideState === 'sliding-out') {
     transitionStyle = { transform: 'translateX(-80px)', opacity: 0, transition: 'transform 0.3s ease-in, opacity 0.3s ease-in', width: '100%' };
@@ -96,9 +102,13 @@ const CaseStudiesPage = () => {
   return (
     <div style={{ background: '#fff', color: '#333', fontFamily: 'var(--ix-font-body)', position: 'relative', overflow: 'hidden', paddingBottom: '100px', minHeight: '100vh' }}>
       <SEOManager
-        title={`${currentStudy.client} Systems Integration Case Study | Infynix`}
-        description={`Learn how Infynix optimized operations for ${currentStudy.client}. Dynamic strategy: ${currentStudy.objectives.slice(0, 120)}`}
-        canonicalUrl={`https://infynix.com/case-studies/${currentStudy.slug}`}
+        title={slug
+          ? `${currentStudy.client} Case Study | Infynix Solutions`
+          : 'Case Studies | Software, Media & Growth Projects | Infynix Solutions'}
+        description={slug
+          ? `How Infynix delivered results for ${currentStudy.client}. ${currentStudy.objectives.slice(0, 110)}`
+          : 'Case studies from Infynix Solutions across Development, Media, and Agency services delivered for clients worldwide.'}
+        canonicalUrl={slug ? `/case-studies/${currentStudy.slug}` : '/case-studies'}
         schemaData={{
           '@context': 'https://schema.org',
           '@type': 'Article',
@@ -114,7 +124,7 @@ const CaseStudiesPage = () => {
         <div style={{ position: 'absolute', right: 'clamp(20px, 4vw, 60px)', top: 0, bottom: 0, borderRight: '1.5px dashed rgba(0,0,0,0.11)' }} />
       </div>
 
-      {/* ── EXACT CHRONOTEK BACKGROUND SHAPE (As shown in mockup image) ── */}
+      {/* ── BACKGROUND SHAPE ── */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -130,69 +140,54 @@ const CaseStudiesPage = () => {
 
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '120px 20px 20px', position: 'relative', zIndex: 1 }}>
         
-        {/* ── SLIDE TRANSITION WRAPPER CLIP BOUNDARY ── */}
+        {/* ── SLIDE TRANSITION WRAPPER ── */}
         <div style={{ overflow: 'hidden', width: '100%' }}>
           <div style={transitionStyle}>
 
             {/* ── 1. HERO / HEADER CONTAINER ── */}
-            <div className="case-page-section" style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '50px', alignItems: 'center', marginBottom: '60px' }} data-aos="fade-up">
+            <div className="case-page-section" style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '50px', alignItems: 'center', marginBottom: '40px' }}>
               
-              <div style={{ padding: '40px 40px 40px 0' }}>
-                {/* Tool icons row */}
-                <div style={{ display: 'flex', gap: '10px', marginBottom: '30px' }}>
-                  {['fa-gem', 'fa-code', 'fa-network-wired', 'fa-desktop'].map((icon, i) => (
-                    <div key={i} style={{ width: '36px', height: '36px', border: '1px solid #ddd', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', fontSize: '0.85rem', color: '#666' }}>
-                      <i className={`fa-solid ${icon}`}></i>
-                    </div>
-                  ))}
+              <div style={{ padding: '20px 20px 20px 0' }}>
+                {/* Category Pill Tag */}
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', background: 'rgba(0, 122, 94, 0.1)', color: GREEN, borderRadius: '100px', fontSize: '0.8rem', fontWeight: '800', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '20px' }}>
+                  <i className="fa-solid fa-layer-group"></i> {currentStudy.category || 'Development'}
                 </div>
 
-                {/* Title & Tagline */}
-                <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 800, color: TEXT_DARK, margin: '0 0 20px', lineHeight: 1.15, textWrap: 'balance' }}>
-                  <span style={{ fontFamily: 'var(--ix-font-display)' }}>{currentStudy.client}</span>{' '}
-                  <span style={{ color: GREEN, fontFamily: 'var(--ix-font-serif)', fontWeight: 600, fontStyle: 'italic', display: 'inline-block' }}>by Infynix</span>
+                {/* Title & Client Name */}
+                <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 800, color: TEXT_DARK, margin: '0 0 15px', lineHeight: 1.15, textWrap: 'balance' }}>
+                  <span style={{ fontFamily: 'var(--ix-font-display)' }}>{currentStudy.title}</span>
                 </h1>
 
-                <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '30px' }}>
-                  {currentStudy.title}
+                <h3 style={{ fontSize: '1.2rem', color: GREEN, fontWeight: '700', marginBottom: '20px', fontFamily: 'var(--ix-font-serif)' }}>
+                  {currentStudy.clientFull || currentStudy.client}
+                </h3>
+
+                <p style={{ color: '#555', fontSize: '0.98rem', lineHeight: '1.75', marginBottom: '30px' }}>
+                  {currentStudy.description}
                 </p>
 
-                <Link to="/contact" className="nav-cta" style={{ textDecoration: 'none', padding: '12px 30px', background: GREEN, color: '#fff', borderRadius: '100px', display: 'inline-flex', fontWeight: 'bold', fontSize: '0.85rem' }}>
+                <Link to="/contact" className="nav-cta" style={{ textDecoration: 'none', padding: '14px 32px', background: GREEN, color: '#fff', borderRadius: '100px', display: 'inline-flex', fontWeight: 'bold', fontSize: '0.88rem', boxShadow: '0 6px 20px rgba(0, 122, 94, 0.25)' }}>
                   Book Discovery Session ↗
                 </Link>
               </div>
 
-              {/* Overlapping perspective screens (Desktop + Mobile) */}
-              <div style={{ position: 'relative', height: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {/* Showcase Image */}
+              <div style={{ position: 'relative', minHeight: '380px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {pageImages.desktop && (
                   <div style={{
-                    position: 'absolute',
-                    width: '420px',
-                    height: '270px',
-                    borderRadius: '12px',
+                    position: 'relative',
+                    borderRadius: '16px',
                     overflow: 'hidden',
                     border: '8px solid #1c1c1e',
-                    borderBottomWidth: '14px',
-                    boxShadow: '0 20px 45px rgba(0,0,0,0.18)',
-                    transform: pageImages.mobile ? 'translateX(-30px) translateY(-10px)' : 'translateX(0)',
-                    zIndex: 1
+                    boxShadow: '0 25px 50px rgba(0,0,0,0.18)',
+                    background: '#fff',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    maxHeight: '360px',
+                    maxWidth: '100%'
                   }}>
-                    <img src={pageImages.desktop} alt={`${currentStudy.client} Desktop Interface`} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
-                  </div>
-                )}
-                {pageImages.mobile && (
-                  <div style={{
-                    position: 'absolute',
-                    width: '140px',
-                    height: '290px',
-                    borderRadius: '24px',
-                    overflow: 'hidden',
-                    border: '6px solid #1c1c1e',
-                    boxShadow: '0 25px 55px rgba(0,0,0,0.25)',
-                    transform: pageImages.desktop ? 'translateX(160px) translateY(30px)' : 'translateX(0)',
-                    zIndex: 2
-                  }}>
-                    <img src={pageImages.mobile} alt={`${currentStudy.client} Mobile App`} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+                    <img src={pageImages.desktop} alt={`${currentStudy.client} Interface`} style={{ maxHeight: '344px', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain', display: 'block' }} />
                   </div>
                 )}
               </div>
@@ -201,120 +196,231 @@ const CaseStudiesPage = () => {
           </div>
         </div>
 
-        {/* ── 2. FILTER BAR (BELOW HERO SECTION) ── */}
-        <div role="navigation" aria-label="Case Studies Menu" style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '20px', marginBottom: '40px', borderBottom: '1px solid #e0e6ed', paddingBottom: '20px' }}>
-          {caseStudiesData.map((item) => (
-            <Link
-              key={item.slug}
-              to={`/case-studies/${item.slug}`}
-              style={{
-                textDecoration: 'none',
-                padding: '10px 22px',
-                borderRadius: '4px',
-                fontWeight: 'bold',
-                fontSize: '0.9rem',
-                background: activeSlug === item.slug ? GREEN : '#f3f4f6',
-                color: activeSlug === item.slug ? '#fff' : '#555',
-                border: '1px solid #ddd',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              {item.client} Case Study
-            </Link>
-          ))}
+        {/* ── 2. CATEGORY TABS & CASE STUDY FILTER SELECTION ── */}
+        <div style={{ marginTop: '20px', marginBottom: '50px', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '16px', padding: '24px' }}>
+          
+          {/* Category Filter Pills */}
+          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  const firstInCat = cat === 'All' ? caseStudiesData[0] : caseStudiesData.find(s => s.category === cat);
+                  if (firstInCat && firstInCat.slug !== currentStudy.slug) {
+                    // Navigate if needed or update selection
+                  }
+                }}
+                style={{
+                  padding: '10px 24px',
+                  borderRadius: '100px',
+                  border: 'none',
+                  fontWeight: '700',
+                  fontSize: '0.88rem',
+                  cursor: 'pointer',
+                  background: selectedCategory === cat ? GREEN : '#fff',
+                  color: selectedCategory === cat ? '#fff' : '#64748B',
+                  boxShadow: selectedCategory === cat ? '0 4px 14px rgba(0, 122, 94, 0.3)' : '0 1px 3px rgba(0,0,0,0.05)',
+                  transition: 'all 0.25s ease'
+                }}
+              >
+                {cat} {cat !== 'All' ? `(${caseStudiesData.filter(s => s.category === cat).length})` : ''}
+              </button>
+            ))}
+          </div>
+
+          {/* Case Studies Sub-navigation Pills */}
+          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '12px', borderTop: '1px dashed #CBD5E1', paddingTop: '20px' }}>
+            {filteredStudies.map((item) => (
+              <Link
+                key={item.slug}
+                to={`/case-studies/${item.slug}`}
+                style={{
+                  textDecoration: 'none',
+                  padding: '8px 18px',
+                  borderRadius: '8px',
+                  fontWeight: '600',
+                  fontSize: '0.85rem',
+                  background: activeSlug === item.slug ? '#1F2937' : '#fff',
+                  color: activeSlug === item.slug ? '#fff' : '#475569',
+                  border: activeSlug === item.slug ? '1px solid #1F2937' : '1px solid #E2E8F0',
+                  transition: 'all 0.2s ease',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+              >
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: activeSlug === item.slug ? GREEN : '#CBD5E1' }}></span>
+                {item.client}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* ── SLIDE TRANSITION WRAPPER CLIP FOR BELOW SECTIONS ── */}
+        {/* ── SLIDE TRANSITION WRAPPER FOR DETAILS ── */}
         <div style={{ overflow: 'hidden', width: '100%' }}>
           <div style={transitionStyle}>
 
-            {/* ── 3. FEATURES HEADER SECTION ── */}
-            <div className="case-page-section" style={{ textAlign: 'center', padding: '40px 0 60px', position: 'relative' }} data-aos="fade-up">
-              <div style={{ fontSize: '1.5rem', color: '#aaa', marginBottom: '20px' }}>
-                <i className="fa-solid fa-arrow-down-long"></i>
-              </div>
-              
-              <div style={{ position: 'relative', display: 'inline-block', marginBottom: '40px' }}>
-                {/* Droplet icon on top */}
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: `2px solid ${GREEN}`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: GREEN, margin: '0 auto 10px', background: '#fff' }}>
-                  <i className="fa-solid fa-circle-check" style={{ fontSize: '0.85rem' }}></i>
+            {/* ── 3. BEFORE & AFTER DETAILED COMPARISON (Matching Screenshot Layout) ── */}
+            {(currentStudy.before || currentStudy.after) && (
+              <div className="case-page-section" style={{ margin: '20px 0 50px' }}>
+                <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+                  <span style={{ fontSize: '0.8rem', fontWeight: '800', letterSpacing: '1.5px', color: GREEN, textTransform: 'uppercase' }}>OPERATIONAL TRANSFORMATION</span>
+                  <h2 style={{ fontSize: '1.8rem', fontWeight: '800', color: TEXT_DARK, margin: '6px 0 0', fontFamily: 'var(--ix-font-serif)' }}>
+                    Before & After Comparison
+                  </h2>
                 </div>
-                
-                {/* Giant background watermark */}
-                <span style={{
-                  position: 'absolute',
-                  left: '50%',
-                  top: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  fontSize: 'clamp(3rem, 10vw, 6rem)',
-                  fontWeight: 900,
-                  color: 'rgba(0,0,0,0.02)',
-                  letterSpacing: '5px',
-                  margin: 0,
-                  pointerEvents: 'none',
-                  textTransform: 'uppercase'
-                }}>
-                  Overview
-                </span>
 
-                <h2 style={{ fontSize: '2rem', fontWeight: 800, color: TEXT_DARK, margin: 0, position: 'relative', zIndex: 1, fontFamily: 'var(--ix-font-serif)' }}>
-                  Case Overview
-                </h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+                  
+                  {/* BEFORE BOX */}
+                  <div style={{
+                    background: '#FAF9F6',
+                    border: '1.5px solid #E5E7EB',
+                    borderRadius: '16px',
+                    padding: '32px',
+                    boxShadow: '0 4px 16px rgba(0,0,0,0.02)'
+                  }}>
+                    <div style={{
+                      borderBottom: '2px solid #D1D5DB',
+                      paddingBottom: '12px',
+                      marginBottom: '20px'
+                    }}>
+                      <span style={{
+                        fontSize: '0.9rem',
+                        fontWeight: '900',
+                        letterSpacing: '2px',
+                        color: '#6B7280',
+                        textTransform: 'uppercase'
+                      }}>
+                        BEFORE
+                      </span>
+                    </div>
+                    <ul style={{ margin: 0, paddingLeft: '20px', color: '#4B5563', fontSize: '0.93rem', lineHeight: '1.8' }}>
+                      {currentStudy.before?.map((item, idx) => (
+                        <li key={idx} style={{ marginBottom: '12px' }}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* AFTER BOX */}
+                  <div style={{
+                    background: '#F0FDF4',
+                    border: '2px solid #007A5E',
+                    borderRadius: '16px',
+                    padding: '32px',
+                    boxShadow: '0 6px 24px rgba(0, 122, 94, 0.1)'
+                  }}>
+                    <div style={{
+                      borderBottom: '2px solid #007A5E',
+                      paddingBottom: '12px',
+                      marginBottom: '20px'
+                    }}>
+                      <span style={{
+                        fontSize: '0.9rem',
+                        fontWeight: '900',
+                        letterSpacing: '2px',
+                        color: GREEN,
+                        textTransform: 'uppercase'
+                      }}>
+                        AFTER
+                      </span>
+                    </div>
+                    <ul style={{ margin: 0, paddingLeft: '20px', color: '#166534', fontSize: '0.93rem', lineHeight: '1.8' }}>
+                      {currentStudy.after?.map((item, idx) => (
+                        <li key={idx} style={{ marginBottom: '12px', fontWeight: '500' }}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
               </div>
+            )}
 
-              <p style={{ maxWidth: '800px', margin: '0 auto 50px', color: '#666', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                {currentStudy.challenge}
-              </p>
-            </div>
+            {/* ── 4. CLIENT QUOTE CARD (Matching Screenshot) ── */}
+            {currentStudy.quote && (
+              <div className="case-page-section" style={{
+                background: '#F8FAFC',
+                borderLeft: '5px solid #007A5E',
+                border: '1px solid #E2E8F0',
+                borderLeftWidth: '6px',
+                borderRadius: '16px',
+                padding: '35px 40px',
+                margin: '40px 0 60px',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+                position: 'relative'
+              }}>
+                <p style={{
+                  fontSize: '1.05rem',
+                  fontStyle: 'italic',
+                  color: '#1F2937',
+                  lineHeight: '1.75',
+                  marginBottom: '18px',
+                  fontWeight: '500'
+                }}>
+                  "{currentStudy.quote}"
+                </p>
+                <div style={{ fontSize: '0.95rem', fontWeight: '800', color: GREEN }}>
+                  {currentStudy.quoteAuthor || currentStudy.client}
+                </div>
+                <div style={{ fontSize: '0.78rem', color: '#9CA3AF', marginTop: '16px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                  These outcomes reflect how the {currentStudy.client} team uses the system day to day.
+                </div>
+              </div>
+            )}
 
-            {/* ── 4. HIGHLIGHTS CARDS ROW ── */}
-            <div className="case-page-section" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '80px' }}>
-              <div data-aos="fade-up" data-aos-delay="100" style={{ border: '1px solid #eee', borderRadius: '16px', padding: '30px', background: '#fff', textAlign: 'center' }}>
+            {/* ── 5. HIGHLIGHTS CARDS ROW ── */}
+            <div className="case-page-section" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '60px' }}>
+              <div style={{ border: '1px solid #eee', borderRadius: '16px', padding: '30px', background: '#fff', textAlign: 'center' }}>
                 <div style={{ color: GREEN, fontSize: '2rem', marginBottom: '15px' }}>
                   <i className="fa-solid fa-bullseye"></i>
                 </div>
                 <h3 style={{ fontWeight: 'bold', margin: '0 0 10px', fontSize: '1.1rem', fontFamily: 'var(--ix-font-serif)' }}>Objectives</h3>
-                <p style={{ color: '#555', fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ color: '#555', fontSize: '0.88rem', lineHeight: 1.6, margin: 0 }}>
                   {currentStudy.objectives}
                 </p>
               </div>
+
               <div style={{ border: '1px solid #eee', borderRadius: '16px', padding: '30px', background: '#fff', textAlign: 'center' }}>
                 <div style={{ color: GREEN, fontSize: '2rem', marginBottom: '15px' }}>
                   <i className="fa-solid fa-lightbulb"></i>
                 </div>
                 <h3 style={{ fontWeight: 'bold', margin: '0 0 10px', fontSize: '1.1rem', fontFamily: 'var(--ix-font-serif)' }}>Strategy</h3>
-                <p style={{ color: '#555', fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ color: '#555', fontSize: '0.88rem', lineHeight: 1.6, margin: 0 }}>
                   {currentStudy.strategy}
                 </p>
               </div>
-              <div data-aos="fade-up" data-aos-delay="200" style={{ border: '1px solid #eee', borderRadius: '16px', padding: '30px', background: '#fff', textAlign: 'center' }}>
+
+              <div style={{ border: '1px solid #eee', borderRadius: '16px', padding: '30px', background: '#fff', textAlign: 'center' }}>
                 <div style={{ color: GREEN, fontSize: '2rem', marginBottom: '15px' }}>
                   <i className="fa-solid fa-chart-line"></i>
                 </div>
                 <h3 style={{ fontWeight: 'bold', margin: '0 0 10px', fontSize: '1.1rem', fontFamily: 'var(--ix-font-serif)' }}>Execution</h3>
-                <p style={{ color: '#555', fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ color: '#555', fontSize: '0.88rem', lineHeight: 1.6, margin: 0 }}>
                   {currentStudy.execution}
                 </p>
               </div>
             </div>
 
-            {/* ── 5. PILL TAGS GRID ── */}
-            <div className="case-page-section" style={{ borderTop: '1px dashed #eee', paddingTop: '60px', display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }} data-aos="fade-up">
-              {techTags.map((tag) => (
-                <span key={tag} style={{ border: '1px solid #e0e6ed', color: '#555', padding: '8px 18px', borderRadius: '8px', fontSize: '0.8rem', background: '#fff', fontWeight: '500' }}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Results Summary Box */}
-            <div className="case-page-section" style={{ background: LIGHT_BG, borderRadius: '24px', padding: '40px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '20px', marginTop: '80px' }} data-aos="fade-up">
-              <div>
-                <h4 style={{ margin: '0 0 8px', fontSize: '1rem', fontWeight: 'bold', color: TEXT_DARK, fontFamily: 'var(--ix-font-serif)' }}>MEASURABLE OUTCOME</h4>
-                <p style={{ margin: 0, color: GREEN, fontWeight: '900', fontSize: '1.8rem', fontFamily: 'var(--ix-font-display)' }}>{currentStudy.results}</p>
+            {/* ── 6. PILL TAGS GRID ── */}
+            {techTags.length > 0 && (
+              <div className="case-page-section" style={{ borderTop: '1px dashed #eee', paddingTop: '40px', display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+                {techTags.map((tag) => (
+                  <span key={tag} style={{ border: '1px solid #e0e6ed', color: '#555', padding: '8px 18px', borderRadius: '8px', fontSize: '0.8rem', background: '#fff', fontWeight: '500' }}>
+                    {tag}
+                  </span>
+                ))}
               </div>
-              <Link to="/contact" className="outline-btn" style={{ border: `1.5px solid ${GREEN}`, color: GREEN, padding: '12px 30px', fontSize: '0.85rem', fontWeight: 'bold', textDecoration: 'none', background: 'transparent' }}>
-                SEE MORE →
+            )}
+
+            {/* ── 7. MEASURABLE OUTCOME BOX ── */}
+            <div className="case-page-section" style={{ background: LIGHT_BG, borderRadius: '24px', padding: '40px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '20px', marginTop: '60px' }}>
+              <div>
+                <h4 style={{ margin: '0 0 8px', fontSize: '0.9rem', fontWeight: 'bold', color: TEXT_DARK, letterSpacing: '1px', textTransform: 'uppercase' }}>MEASURABLE OUTCOME</h4>
+                <p style={{ margin: 0, color: GREEN, fontWeight: '900', fontSize: '1.6rem', fontFamily: 'var(--ix-font-display)' }}>{currentStudy.results}</p>
+              </div>
+              <Link to="/contact" className="outline-btn" style={{ border: `1.5px solid ${GREEN}`, color: GREEN, padding: '12px 30px', fontSize: '0.85rem', fontWeight: 'bold', textDecoration: 'none', background: '#fff', borderRadius: '100px' }}>
+                Book Discovery Session ↗
               </Link>
             </div>
 

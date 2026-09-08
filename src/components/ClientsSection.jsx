@@ -75,46 +75,9 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section className="clients-section" id="clients" style={{ background: '#007A5E', paddingTop: '80px' }}>
-      
-      {/* Stats Section */}
-      {/* <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 5%', marginBottom: '80px' }}>
-        <h2 data-aos="fade-up" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#fff', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.2, marginBottom: '1.5rem', maxWidth: '700px' }}>
-          Over a decade helping enterprise businesses scale.
-        </h2>
-        
-        <p data-aos-delay="100" data-aos="fade-up" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '800px', marginBottom: '4rem' }}>
-          From idea validation to advanced growth, we combine strategic insight and modern tools to help your business make smarter decisions and scale faster in a rapidly changing market.
-        </p>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem' }}>
-          <div data-aos-delay="100" data-aos="fade-up">
-            <div style={{ color: '#fff', fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-display)', marginBottom: '0.5rem' }}>95%</div>
-            <div style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', fontWeight: 500 }}>Complete customer satisfaction</div>
-          </div>
-          <div data-aos-delay="200" data-aos="fade-up">
-            <div style={{ color: '#fff', fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-display)', marginBottom: '0.5rem' }}>150+</div>
-            <div style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', fontWeight: 500 }}>Systems & scalable platforms shipped</div>
-          </div>
-          <div data-aos-delay="300" data-aos="fade-up">
-            <div style={{ color: '#fff', fontSize: '3.5rem', fontWeight: 700, fontFamily: 'var(--font-display)', marginBottom: '0.5rem' }}>$1B+</div>
-            <div style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', fontWeight: 500 }}>Revenue unlocked for clients</div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* White Logo Banner */}
-      {/* <div data-aos="fade-up" style={{ background: '#fff', padding: '2.5rem 0', overflow: 'hidden', whiteSpace: 'nowrap', display: 'flex' }}>
-        <div style={{ display: 'inline-flex', gap: '4rem', paddingLeft: '4rem', animation: 'ix-scroll-marquee 30s linear infinite' }}>
-          {clients.concat(clients).map((client, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {getClientLogo(client.name, '#1F2937')}
-            </div>
-          ))}
-        </div>
-      </div> */}
+    <section className="clients-section" id="clients" style={{ background: '#007A5E', paddingTop: '10px' }}>
       {/* CTA Card — "Let's create great things." */}
-      <div className="cta-home-card" id="contact">
+      <div className="cta-home-card" id="contact" style={{ margin: '20px auto 40px' }}>
         <h2 className="cta-home-heading">
           Let's create <em>great things.</em>
         </h2>
@@ -127,7 +90,7 @@ const ClientsSection = () => {
       </div>
 
       {/* Footer — inside clients section */}
-      <footer className="premium-footer spec-footer" style={{ padding: '80px 3rem 40px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <footer className="premium-footer spec-footer" style={{ padding: '40px 5% 30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           
           {/* Replica Locations Row */}
@@ -146,20 +109,20 @@ const ClientsSection = () => {
             </div>
 
             <div className="footer-location-card">
-              <img src={ukLImage} alt="UK London Office" className="footer-location-svg" />
-              <div className="footer-location-title">UK - LONDON</div>
-              <div className="footer-location-addr">
-                1-75 Shelton St,<br />
-                London, WC2H 9JQ
-              </div>
-            </div>
-
-            <div className="footer-location-card">
               <img src={dubaiImage} alt="Dubai UAE Office" className="footer-location-svg" />
               <div className="footer-location-title">DUBAI - UAE</div>
               <div className="footer-location-addr">
                 Business Bay,<br />
                 Dubai, UAE
+              </div>
+            </div>
+
+            <div className="footer-location-card">
+              <img src={ukLImage} alt="UK London Office" className="footer-location-svg" />
+              <div className="footer-location-title">UK - LONDON</div>
+              <div className="footer-location-addr">
+                1-75 Shelton St,<br />
+                London, WC2H 9JQ
               </div>
             </div>
 
@@ -175,10 +138,10 @@ const ClientsSection = () => {
             </div>
           </div>
 
-          <hr className="footer-divider" style={{ margin: '40px 0' }} />
+          <hr className="footer-divider" style={{ margin: '30px 0', borderColor: 'rgba(255,255,255,0.15)' }} />
 
           {/* Bottom Links Row */}
-          <div className="footer-top" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '40px' }}>
+          <div className="footer-top" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '30px' }}>
             <div className="footer-nav-grid" style={{ width: '100%' }}>
               <div className="footer-nav-col">
                 <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>ABOUT</span>
@@ -194,9 +157,31 @@ const ClientsSection = () => {
               </div>
               <div className="footer-nav-col">
                 <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>INDUSTRIES</span>
+                <Link to="/industries">All Industries</Link>
                 <Link to="/industries/retail">Retail & Commerce</Link>
                 <Link to="/industries/healthcare">Healthcare</Link>
                 <Link to="/industries/education">Education</Link>
+              </div>
+              <div className="footer-nav-col">
+                <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>DUBAI</span>
+                <Link to="/digital-marketing-agency-in-dubai">Digital Marketing in Dubai</Link>
+                <Link to="/software-development-company-in-dubai">Software Development Dubai</Link>
+                <Link to="/seo-company-in-dubai">SEO Company Dubai</Link>
+                <Link to="/web-design-company-in-dubai">Web Design Dubai</Link>
+              </div>
+              <div className="footer-nav-col">
+                <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>ABU DHABI</span>
+                <Link to="/digital-marketing-agency-in-abu-dhabi">Digital Marketing in Abu Dhabi</Link>
+                <Link to="/software-development-company-in-abu-dhabi">Software Development Abu Dhabi</Link>
+                <Link to="/seo-company-in-abu-dhabi">SEO Company Abu Dhabi</Link>
+                <Link to="/web-design-company-in-abu-dhabi">Web Design Abu Dhabi</Link>
+              </div>
+              <div className="footer-nav-col">
+                <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>SHARJAH</span>
+                <Link to="/digital-marketing-agency-in-sharjah">Digital Marketing in Sharjah</Link>
+                <Link to="/seo-company-in-sharjah">SEO Company in Sharjah</Link>
+                <Link to="/web-design-company-in-sharjah">Web Design Company Sharjah</Link>
+                <Link to="/software-development-company-in-sharjah">Software Development Sharjah</Link>
               </div>
               <div className="footer-nav-col">
                 <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>LEGAL</span>
@@ -207,8 +192,8 @@ const ClientsSection = () => {
             </div>
           </div>
 
-          <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.05)', marginTop: '40px', paddingTop: '30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-            <p style={{ fontSize: '0.8rem', color: '#ffffff' }}>© 2026 Infynix Solutions UK. Engineered for Excellence.</p>
+          <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '30px', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+            <p style={{ fontSize: '0.8rem', color: '#ffffff' }}>© 2026 Infynix Solutions. Engineered for Excellence.</p>
           </div>
         </div>
       </footer>

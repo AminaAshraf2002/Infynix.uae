@@ -13,7 +13,7 @@ const ParticleTorus = () => {
   
   const { geometry, spriteTexture } = useMemo(() => {
     // 1. Create a TorusGeometry
-    const geo = new THREE.TorusGeometry(3.5, 1.2, 80, 200);
+    const geo = new THREE.TorusGeometry(3.0, 1.4, 80, 200);
     
     // 2. Mix White and Teal colors, and filter out any stray outlier vertices
     const positions = geo.attributes.position.array;
@@ -41,7 +41,7 @@ const ParticleTorus = () => {
     cleanGeo.setAttribute('position', new THREE.Float32BufferAttribute(validPositions, 3));
     cleanGeo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
 
-    // 3. Create a soft glow circular sprite texture dynamically (so we don't need external PNGs)
+    // 3. Create a soft glow circular sprite texture dynamically
     const canvas = document.createElement('canvas');
     canvas.width = 64;
     canvas.height = 64;
@@ -84,7 +84,7 @@ const ParticleTorus = () => {
   });
 
   return (
-    <group ref={groupRef} position={[-1, -0.5, 0]} rotation={[Math.PI / 2.6, 0, 0]} scale={[0.75, 0.75, 0.75]}>
+    <group ref={groupRef} position={[1.1, -1.2, 0]} rotation={[Math.PI / 2.6, 0, 0]} scale={[1.1, 1.0, 1.0]}>
       <points ref={pointsRef} geometry={geometry}>
         {/* Convert to points via PointsMaterial with soft glow texture */}
         <pointsMaterial
@@ -99,13 +99,13 @@ const ParticleTorus = () => {
           blending={THREE.AdditiveBlending} // Adds a nice luminous glow to the particles
         />
       </points>
-      {/* Invisible hit-mesh to cleanly catch hover events (points are too thin to raycast reliably) */}
+      {/* Invisible hit-mesh to cleanly catch hover events */}
       <mesh 
         onPointerOver={() => setHovered(true)} 
         onPointerOut={() => setHovered(false)}
         visible={false}
       >
-        <torusGeometry args={[3.5, 1.2, 16, 32]} />
+        <torusGeometry args={[3.0, 1.4, 16, 32]} />
         <meshBasicMaterial />
       </mesh>
     </group>
@@ -118,22 +118,26 @@ const Hero = () => {
   const subtitleRef = useRef(null);
   const descRef = useRef(null);
   const btnsRef = useRef(null);
+  const locationsRef = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.fromTo(titleRef.current, 
-        { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, 0.2
+        { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, 0.1
       )
       .fromTo(subtitleRef.current, 
-        { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, 0.4
+        { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, 0.25
       )
       .fromTo(descRef.current, 
-        { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, 0.6
+        { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, 0.45
       )
       .fromTo(btnsRef.current, 
-        { y: 20, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.2)' }, 0.8
+        { y: 20, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.2)' }, 0.65
+      )
+      .fromTo(locationsRef.current,
+        { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.85
       );
     }, containerRef);
 
@@ -152,22 +156,30 @@ const Hero = () => {
 
       <div className="hero-slime" />
 
-      {/* HERO TEXT */}
+      {/* HERO TEXT - Left Aligned */}
       <div className="hero-content">
-        <p ref={titleRef} className="hero-subtitle" style={{ fontSize: 'clamp(14px, 1.5vw, 18px)', fontWeight: '800', color: '#007A5E', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '15px', fontFamily: "'Inter', sans-serif" }}>
-          Growth Engineering Company
+        <p ref={titleRef} className="hero-eyebrow" style={{ fontSize: 'clamp(13px, 1.4vw, 16px)', fontWeight: '700', color: '#007A5E', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '16px', fontFamily: "'Montserrat', Arial, sans-serif" }}>
+          — GROWTH ENGINEERING COMPANY
         </p>
-        <h1 ref={subtitleRef} className="hero-title" style={{ fontSize: 'clamp(48px, 8vw, 95px)', margin: '0 0 20px', color: '#1F2937', fontFamily: "'Cormorant', serif", fontWeight: '500', lineHeight: '1.1', letterSpacing: '0.05em' }}>
-          Growth Engineering for <br />
-          <span style={{ color: '#007A5E' }}>Businesses Built to Scale.</span>
+        <h1 ref={subtitleRef} className="hero-title" style={{ fontSize: 'clamp(38px, 5.5vw, 76px)', margin: '0 0 20px', color: '#1F2937', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700', lineHeight: '1.12', letterSpacing: '-0.02em', textAlign: 'left' }}>
+          The Growth <span style={{ color: '#007A5E' }}>Engineering</span><br />
+          Company for UAE Businesses
         </h1>
-        <p ref={descRef} style={{ color: '#4B5563', maxWidth: '900px', margin: '0 auto 30px', fontSize: 'clamp(16px, 2.2vw, 20px)', lineHeight: '1.6' }}>
-          We engineer connected technology, marketing, and operations systems that turn disconnected growth into sustainable business growth.
+        <p ref={descRef} className="hero-subtitle" style={{ color: '#4B5563', maxWidth: '620px', margin: '0 0 32px', fontSize: 'clamp(16px, 1.8vw, 20px)', lineHeight: '1.6', fontFamily: "var(--ix-font-body, 'Montserrat', Arial, sans-serif)", textAlign: 'left' }}>
+          Software, AI vision, and retail growth systems — built for companies scaling across the UAE.
         </p>
-        <div ref={btnsRef} style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="/contact" className="nav-cta" style={{ padding: '0.8rem 2rem', fontSize: '1rem', textDecoration: 'none' }}>
+        <div ref={btnsRef} className="hero-actions" style={{ marginBottom: '40px' }}>
+          <a href="/contact" className="nav-cta hero-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem', textDecoration: 'none', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700' }}>
             Book a Discovery Call
           </a>
+          <a href="/growth-engineering" className="nav-secondary hero-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem', textDecoration: 'none', border: '1px solid #1F2937', color: '#1F2937', borderRadius: '100px', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700' }}>
+            Explore Growth Engineering
+          </a>
+        </div>
+        <div ref={locationsRef} style={{ borderTop: '1px solid rgba(0, 122, 94, 0.25)', paddingTop: '18px', width: '100%', maxWidth: '620px' }}>
+          <p style={{ margin: 0, fontSize: 'clamp(11px, 1.1vw, 13px)', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#4B5563', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '600' }}>
+            UNITED ARAB EMIRATES &nbsp;•&nbsp; UNITED KINGDOM &nbsp;•&nbsp; INDIA
+          </p>
         </div>
       </div>
     </section>

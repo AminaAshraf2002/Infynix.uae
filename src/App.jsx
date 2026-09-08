@@ -2,6 +2,7 @@ import './index.css';
 import './App.css';
 
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -36,9 +37,23 @@ import CaseStudiesPage from './components/CaseStudiesPage';
 import InsightsPage from './components/InsightsPage';
 import { PrivacyPolicy, TermsOfService, NotFoundPage } from './components/UtilityPages';
 
+// Location + service landing pages (SEO)
+import LandingPage from './components/LandingPage';
+import { landingPages } from './content/landingPages';
+import Seo from './seo/Seo';
+import { organizationSchema, websiteSchema, localBusinessSchema } from './seo/schema';
+import { DEFAULT_TITLE, DEFAULT_DESCRIPTION } from './seo/siteConfig';
+
 function HomePage() {
   return (
     <>
+      <Seo
+        title={DEFAULT_TITLE}
+        description={DEFAULT_DESCRIPTION}
+        path="/"
+        schema={[organizationSchema(), websiteSchema(), localBusinessSchema()]}
+      />
+
       {/* 1. Hero */}
       <Hero />
 
@@ -92,6 +107,17 @@ function AppContent() {
         <div style={{ position: 'relative', zIndex: 1 }}>
           <Routes>
             <Route path="/"                 element={<HomePage />} />
+
+            {/* Location + service landing pages. Flat slugs, matching the
+                "{service} company in {city}" pattern that ranks in this market. */}
+            {landingPages.map((page) => (
+              <Route
+                key={page.slug}
+                path={`/${page.slug}`}
+                element={<LandingPage slug={page.slug} />}
+              />
+            ))}
+
             <Route path="/growth-engineering" element={<GrowthEngineering />} />
             <Route path="/solutions/:slug"   element={<SolutionsPage />} />
             <Route path="/solutions"        element={<SolutionsIndex />} />
@@ -133,9 +159,11 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

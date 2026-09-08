@@ -29,28 +29,30 @@ function HeroSection({ data }) {
   <div className="hero-bg-wrapper" style={{ backgroundImage: `url(${getImgUrl(staticSlide?.image)})` }}>
     <div className="hero-overlay"></div>
     <div className="hero-content">
-      <span className="hero-eyebrow">GROWTH ENGINEERING COMPANY</span>
-      <h1 className="hero-title" style={{ fontWeight: '500', fontSize: 'clamp(48px, 8vw, 95px)', letterSpacing: '0.05em' }}>
-        Growth Engineering for<br />
-        <span className="title-highlight">Businesses Built to Scale.</span>
+      <span className="hero-eyebrow" style={{ fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700' }}>
+        — GROWTH ENGINEERING COMPANY
+      </span>
+      <h1 className="hero-title" style={{ fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700', fontSize: 'clamp(44px, 7.5vw, 88px)', letterSpacing: '-0.02em' }}>
+        The Growth <span className="title-highlight">Engineering</span><br />
+        Company
       </h1>
-      <p className="hero-subtitle">
-        We engineer connected technology, marketing, and operations systems that turn disconnected growth into sustainable business growth.
+      <p className="hero-subtitle" style={{ fontFamily: "var(--ix-font-body, 'Montserrat', Arial, sans-serif)" }}>
+        Software, AI vision, and retail growth systems.
       </p>
       <div className="hero-actions" style={{ marginTop: '30px' }}>
         <button
-          className="btn btn-primary outline-btn-hover"
+          className="btn btn-primary outline-btn-hover hero-btn"
           onClick={() => window.location.href = '/contact'}
-          style={{ backgroundColor: ' rgb(214, 250, 86)', color: '#111', border: 'none', padding: '12px 24px', borderRadius: '100px', cursor: 'pointer', fontWeight: '700' }}
+          style={{ fontFamily: "'Montserrat', Arial, sans-serif", backgroundColor: 'rgb(214, 250, 86)', color: '#111', border: 'none', padding: '12px 24px', borderRadius: '100px', cursor: 'pointer', fontWeight: '700' }}
         >
           Book a Discovery Call
         </button>
         <button
-          className="btn btn-secondary"
+          className="btn btn-secondary hero-btn"
           onClick={() => window.location.href = '/growth-engineering'}
-          style={{ backgroundColor: 'transparent', color: '#fff', border: '1px solid #fff', padding: '12px 24px', borderRadius: '100px', cursor: 'pointer', fontWeight: '500' }}
+          style={{ fontFamily: "'Montserrat', Arial, sans-serif", backgroundColor: 'transparent', color: '#fff', border: '1px solid #fff', padding: '12px 24px', borderRadius: '100px', cursor: 'pointer', fontWeight: '700' }}
         >
-          Learn About Growth Engineering
+          Explore Growth Engineering
         </button>
       </div>
     </div>

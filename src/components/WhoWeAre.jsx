@@ -3,6 +3,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import Seo from "../seo/Seo";
+import { organizationSchema, breadcrumbSchema } from "../seo/schema";
 import "./InfynixDesign.css";
 import storyVideo from "../assets/video.mp4";
 import teamImg from '../assets/team.png';
@@ -52,6 +54,19 @@ export default function WhoWeAre() {
 
   return (
     <div style={{ background: "#fff" }}>
+      <Seo
+        title="About Infynix | Growth Engineering Agency, Dubai"
+        description="Infynix operates from Dubai with delivery teams in the UK and India, engineering growth systems for UAE and international businesses."
+        path="/about"
+        ogType="website"
+        schema={[
+          organizationSchema(),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'About', path: '/about' },
+          ]),
+        ]}
+      />
 
       {/* ══ HERO — Zendesk Replica ══ */}
       <section className="solutions-hero-section" style={{
@@ -78,21 +93,18 @@ export default function WhoWeAre() {
         }} />
         {/* Left */}
         <div style={{ position: 'relative', zIndex: 1 }} data-aos="fade-up">
-          <h1 style={{ fontFamily: 'var(--ix-font-display)', fontWeight: 500, fontSize: 'clamp(2.3rem, 4.3vw,3.8rem)', color: '#111', lineHeight: 1.1, marginTop: '0', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-            Built for Real Growth.
+          <h1 style={{ fontFamily: 'var(--ix-font-display)', fontWeight: 600, fontSize: 'clamp(2.3rem, 4.3vw,3.8rem)', color: '#111', lineHeight: 1.1, marginTop: '0', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+            A Growth Engineering Agency Built for UAE Businesses
           </h1>
-          <p style={{ fontFamily: 'var(--ix-font-body)', fontSize: '1rem', color: '#111', lineHeight: 1.6, marginBottom: '1.5rem', maxWidth: '520px' }}>
-            Most agencies give you one piece of the puzzle. We give you the whole picture. We are a Growth Engineering company.
-          </p>
-          <p style={{ fontFamily: 'var(--ix-font-body)', fontSize: '1.1rem', color: '#111', lineHeight: 1.6, marginBottom: '2.5rem', maxWidth: '520px' }}>
-            We combine custom software, clear data, and smart marketing. We build systems that get real results.
+          <p style={{ fontFamily: 'var(--ix-font-body)', fontSize: '1.05rem', color: '#111', lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: '580px' }}>
+            Infynix operates from our Dubai office in Business Bay, working directly with UAE businesses on growth engineering, web development, and AI automation. Our client-facing and strategy work is based in the UAE, supported by dedicated delivery teams in London (UK) and Kochi (India) — giving UAE clients local accessibility with efficient, high-quality engineering behind it.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link to="/contact" style={{ background: '#007A5E', color: '#ffffffff', padding: '0.9rem 1.8rem', borderRadius: '40px', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', transition: 'background 0.3s' }} onMouseEnter={e => e.currentTarget.style.background = '#96c200'} onMouseLeave={e => e.currentTarget.style.background = '#a7d600'}>
-              Try it for free
+            <Link to="/contact" style={{ background: '#007A5E', color: '#ffffffff', padding: '0.9rem 1.8rem', borderRadius: '40px', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', transition: 'background 0.3s' }} onMouseEnter={e => e.currentTarget.style.background = '#0F5C4C'} onMouseLeave={e => e.currentTarget.style.background = '#007A5E'}>
+              Book a Discovery Call
             </Link>
             <a href="#story" style={{ background: '#fff', border: '1px solid #ccc', color: '#111', padding: '0.9rem 1.8rem', borderRadius: '40px', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', transition: 'border-color 0.3s' }} onMouseEnter={e => e.currentTarget.style.borderColor = '#999'} onMouseLeave={e => e.currentTarget.style.borderColor = '#ccc'}>
-              View demo
+              Our Story
             </a>
           </div>
         </div>

@@ -7,7 +7,8 @@ import {
   ClipboardList, ShieldCheck, MonitorPlay, BarChart, Home, CalendarCheck, TrendingUp,
   LineChart, Truck, ConciergeBell, Smartphone, RefreshCw, CreditCard, LayoutDashboard, Video
 } from 'lucide-react';
-import SEOManager from './SEOManager';
+import Seo from '../seo/Seo';
+import { organizationSchema, serviceSchema, breadcrumbSchema } from '../seo/schema';
 import './InfynixDesign.css';
 
 const industryTestimonials = {
@@ -135,34 +136,56 @@ const IndustriesPage = () => {
 
   return (
     <div style={{ background: '#fff', color: '#1F2937', fontFamily: "'Montserrat', sans-serif", overflowX: 'hidden' }}>
-      <SEOManager
-        title={`${data.name} Solutions | Infynix`}
-        description={data.challenge}
-        canonicalUrl={`https://infynix.com/industries/${industryKey}`}
+      <Seo
+        title={slug
+          ? `${data.name} Software Solutions UAE | Infynix Solutions`
+          : 'Industries We Serve | Infynix Solutions Dubai'}
+        description={slug
+          ? data.challenge
+          : 'Industry-specific software, automation and marketing systems from Infynix Solutions UAE: healthcare, retail, education, real estate, manufacturing, hospitality and more.'}
+        path={slug ? `/industries/${industryKey}` : '/industries'}
+        schema={[
+          organizationSchema(),
+          slug
+            ? serviceSchema({
+                name: `${data.name} Technology Solutions`,
+                description: data.challenge,
+                path: `/industries/${industryKey}`,
+                areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'United Arab Emirates', 'Middle East'],
+              })
+            : null,
+          breadcrumbSchema(
+            slug
+              ? [
+                  { name: 'Home', path: '/' },
+                  { name: 'Industries', path: '/industries' },
+                  { name: data.name, path: `/industries/${industryKey}` },
+                ]
+              : [
+                  { name: 'Home', path: '/' },
+                  { name: 'Industries', path: '/industries' },
+                ]
+          ),
+        ]}
       />
 
       <style>{`
-        /* ===== FIX: --section-px was used but never defined anywhere below.
-           Without this, every "padding: 0 var(--section-px)" declaration was
-           INVALID and got dropped by the browser, meaning .ind-container,
-           .ind-container-lg, and the Final CTA band had ZERO side padding
-           regardless of any other changes made. This is now fixed. ===== */
         :root {
-          --section-px: clamp(20px, 5vw, 100px);
+          --section-px: clamp(40px, 6vw, 80px);
         }
 
-        .ind-section { padding: clamp(40px, 8vw, 180px) 0; }
+        .ind-section { padding: clamp(40px, 6vw, 90px) 0; }
         .ind-eyebrow { font-size: 0.8rem; font-weight: 600; color: #007A5E; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: block; }
-        .ind-h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.25rem, 4vw, 2.75rem); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.01em; color: #111; }
-        .ind-h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.75rem, 3vw, 2rem); font-weight: 600; line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.01em; color: #111; }
-        .ind-p { font-size: clamp(0.9375rem, 2vw, 1rem); color: #4B5563; line-height: 1.7; margin-bottom: 2rem; max-width: 600px; }
-        .ind-btn-primary { background: #007A5E; color: #fff; padding: 0.6rem 1.35rem; font-size: 0.85rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.3s; border: none; cursor: pointer; }
+        .ind-h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.25rem, 4vw, 2.75rem); font-weight: 600; line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.01em; color: #111; }
+        .ind-h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.75rem, 3vw, 2rem); font-weight: 600; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.01em; color: #111; }
+        .ind-p { font-size: clamp(0.9375rem, 1.8vw, 1rem); color: #4B5563; line-height: 1.7; margin-bottom: 2rem; max-width: 480px; }
+        .ind-btn-primary { background: #007A5E; color: #fff; padding: 0.7rem 1.5rem; font-size: 0.88rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.3s; border: none; cursor: pointer; }
         .ind-btn-primary:hover { background: #0F5C4C; }
-        .ind-btn-outline { background: transparent; color: #111; padding: 0.6rem 1.35rem; font-size: 0.85rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.3s, border-color 0.3s; border: 1.5px solid #E5E7EB; cursor: pointer; }
+        .ind-btn-outline { background: transparent; color: #111; padding: 0.7rem 1.5rem; font-size: 0.88rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.3s, border-color 0.3s; border: 1.5px solid #E5E7EB; cursor: pointer; }
         .ind-btn-outline:hover { background: #F9FAFB; border-color: #D1D5DB; }
         .ind-btn-text { color: #007A5E; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; font-size: 1.1rem; }
         .ind-btn-text:hover { text-decoration: underline; }
-        .ind-glow { position: absolute; bottom: -50px; right: 0; width: clamp(800px, 60vw, 1200px); height: clamp(250px, 20vw, 400px); background: radial-gradient(ellipse at center, rgba(0, 122, 94, 0.7) 0%, rgba(204, 255, 0, 0.25) 55%, rgba(255,255,255,0) 85%); filter: blur(90px); pointer-events: none; z-index: 0; }
+        .ind-glow { position: absolute; bottom: -50px; right: 0; width: clamp(600px, 50vw, 1000px); height: clamp(200px, 15vw, 350px); background: radial-gradient(ellipse at center, rgba(0, 122, 94, 0.5) 0%, rgba(204, 255, 0, 0.18) 55%, rgba(255,255,255,0) 85%); filter: blur(90px); pointer-events: none; z-index: 0; }
         .ind-img { border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); object-fit: cover; width: 100%; display: block; }
         .ind-card { background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 2rem; transition: transform 0.3s, box-shadow 0.3s; }
         .ind-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
@@ -174,48 +197,44 @@ const IndustriesPage = () => {
         .ind-container-sm { max-width: 1040px; margin: 0 auto; padding: 0 var(--section-px); width: 100%; box-sizing: border-box; }
         .ind-container-lg { max-width: 1200px; margin: 0 auto; padding: 0 var(--section-px); width: 100%; box-sizing: border-box; }
 
-        /* Hero: text column sized to match image column, matching About page proportions.
-           380px hard cap removed from text elements below so this gap value is meaningful. */
-        .ind-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: center; }
-        .ind-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-        .ind-works-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+        .ind-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 5vw, 5.5rem); align-items: center; }
+        .ind-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 5vw, 5.5rem); align-items: center; }
+        .ind-works-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         .ind-resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .ind-testimonial-grid { display: grid; grid-template-columns: 400px 1fr; gap: 4rem; align-items: center; }
+        .ind-testimonial-grid { display: grid; grid-template-columns: 360px 1fr; gap: 3rem; align-items: center; }
 
         .ind-hero-text { max-width: 480px; }
 
         @media (min-width: 1024px) and (max-width: 1439px) {
-          :root { --section-px: clamp(40px, 6vw, 80px); }
-          .ind-section { padding: clamp(40px, 6vw, 80px) 0; }
-          .ind-container { max-width: 960px; }
-          .ind-container-sm { max-width: 900px; }
-          .ind-container-lg { max-width: 1000px; }
+          :root { --section-px: clamp(40px, 5.5vw, 70px); }
+          .ind-section { padding: clamp(40px, 5vw, 80px) 0; }
+          .ind-container { max-width: 1080px; }
+          .ind-container-sm { max-width: 980px; }
+          .ind-container-lg { max-width: 1140px; }
           .ind-hero-grid { gap: 4rem; }
-          .ind-feature-grid { gap: 3.5rem; }
-          .ind-works-grid { gap: 2rem; }
-          .ind-resources-grid { gap: 1.5rem; }
-          .ind-testimonial-grid { grid-template-columns: 380px 1fr; gap: 3rem; }
-          .ind-hero-text { max-width: 420px; }
+          .ind-feature-grid { gap: 4rem; }
+          .ind-hero-text { max-width: 440px; }
         }
 
         @media (min-width: 1440px) {
-          :root { --section-px: clamp(80px, 9vw, 180px); }
-          .ind-section { padding: clamp(80px, 9vw, 180px) 0; }
-          .ind-container { max-width: 1400px; }
-          .ind-container-sm { max-width: 1300px; }
-          .ind-container-lg { max-width: 1450px; }
-          .ind-hero-grid { grid-template-columns: 1fr 1fr; gap: 8rem; }
-          .ind-feature-grid { gap: 8rem; }
-          .ind-testimonial-grid { grid-template-columns: 450px 1fr; gap: 6rem; }
-          .ind-hero-text { max-width: 540px; }
+          :root { --section-px: clamp(60px, 7vw, 100px); }
+          .ind-section { padding: clamp(50px, 6vw, 100px) 0; }
+          .ind-container { max-width: 1180px; }
+          .ind-container-sm { max-width: 1060px; }
+          .ind-container-lg { max-width: 1220px; }
+          .ind-hero-grid { grid-template-columns: 1fr 1fr; gap: 5rem; }
+          .ind-feature-grid { gap: 5rem; }
+          .ind-testimonial-grid { grid-template-columns: 380px 1fr; gap: 4rem; }
+          .ind-hero-text { max-width: 480px; }
         }
 
         @media (max-width: 1023px) {
-          .ind-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-          .ind-feature-grid { grid-template-columns: 1fr; gap: 3rem; }
-          .ind-works-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+          :root { --section-px: 24px; }
+          .ind-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+          .ind-feature-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+          .ind-works-grid { grid-template-columns: 1fr; gap: 2rem; }
           .ind-resources-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-          .ind-testimonial-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+          .ind-testimonial-grid { grid-template-columns: 1fr; gap: 2rem; }
           .ind-hero-text { max-width: 100%; }
         }
       `}</style>

@@ -39,7 +39,7 @@ const SpecializeSection = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const text1 = "We build interconnected business systems that help you";
+  const text1 = "We build interconnected business systems that help UAE companies";
   const text2 = "Attract, Engage, Convert, Optimize,";
   const text3 = "and Scale.";
 

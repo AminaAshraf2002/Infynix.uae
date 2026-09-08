@@ -81,7 +81,7 @@ const CaseStudies = () => {
               Client Success <span>Stories</span>
             </h2>
             <p className="section-subtitle" style={{ marginTop: 12 }}>
-              From startups to Fortune 500s — real outcomes, delivered.
+              From startups to Fortune 500s, real outcomes, delivered.
             </p>
           </div>
           <a href="#contact" className="btn btn-outline" data-aos="fade-right" id="all-cases-btn">
