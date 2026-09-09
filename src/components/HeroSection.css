@@ -29,55 +29,63 @@
 
 @media (max-width: 1024px) {
   .threejs-wrapper {
-    width: 85%;
-    right: -15%;
+    width: 90%;
+    right: -10%;
     bottom: -15%;
-    opacity: 0.85;
+    height: 105%;
+    opacity: 0.9;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 110px 20px 50px !important;
+    padding: 115px 20px 50px !important;
     min-height: auto;
+    overflow: hidden;
   }
   .threejs-wrapper {
-    width: 120%;
-    right: -20%;
-    bottom: -10%;
-    top: auto;
-    height: 55%;
-    opacity: 0.35;
-    pointer-events: none;
+    position: absolute;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: 0.92 !important;
+    pointer-events: auto !important;
   }
   .hero-content {
-    margin-top: 10px !important;
+    margin-top: 5px !important;
     margin-left: 0 !important;
     max-width: 100% !important;
+    position: relative;
+    z-index: 10;
   }
   .hero-title {
-    font-size: clamp(26px, 7.5vw, 36px) !important;
-    line-height: 1.15 !important;
+    font-size: clamp(28px, 7.8vw, 40px) !important;
+    line-height: 1.14 !important;
     margin: 0 0 16px !important;
   }
   .hero-subtitle {
-    font-size: 0.95rem !important;
+    font-size: 0.98rem !important;
     line-height: 1.55 !important;
     margin: 0 0 24px !important;
+    max-width: 100% !important;
   }
   .hero-actions {
     flex-direction: column !important;
     align-items: stretch !important;
     width: 100% !important;
-    max-width: 340px !important;
+    max-width: 360px !important;
     gap: 12px !important;
     margin-bottom: 28px !important;
   }
   .hero-btn {
     width: 100% !important;
     text-align: center !important;
-    padding: 0.8rem 1.6rem !important;
-    font-size: 0.92rem !important;
+    padding: 0.85rem 1.6rem !important;
+    font-size: 0.95rem !important;
     display: block !important;
     box-sizing: border-box !important;
   }
@@ -94,6 +102,14 @@
     radial-gradient(circle at 75% 65%, rgba(0, 122, 94, 0.3) 0%, rgba(2, 44, 34, 0.1) 45%, transparent 70%);
   pointer-events: none;
   z-index: 2; /* Sits over the 3D canvas for a subtle glow */
+}
+
+@media (max-width: 768px) {
+  .hero-slime {
+    background: 
+      radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.85) 0%, transparent 60%),
+      radial-gradient(circle at 70% 80%, rgba(0, 122, 94, 0.2) 0%, transparent 55%);
+  }
 }
 
 /* Hero Content on the Left Side - Near the Guide / Dashed line */
