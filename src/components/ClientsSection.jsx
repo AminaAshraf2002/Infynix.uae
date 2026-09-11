@@ -109,11 +109,12 @@ const ClientsSection = () => {
             </div>
 
             <div className="footer-location-card">
-              <img src={dubaiImage} alt="Dubai UAE Office" className="footer-location-svg" />
-              <div className="footer-location-title">DUBAI - UAE</div>
+              <img src={dubaiImage} alt="UAE Office" className="footer-location-svg" />
+              <div className="footer-location-title">UAE</div>
               <div className="footer-location-addr">
-                Business Bay,<br />
-                Dubai, UAE
+                C1 Building - Office C1 1F-SF6540,<br />
+                Free Zone, Al Butain,<br />
+                Ajman, UAE
               </div>
             </div>
 

@@ -17,15 +17,15 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 export const BUSINESS = {
   legalName: 'Infynix Solutions',
   email: 'office@infynixsolutions.ae',
-  telephone: '+971 50 123 4567',
+  telephone: '+971 54 257 5702',
   address: {
-    street: 'Business Bay',
-    locality: 'Dubai',
-    region: 'Dubai',
+    street: 'C1 Building - Office C1 1F-SF6540, Free Zone',
+    locality: 'Al Butain',
+    region: 'Ajman',
     postalCode: '',
     country: 'AE',
   },
-  geo: { latitude: 25.1851, longitude: 55.2575 },
+  geo: { latitude: 25.4052, longitude: 55.4419 },
   openingHours: {
     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
     opens: '09:00',

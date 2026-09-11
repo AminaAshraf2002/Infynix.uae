@@ -3,6 +3,7 @@ import Seo from "../seo/Seo";
 import { organizationSchema, breadcrumbSchema } from "../seo/schema";
 import "./Contact.css";
 import kochiImage from "../assets/kochi-office.jpg";
+import uaeOfficeImage from "../assets/lp/office.webp";
 
 const ArrowIcon = () => (
     <svg viewBox="0 0 14 14" fill="none" width="13" height="13">
@@ -18,10 +19,11 @@ const LocationIcon = () => (
 
 const offices = [
     {
-        city: "Dubai",
+        city: "UAE",
         label: "UAE Office",
-        desc: "Business Bay, Dubai, UAE. Our client-facing and strategy headquarters working directly with UAE businesses on growth engineering, web development, and AI automation.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=80",
+        desc: "C1 Building - Office C1 1F-SF6540, Free Zone, Al Butain, Ajman, United Arab Emirates. Our client-facing and strategy headquarters working directly with UAE businesses on growth engineering, web development, and AI automation.",
+        image: uaeOfficeImage,
+        mapUrl: "https://maps.google.com/?q=C1+Building,+Free+Zone,+Al+Butain,+Ajman,+UAE"
     },
     {
         city: "London",
@@ -170,6 +172,7 @@ export default function Contact() {
                         <div className="sidebar-card">
                             <div className="sidebar-query-block">
                                 <p className="sidebar-query-title">Sales-Related Queries</p>
+                                <a href="tel:+971542575702" className="sidebar-query-val">+971 54 257 5702</a>
                                 <a href="mailto:office@infynixsolutions.ae" className="sidebar-query-val">office@infynixsolutions.ae</a>
                             </div>
                             <div className="sidebar-divider" />

@@ -26,12 +26,13 @@ const Footer = () => {
           </div>
 
           <div className="footer-location-card">
-            <a href="https://maps.google.com/?q=Business+Bay,+Dubai,+UAE" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <img loading="lazy" decoding="async" src={dubaiImage} alt="Dubai UAE Office" className="footer-location-svg" />
-              <div className="footer-location-title">DUBAI - UAE ↗</div>
+            <a href="https://maps.google.com/?q=C1+Building,+Free+Zone,+Al+Butain,+Ajman,+UAE" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <img loading="lazy" decoding="async" src={dubaiImage} alt="UAE Office" className="footer-location-svg" />
+              <div className="footer-location-title">UAE ↗</div>
               <div className="footer-location-addr">
-                Business Bay,<br />
-                Dubai, UAE
+                C1 Building - Office C1 1F-SF6540,<br />
+                Free Zone, Al Butain,<br />
+                Ajman, UAE
               </div>
             </a>
           </div>
