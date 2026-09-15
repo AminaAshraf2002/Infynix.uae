@@ -45,7 +45,7 @@ const GrowthEngineering = () => {
       title: "Search Infrastructure",
       mockupIcon: "fa-solid fa-magnifying-glass",
       capability: "Search Infrastructure & Web Development",
-      details: "Built by our web development team using React and modern frameworks — fast, pre-rendered sites engineered to perform in competitive UAE search results.",
+      details: "Built by our web development team using React and modern frameworks, fast, pre-rendered sites engineered to perform in competitive UAE search results.",
       heading: "Turn search engines into your primary driver of commercial growth across the UAE."
     },
     {
@@ -73,7 +73,7 @@ const GrowthEngineering = () => {
       title: "AI Automation",
       mockupIcon: "fa-solid fa-robot",
       capability: "AI Automation & Computer Vision",
-      details: "AI automation agency UAE solutions — custom workflow pipelines, automated client intake, and real-time computer vision security models.",
+      details: "AI automation agency UAE solutions, custom workflow pipelines, automated client intake, and real-time computer vision security models.",
       heading: "Automate complex manual workflows and scale without linear headcount costs."
     }
   ];
@@ -178,7 +178,7 @@ const GrowthEngineering = () => {
             </h1>
 
             <p className="ge-hero-p" style={{ fontFamily: "var(--ix-font-body)", fontSize: "1.1rem", color: "#555", lineHeight: 1.6, marginTop: "1rem" }}>
-              Software, AI vision, and retail growth systems — built for companies scaling across the UAE.
+              Software, AI vision, and retail growth systems, built for companies scaling across the UAE.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ const GrowthEngineering = () => {
             Real growth comes from clear engineering. We connect your search, media, and software so your business works smoothly every day.
           </blockquote>
           <p style={{ fontFamily: 'var(--ix-font-body)', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(0, 0, 0, 0.9)', marginTop: '3rem' }}>
-            Infynix Solutions — UAE
+            Infynix Solutions, UAE
           </p>
         </div>
       </section>

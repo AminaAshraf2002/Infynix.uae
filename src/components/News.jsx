@@ -10,7 +10,7 @@ const newsArticles = [
         title: "Infynix Solutions Unveils Advanced AI Surveillance & Autonomous Growth Platform",
         sections: [
             {
-                body: `San Jose, California – In a strategic move to optimize enterprise operations and scaling capabilities, Infynix Solutions has officially launched its new autonomous AI Surveillance platform, integrated directly with high-performance Growth Systems.`,
+                body: `San Jose, California - In a strategic move to optimize enterprise operations and scaling capabilities, Infynix Solutions has officially launched its new autonomous AI Surveillance platform, integrated directly with high-performance Growth Systems.`,
             },
             {
                 body: `This release marks a significant milestone for Infynix Solutions as it expands its suite of AI-first products and scalable infrastructure tools designed to automate real-time analytics and accelerate customer acquisition loops.`,
@@ -38,8 +38,8 @@ const newsArticles = [
 ];
 
 const relatedNews = [
-    { label: "Infynix Solutions' C-Commerce – commerce like never before!", href: "#" },
-    { label: "Infynix Solutions Reimagines the Future of Workplaces – a true bi-directional 'flatarchy' organization", href: "#" },
+    { label: "Infynix Solutions' C-Commerce - commerce like never before!", href: "#" },
+    { label: "Infynix Solutions Reimagines the Future of Workplaces - a true bi-directional 'flatarchy' organization", href: "#" },
     { label: "Infynix Solutions, a 100% retail-focused technology service provider, has launched a new Retail Hive benchmark report on independent beauty brands in the U.S.", href: "#" },
     { label: "Infynix Solutions Unveils Advanced AI Surveillance & Autonomous Growth Platform", href: "#" },
 ];

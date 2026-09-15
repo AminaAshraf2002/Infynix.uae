@@ -29,8 +29,7 @@ function HeroSection({ data }) {
   <div className="hero-bg-wrapper" style={{ backgroundImage: `url(${getImgUrl(staticSlide?.image)})` }}>
     <div className="hero-overlay"></div>
     <div className="hero-content">
-      <span className="hero-eyebrow" style={{ fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700' }}>
-        — GROWTH ENGINEERING COMPANY
+      <span className="hero-eyebrow" style={{ fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700' }}>, GROWTH ENGINEERING COMPANY
       </span>
       <h1 className="hero-title" style={{ fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700', fontSize: 'clamp(44px, 7.5vw, 88px)', letterSpacing: '-0.02em' }}>
         The Growth <span className="title-highlight">Engineering</span><br />

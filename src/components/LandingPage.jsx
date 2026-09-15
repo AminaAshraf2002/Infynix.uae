@@ -43,7 +43,7 @@ export default function LandingPage({ slug: slugProp }) {
 
   const schema = [
     organizationSchema(),
-    // Only the Dubai pages carry LocalBusiness — that is the UAE address
+    // Only the Dubai pages carry LocalBusiness. That is the UAE address
     // Infynix actually occupies.
     isDubai ? localBusinessSchema() : null,
     serviceSchema({

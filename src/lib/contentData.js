@@ -246,7 +246,7 @@ export const industriesData = {
   'healthcare': {
     name: 'Healthcare',
     heroTitle: 'Healthcare Growth & Automation Systems UAE',
-    challenge: 'Healthcare teams struggle with paper forms, manual scheduling, and disconnected records — supporting UAE healthcare providers and private clinics with compliant, automated systems.',
+    challenge: 'Healthcare teams struggle with paper forms, manual scheduling, and disconnected records, supporting UAE healthcare providers and private clinics with compliant, automated systems.',
     opportunity: 'Automate intake, deploy secure patient portals, and streamline daily scheduling for UAE clinics.',
     focusArea: 'Patient Portals & Telehealth Integrations',
     solutions: ['Patient portals, automated appointment reminders, and secure data storage.'],
@@ -262,7 +262,7 @@ export const industriesData = {
   'education': {
     name: 'Education',
     heroTitle: 'Education Technology & Student Portals UAE',
-    challenge: 'Outdated platforms make student registration frustrating — built for UAE academies, colleges, and EdTech providers.',
+    challenge: 'Outdated platforms make student registration frustrating, built for UAE academies, colleges, and EdTech providers.',
     opportunity: 'Modernize learning with fast student portals, online enrollment, and clear dashboards.',
     solutions: ['Custom LMS setups, online registration tools, and student portals.'],
     faqs: [
@@ -277,7 +277,7 @@ export const industriesData = {
   'construction': {
     name: 'Construction',
     heroTitle: 'Construction Project & Field Automation UAE',
-    challenge: 'Managing field logs, contractor communications, and supply deliveries manually creates project delays — designed for UAE construction and civil engineering firms.',
+    challenge: 'Managing field logs, contractor communications, and supply deliveries manually creates project delays, designed for UAE construction and civil engineering firms.',
     opportunity: 'Deploy unified mobile reporting, track site progress in real time, and streamline supply chain logistics.',
     solutions: ['Field reporting apps, contractor portals, and equipment tracking dashboards.'],
     faqs: [
@@ -292,7 +292,7 @@ export const industriesData = {
   'real-estate': {
     name: 'Real Estate',
     heroTitle: 'Real Estate Portals & Lead Systems UAE',
-    challenge: 'Slow property listing sites lose buyers — tailored real estate software solutions for UAE property agencies and developers.',
+    challenge: 'Slow property listing sites lose buyers, tailored real estate software solutions for UAE property agencies and developers.',
     opportunity: 'Engage home buyers with fast property search, interactive maps, and automated lead routing.',
     solutions: ['Fast property listing engines, interactive map search, and CRM lead capture.'],
     faqs: [
@@ -307,7 +307,7 @@ export const industriesData = {
   'manufacturing': {
     name: 'Manufacturing',
     heroTitle: 'Manufacturing Operations & Supply Chain UAE',
-    challenge: 'Siloed plant data, legacy machinery, and manual inventory tracking cause costly downtime — for UAE manufacturers managing supply chain and production data.',
+    challenge: 'Siloed plant data, legacy machinery, and manual inventory tracking cause costly downtime, for UAE manufacturers managing supply chain and production data.',
     opportunity: 'Implement IoT telemetry, automate batch scheduling, and gain real-time inventory visibility.',
     solutions: ['Factory telemetry dashboards, automated inventory tracking, and predictive maintenance tools.'],
     faqs: [
@@ -322,7 +322,7 @@ export const industriesData = {
   'retail': {
     name: 'Retail & Commerce',
     heroTitle: 'Retail & E-Commerce Web Platforms UAE',
-    challenge: 'Slow checkout pages cause cart abandonment — retail ecommerce software solutions for UAE retailers unifying inventory, customers, and channels.',
+    challenge: 'Slow checkout pages cause cart abandonment, retail ecommerce software solutions for UAE retailers unifying inventory, customers, and channels.',
     opportunity: 'Increase online sales with fast mobile checkout, smart product recommendations, and simple carts.',
     solutions: ['Fast online stores, cart recovery tools, and sales reporting.'],
     faqs: [
@@ -337,7 +337,7 @@ export const industriesData = {
   'hospitality': {
     name: 'Hospitality',
     heroTitle: 'Hospitality Booking Engines & Guest Portals UAE',
-    challenge: 'High OTA commissions and disjointed guest check-ins eat into profit margins — for UAE hotel groups and hospitality operators.',
+    challenge: 'High OTA commissions and disjointed guest check-ins eat into profit margins, for UAE hotel groups and hospitality operators.',
     opportunity: 'Drive direct bookings, provide contactless mobile check-in, and personalize guest experiences.',
     solutions: ['Direct booking engines, digital concierge web apps, and loyalty system sync.'],
     faqs: [
@@ -352,7 +352,7 @@ export const industriesData = {
   'professional-services': {
     name: 'Professional Services',
     heroTitle: 'Practice Management & Client Portals UAE',
-    challenge: 'Manual client onboarding, disorganized document exchanges, and delayed billing slow down billable hours — for UAE legal, accounting, and consultancy practices.',
+    challenge: 'Manual client onboarding, disorganized document exchanges, and delayed billing slow down billable hours, for UAE legal, accounting, and consultancy practices.',
     opportunity: 'Streamline client intake, automate document sign-offs, and accelerate billing cycles.',
     solutions: ['Secure client portals, automated engagement letters, and time-tracking integrations.'],
     faqs: [

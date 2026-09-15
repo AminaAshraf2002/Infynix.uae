@@ -22,7 +22,7 @@ const testimonials = [
     initials: 'MR',
     name: 'Marcus Reynolds',
     role: 'CTO, FinTrust Bank',
-    text: `Infynix transformed our legacy trading infrastructure into a real-time analytics powerhouse. Their team's depth of knowledge in distributed systems is extraordinary — delivery was on time, on budget, and exceeded every KPI.`,
+    text: `Infynix transformed our legacy trading infrastructure into a real-time analytics powerhouse. Their team's depth of knowledge in distributed systems is extraordinary, delivery was on time, on budget, and exceeded every KPI.`,
   },
   {
     initials: 'SP',
@@ -50,7 +50,7 @@ const Testimonials = () => {
             What Our <span>Clients Say</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            We measure success by the outcomes we create for our clients — not just the code we ship.
+            We measure success by the outcomes we create for our clients, not just the code we ship.
           </p>
         </div>
 

@@ -62,7 +62,7 @@ const Expertise = () => {
             Core <span>Competencies</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            Deep expertise across the modern software engineering stack — from AI and cloud to security and mobile.
+            Deep expertise across the modern software engineering stack, from AI and cloud to security and mobile.
           </p>
         </div>
 

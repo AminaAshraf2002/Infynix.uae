@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const faqs = [
   {
     question: "What is Growth Engineering?",
-    answer: "Growth Engineering is the discipline of designing, building, and continuously improving interconnected business systems—combining technology, marketing, operations, and data—to create sustainable growth."
+    answer: "Growth Engineering is the discipline of designing, building, and continuously improving interconnected business systems, combining technology, marketing, operations, and data, to create sustainable growth."
   },
   {
     question: "How is Infynix different from a digital agency?",

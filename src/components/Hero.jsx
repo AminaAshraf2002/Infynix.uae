@@ -217,15 +217,14 @@ const Hero = () => {
 
       {/* HERO TEXT - Left Aligned */}
       <div className="hero-content">
-        <p ref={titleRef} className="hero-eyebrow" style={{ fontSize: 'clamp(13px, 1.4vw, 16px)', fontWeight: '700', color: '#007A5E', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '16px', fontFamily: "'Montserrat', Arial, sans-serif" }}>
-          — GROWTH ENGINEERING COMPANY
+        <p ref={titleRef} className="hero-eyebrow" style={{ fontSize: 'clamp(13px, 1.4vw, 16px)', fontWeight: '700', color: '#007A5E', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '16px', fontFamily: "'Montserrat', Arial, sans-serif" }}>, GROWTH ENGINEERING COMPANY
         </p>
         <h1 ref={subtitleRef} className="hero-title" style={{ fontSize: 'clamp(38px, 5.5vw, 76px)', margin: '0 0 20px', color: '#1F2937', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700', lineHeight: '1.12', letterSpacing: '-0.02em', textAlign: 'left' }}>
           The Growth <span style={{ color: '#007A5E' }}>Engineering</span>{' '}<br />
           Company for UAE Businesses
         </h1>
         <p ref={descRef} className="hero-subtitle" style={{ color: '#4B5563', maxWidth: '620px', margin: '0 0 32px', fontSize: 'clamp(16px, 1.8vw, 20px)', lineHeight: '1.6', fontFamily: "var(--ix-font-body, 'Montserrat', Arial, sans-serif)", textAlign: 'left' }}>
-          Software, AI vision, and retail growth systems — built for companies scaling across the UAE.
+          Software, AI vision, and retail growth systems, built for companies scaling across the UAE.
         </p>
         <div ref={btnsRef} className="hero-actions" style={{ marginBottom: '40px' }}>
           <a href="/contact" className="nav-cta hero-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '1rem', textDecoration: 'none', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700' }}>

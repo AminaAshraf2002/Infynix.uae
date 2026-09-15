@@ -85,7 +85,7 @@ export default function HeroBackground() {
     const particleGeometry = new THREE.BufferGeometry();
     particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
 
-    // Custom Canvas Texture — sharp crisp white circle
+    // Custom Canvas Texture, sharp crisp white circle
     const createParticleTexture = () => {
       const canvas = document.createElement('canvas');
       canvas.width = 32;

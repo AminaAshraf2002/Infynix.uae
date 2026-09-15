@@ -171,7 +171,7 @@ body {
     font-size: clamp(1.6rem, 3.5vw, 3.5rem) !important;
     line-height: 1.38;
     color: #363636;
-    /* FULL WIDTH — no max-width, no margin-left */
+    /* FULL WIDTH, no max-width, no margin-left */
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -290,7 +290,7 @@ body {
     font-size: clamp(1.3rem, 3.3vw, 3.3rem);
     line-height: 1.1;
     color: #fff;
-    /* FULL WIDTH — no max-width, no margin-left */
+    /* FULL WIDTH, no max-width, no margin-left */
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -502,11 +502,11 @@ body {
 /* ============================================================
    FULL RESPONSIVE
    xs  : < 480px
-   sm  : 480px–639px
-   md  : 640px–767px
-   lg  : 768px–1023px
-   xl  : 1024px–1279px
-   2xl : 1280px–1535px
+   sm  : 480px-639px
+   md  : 640px-767px
+   lg  : 768px-1023px
+   xl  : 1024px-1279px
+   2xl : 1280px-1535px
    3xl : 1536px+
    ============================================================ */
 
@@ -524,7 +524,7 @@ body {
         padding-right: 160px;
     }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-quote {
         font-size: clamp(2rem, 2.8vw, 3.6rem);
         max-width: 100%;
@@ -534,7 +534,7 @@ body {
     .lime-quote-mark,
     .lime-close { font-size: 11rem; }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-text {
         font-size: clamp(2rem, 3.5vw, 4rem);
         max-width: 100%;
@@ -571,7 +571,7 @@ body {
 }
 
 /* ======================================================
-   LARGE DESKTOP  2xl  1280px–1535px
+   LARGE DESKTOP  2xl  1280px-1535px
    ====================================================== */
 @media (min-width: 1280px) and (max-width: 1535px) {
     .lime-section,
@@ -584,7 +584,7 @@ body {
         padding-right: 120px;
     }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-quote {
         font-size: clamp(1.6rem, 2.6vw, 3rem);
         max-width: 100%;
@@ -592,7 +592,7 @@ body {
     }
     .lime-attr { margin-left: 0; }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-text {
         font-size: clamp(1.6rem, 3vw, 3.5rem);
         max-width: 100%;
@@ -620,7 +620,7 @@ body {
 }
 
 /* ======================================================
-   DESKTOP  xl  1024px–1279px
+   DESKTOP  xl  1024px-1279px
    ====================================================== */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .lime-section,
@@ -633,7 +633,7 @@ body {
         padding-right: 60px;
     }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-quote {
         font-size: clamp(1.2rem, 2.6vw, 2.6rem);
         max-width: 100%;
@@ -643,7 +643,7 @@ body {
     .lime-quote-mark,
     .lime-close { font-size: 7rem; }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-text {
         font-size: clamp(1.2rem, 3vw, 3rem);
         max-width: 100%;
@@ -684,7 +684,7 @@ body {
 }
 
 /* ======================================================
-   TABLET L  lg  768px–1023px
+   TABLET L  lg  768px-1023px
    ====================================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
     .lime-section,
@@ -702,7 +702,7 @@ body {
     .dashes-r,
     .dashes-wr { right: 32px; }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-section {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -744,7 +744,7 @@ body {
         font-size: clamp(0.9rem, 2.5vw, 1.7rem);
     }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-section {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -790,7 +790,7 @@ body {
 }
 
 /* ======================================================
-   TABLET S  md  640px–767px
+   TABLET S  md  640px-767px
    ====================================================== */
 @media (min-width: 640px) and (max-width: 767px) {
     .lime-section,
@@ -810,7 +810,7 @@ body {
     .dashes-r,
     .dashes-wr { right: 24px; }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-quote {
         font-size: clamp(1rem, 3vw, 1.8rem);
         max-width: 100%;
@@ -848,7 +848,7 @@ body {
         margin-bottom: 1.2rem;
     }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-text {
         font-size: clamp(1.1rem, 3.5vw, 2.4rem);
         max-width: 100%;
@@ -896,7 +896,7 @@ body {
 }
 
 /* ======================================================
-   MOBILE L  sm  480px–639px
+   MOBILE L  sm  480px-639px
    ====================================================== */
 @media (min-width: 480px) and (max-width: 639px) {
     .lime-section,
@@ -916,7 +916,7 @@ body {
     .dashes-r,
     .dashes-wr { right: 16px; }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-quote {
         font-size: clamp(0.95rem, 3.8vw, 1.55rem);
         max-width: 100%;
@@ -965,7 +965,7 @@ body {
     }
     .purple-attr { font-size: 0.82rem; }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-text {
         font-size: clamp(1rem, 4.2vw, 2rem);
         max-width: 100%;
@@ -1051,7 +1051,7 @@ body {
     .dashes-wl,
     .dashes-wr { display: none; }
 
-    /* Lime — full width */
+    /* Lime, full width */
     .lime-quote {
         font-size: clamp(0.9rem, 4.5vw, 1.35rem);
         max-width: 100%;
@@ -1101,7 +1101,7 @@ body {
     }
     .purple-attr { font-size: 0.8rem; }
 
-    /* Black — full width */
+    /* Black, full width */
     .black-text {
         font-size: clamp(0.95rem, 5vw, 1.8rem);
         max-width: 100%;

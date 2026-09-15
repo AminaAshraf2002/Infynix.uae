@@ -1,12 +1,12 @@
 /* ══════════════════════════════════════════════
-   CONTACT PAGE — FULL RESPONSIVE CSS
+   CONTACT PAGE, FULL RESPONSIVE CSS
    Breakpoints:
    xs   < 480px      Mobile S (iPhone SE, small Android)
-   sm   480–639px    Mobile L (iPhone Pro Max, landscape)
-   md   640–767px    Tablet S (iPad mini portrait, Nexus 7)
-   lg   768–1023px   Tablet L (iPad landscape, Surface)
-   xl   1024–1279px  Desktop (Laptop, 13" MacBook)
-   2xl  1280–1535px  Large Desktop (1440p monitors, iMac)
+   sm   480-639px    Mobile L (iPhone Pro Max, landscape)
+   md   640-767px    Tablet S (iPad mini portrait, Nexus 7)
+   lg   768-1023px   Tablet L (iPad landscape, Surface)
+   xl   1024-1279px  Desktop (Laptop, 13" MacBook)
+   2xl  1280-1535px  Large Desktop (1440p monitors, iMac)
    3xl  1536px+      Ultra-wide (4K)
 ══════════════════════════════════════════════ */
 
@@ -449,7 +449,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
    RESPONSIVE BREAKPOINTS
 ══════════════════════════════════════════════ */
 
-/* ── xs: Mobile S — < 480px ── */
+/* ── xs: Mobile S, < 480px ── */
 @media (max-width: 479px) {
     .contact-hero {
         padding: 3rem 28px 2.5rem;
@@ -562,7 +562,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
     }
 }
 
-/* ── sm: Mobile L — 480px to 639px ── */
+/* ── sm: Mobile L, 480px to 639px ── */
 @media (min-width: 480px) and (max-width: 639px) {
     .contact-hero {
         padding: 3.5rem 40px 3rem;
@@ -650,7 +650,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
     }
 }
 
-/* ── md: Tablet S — 640px to 767px ── */
+/* ── md: Tablet S, 640px to 767px ── */
 @media (min-width: 640px) and (max-width: 767px) {
     .contact-hero {
         padding: 4rem 52px 3.5rem;
@@ -683,7 +683,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
         padding: 0.7rem 2rem;
     }
 
-    /* Sidebar — 2-column side by side */
+    /* Sidebar, 2-column side by side */
     .contact-sidebar {
         margin-top: 0;
         padding-top: 0;
@@ -718,7 +718,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
     }
 }
 
-/* ── lg: Tablet L — 768px to 1023px ── */
+/* ── lg: Tablet L, 768px to 1023px ── */
 @media (min-width: 768px) and (max-width: 1023px) {
     .contact-hero {
         padding: 4.5rem 64px 4rem;
@@ -792,7 +792,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
     }
 }
 
-/* ── xl: Desktop — 1024px to 1279px ── */
+/* ── xl: Desktop, 1024px to 1279px ── */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .contact-hero {
         padding: 5rem 80px 4rem;
@@ -846,7 +846,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
     }
 }
 
-/* ── 2xl: Large Desktop — 1280px to 1535px ── */
+/* ── 2xl: Large Desktop, 1280px to 1535px ── */
 @media (min-width: 1280px) and (max-width: 1535px) {
     .contact-hero {
         padding: 6rem clamp(80px, 7vw, 120px) 5rem;
@@ -920,7 +920,7 @@ a.sidebar-query-val:hover { color: #007A5E; }
     }
 }
 
-/* ── 3xl: Ultra-wide — 1536px+ ── */
+/* ── 3xl: Ultra-wide, 1536px+ ── */
 @media (min-width: 1536px) {
     .contact-hero {
         padding: 7rem clamp(100px, 8vw, 180px) 6rem;

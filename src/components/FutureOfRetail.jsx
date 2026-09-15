@@ -68,7 +68,7 @@ export default function FutureOfRetail() {
                     <div className="dashes-l" />
                     <div className="dashes-r" />
 
-                    {/* ── TITLE + HEADING — fades up and out ── */}
+                    {/* ── TITLE + HEADING, fades up and out ── */}
                     <div style={{
                         position: "absolute",
                         left: "8vw",
@@ -131,7 +131,7 @@ export default function FutureOfRetail() {
                         </p>
                     </div>
 
-                    {/* ── IMAGE — wide centered → left card ── */}
+                    {/* ── IMAGE, wide centered → left card ── */}
                     <div style={{
                         position: "absolute",
                         left: "11vw",
@@ -157,7 +157,7 @@ export default function FutureOfRetail() {
                         />
                     </div>
 
-                    {/* ── RIGHT CONTENT — centered vertically ── */}
+                    {/* ── RIGHT CONTENT, centered vertically ── */}
                     <div style={{
                         position: "absolute",
                         left: "52vw",
@@ -198,7 +198,7 @@ export default function FutureOfRetail() {
                         <p className="s-sub">Engineering resilient growth networks and smart surveillance systems</p>
                     </div>
 
-                    {/* ── REPORT CARD — fades in last ── */}
+                    {/* ── REPORT CARD, fades in last ── */}
                     <div style={{
                         position: "absolute",
                         left: "8vw",
@@ -236,7 +236,7 @@ export default function FutureOfRetail() {
                     AI surveillance and growth marketing systems to automate insights and
                     accelerate growth will be the ones that remain relevant in the future
                 </blockquote>
-                <p className="lime-attr reveal">Michael Witty, Director – Scale & Analytics, ISG Americas</p>
+                <p className="lime-attr reveal">Michael Witty, Director - Scale & Analytics, ISG Americas</p>
                 <span className="lime-close">"</span>
             </section>
 

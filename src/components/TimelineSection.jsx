@@ -257,7 +257,7 @@ const TimelineSection = () => {
           Growth Engineering that gets <span style={{ color: '#007A5E' }}>smarter</span> with every system.
         </h2>
         <p>
-          From website development and AI automation to CRM integration, Infynix's Growth Engineering Method connects every business system for measurable, sustainable growth — for companies across the UAE and beyond.
+          From website development and AI automation to CRM integration, Infynix's Growth Engineering Method connects every business system for measurable, sustainable growth, for companies across the UAE and beyond.
         </p>
         <button className="timeline-cta-btn">
           Schedule a Discovery Call

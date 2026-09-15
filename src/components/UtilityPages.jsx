@@ -20,7 +20,7 @@ export const PrivacyPolicy = () => {
           <div className="news-block">
             <h2 className="news-subheading">1. Introduction</h2>
             <p className="news-para">
-              At Infynix — Growth Engineering Company, we prioritize the protection and security of your corporate and personal data. This privacy policy describes the types of info we collect, how it is stored, and the precautions we take to secure your transactions and interactions.
+              At Infynix, Growth Engineering Company, we prioritize the protection and security of your corporate and personal data. This privacy policy describes the types of info we collect, how it is stored, and the precautions we take to secure your transactions and interactions.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export const TermsOfService = () => {
           <div className="news-block">
             <h2 className="news-subheading">2. Use of Services</h2>
             <p className="news-para">
-              You agree not to use our systems for any unlawful purposes, database mining, or network overloading. Infynix — Growth Engineering Company reserves the right to terminate API key access or hosting deployments in the event of clear violations.
+              You agree not to use our systems for any unlawful purposes, database mining, or network overloading. Infynix, Growth Engineering Company reserves the right to terminate API key access or hosting deployments in the event of clear violations.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export const TermsOfService = () => {
           <div className="news-block">
             <h2 className="news-subheading">4. Liability Limits</h2>
             <p className="news-para">
-              Infynix — Growth Engineering Company shall not be liable for indirect, incidental, or consequential damages resulting from system downtime, hosting provider failure, or third-party API changes.
+              Infynix, Growth Engineering Company shall not be liable for indirect, incidental, or consequential damages resulting from system downtime, hosting provider failure, or third-party API changes.
             </p>
           </div>
         </div>

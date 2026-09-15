@@ -1,4 +1,4 @@
-// Abu Dhabi Landing Pages — UAE
+// Abu Dhabi Landing Pages, UAE
 
 export const abuDhabiPages = [
   {
@@ -9,12 +9,12 @@ export const abuDhabiPages = [
     service: 'Digital Marketing',
     category: 'marketing',
     title: 'Digital Marketing Agency in Abu Dhabi | Infynix Solutions',
-    description: 'Infynix Solutions is a growth-focused digital marketing agency in Abu Dhabi — SEO, paid ads, social media and marketing automation for UAE businesses.',
+    description: 'Infynix Solutions is a growth-focused digital marketing agency in Abu Dhabi, SEO, paid ads, social media and marketing automation for UAE businesses.',
     h1: 'Digital Marketing Agency in Abu Dhabi',
-    heroSubtitle: 'Performance marketing, SEO and automation for Abu Dhabi businesses — built by Infynix Solutions from our UAE operations.',
+    heroSubtitle: 'Performance marketing, SEO and automation for Abu Dhabi businesses, built by Infynix Solutions from our UAE operations.',
     intro: [
       'Abu Dhabi is the capital of the UAE and a rapidly growing commercial hub. Businesses here need marketing that goes beyond vanity metrics and delivers measurable pipeline and revenue.',
-      'Infynix Solutions delivers integrated digital marketing services to Abu Dhabi businesses — from technical SEO and Google Ads to social media management and CRM automation. Every campaign is built on proper tracking infrastructure so you can trace results to revenue.',
+      'Infynix Solutions delivers integrated digital marketing services to Abu Dhabi businesses, from technical SEO and Google Ads to social media management and CRM automation. Every campaign is built on proper tracking infrastructure so you can trace results to revenue.',
       'We serve government contractors, oil and gas companies, hospitality brands, healthcare providers, and professional services firms across Abu Dhabi.'
     ],
     servicesHeading: 'Digital Marketing Services in Abu Dhabi',
@@ -52,12 +52,12 @@ export const abuDhabiPages = [
     service: 'Software Development',
     category: 'technology',
     title: 'Software Development Company in Abu Dhabi | Infynix Solutions',
-    description: 'Custom software development in Abu Dhabi — web apps, mobile apps, AI systems and enterprise platforms by Infynix Solutions.',
+    description: 'Custom software development in Abu Dhabi, web apps, mobile apps, AI systems and enterprise platforms by Infynix Solutions.',
     h1: 'Software Development Company in Abu Dhabi',
     heroSubtitle: 'Custom software, mobile apps and enterprise platforms built for Abu Dhabi businesses by Infynix Solutions.',
     intro: [
       'Abu Dhabi is investing heavily in technology and digital transformation. Businesses here need custom software that fits their exact requirements, not generic SaaS platforms.',
-      'Infynix Solutions builds custom applications for Abu Dhabi organisations — from web platforms and mobile apps to AI-powered systems and enterprise integrations.',
+      'Infynix Solutions builds custom applications for Abu Dhabi organisations, from web platforms and mobile apps to AI-powered systems and enterprise integrations.',
       'We serve clients across energy, government, healthcare, finance and retail sectors in Abu Dhabi.'
     ],
     servicesHeading: 'Software Development Services in Abu Dhabi',
@@ -95,12 +95,12 @@ export const abuDhabiPages = [
     service: 'SEO',
     category: 'marketing',
     title: 'SEO Company in Abu Dhabi | Infynix Solutions',
-    description: 'Expert SEO services in Abu Dhabi — technical SEO, local search, content strategy and link building by Infynix Solutions.',
+    description: 'Expert SEO services in Abu Dhabi, technical SEO, local search, content strategy and link building by Infynix Solutions.',
     h1: 'SEO Company in Abu Dhabi',
     heroSubtitle: 'Technical SEO, local search and content strategy for Abu Dhabi businesses that want to dominate Google.',
     intro: [
       'Abu Dhabi businesses are competing for attention in an increasingly digital market. SEO is the most cost-effective way to capture high-intent traffic consistently.',
-      'Infynix Solutions provides end-to-end SEO services for Abu Dhabi businesses — from technical audits and on-page optimisation to content creation and link building.',
+      'Infynix Solutions provides end-to-end SEO services for Abu Dhabi businesses, from technical audits and on-page optimisation to content creation and link building.',
     ],
     servicesHeading: 'SEO Services in Abu Dhabi',
     services: [
@@ -135,12 +135,12 @@ export const abuDhabiPages = [
     service: 'Web Design',
     category: 'technology',
     title: 'Web Design Company in Abu Dhabi | Infynix Solutions',
-    description: 'Premium web design in Abu Dhabi — responsive websites, UI/UX and conversion-optimised pages by Infynix Solutions.',
+    description: 'Premium web design in Abu Dhabi, responsive websites, UI/UX and conversion-optimised pages by Infynix Solutions.',
     h1: 'Web Design Company in Abu Dhabi',
     heroSubtitle: 'Premium, mobile-first websites designed for Abu Dhabi businesses by Infynix Solutions.',
     intro: [
       'In Abu Dhabi\'s premium market, your website needs to match the quality and sophistication your customers expect.',
-      'Infynix Solutions designs and builds custom websites for Abu Dhabi businesses — mobile-first, SEO-ready and conversion-optimised.',
+      'Infynix Solutions designs and builds custom websites for Abu Dhabi businesses, mobile-first, SEO-ready and conversion-optimised.',
     ],
     servicesHeading: 'Web Design Services in Abu Dhabi',
     services: [

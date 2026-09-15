@@ -76,7 +76,7 @@ const ClientsSection = () => {
 
   return (
     <section className="clients-section" id="clients" style={{ background: '#007A5E', paddingTop: '10px' }}>
-      {/* CTA Card — "Let's create great things." */}
+      {/* CTA Card, "Let's create great things." */}
       <div className="cta-home-card" id="contact" style={{ margin: '20px auto 40px' }}>
         <h2 className="cta-home-heading">
           Let's create <em>great things.</em>
@@ -89,7 +89,7 @@ const ClientsSection = () => {
         </a>
       </div>
 
-      {/* Footer — inside clients section */}
+      {/* Footer, inside clients section */}
       <footer className="premium-footer spec-footer" style={{ padding: '40px 5% 30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           

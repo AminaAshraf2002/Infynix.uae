@@ -1,4 +1,4 @@
-// Sharjah Landing Pages — UAE
+// Sharjah Landing Pages, UAE
 
 export const sharjahPages = [
   {
@@ -9,12 +9,12 @@ export const sharjahPages = [
     service: 'Digital Marketing',
     category: 'marketing',
     title: 'Digital Marketing Agency in Sharjah | Infynix Solutions',
-    description: 'Infynix Solutions is a digital marketing agency serving Sharjah — SEO, paid ads, social media and marketing automation for UAE businesses.',
+    description: 'Infynix Solutions is a digital marketing agency serving Sharjah, SEO, paid ads, social media and marketing automation for UAE businesses.',
     h1: 'Digital Marketing Agency in Sharjah',
-    heroSubtitle: 'Performance marketing, SEO and automation for Sharjah businesses — built by Infynix Solutions UAE.',
+    heroSubtitle: 'Performance marketing, SEO and automation for Sharjah businesses, built by Infynix Solutions UAE.',
     intro: [
       'Sharjah is one of the fastest-growing Emirates, with a thriving business community that spans manufacturing, education, healthcare and retail. Digital marketing done right can give Sharjah businesses a significant competitive advantage.',
-      'Infynix Solutions delivers integrated digital marketing for Sharjah businesses — from SEO and Google Ads to social media and CRM automation. We build the tracking infrastructure first so every campaign dollar is accountable.',
+      'Infynix Solutions delivers integrated digital marketing for Sharjah businesses, from SEO and Google Ads to social media and CRM automation. We build the tracking infrastructure first so every campaign dollar is accountable.',
     ],
     servicesHeading: 'Digital Marketing Services in Sharjah',
     services: [
@@ -27,7 +27,7 @@ export const sharjahPages = [
     ],
     localHeading: 'Digital Marketing for Sharjah\'s Growing Economy',
     localBody: [
-      'Sharjah offers a unique business environment — lower costs than Dubai with access to the same UAE market. Smart digital marketing amplifies this advantage.',
+      'Sharjah offers a unique business environment, lower costs than Dubai with access to the same UAE market. Smart digital marketing amplifies this advantage.',
       'Our team understands Sharjah\'s distinct character and creates marketing strategies that resonate with both local businesses and the broader UAE audience.'
     ],
     faqs: [
@@ -49,12 +49,12 @@ export const sharjahPages = [
     service: 'SEO',
     category: 'marketing',
     title: 'SEO Company in Sharjah | Infynix Solutions',
-    description: 'SEO services in Sharjah — technical SEO, local search and content strategy by Infynix Solutions UAE.',
+    description: 'SEO services in Sharjah, technical SEO, local search and content strategy by Infynix Solutions UAE.',
     h1: 'SEO Company in Sharjah',
     heroSubtitle: 'Technical SEO, local search and content strategy for Sharjah businesses.',
     intro: [
       'Sharjah businesses are increasingly competing online. A strong SEO foundation ensures you capture high-intent traffic when potential customers search for your services.',
-      'Infynix Solutions provides comprehensive SEO for Sharjah businesses — from technical fixes to content creation and link building.',
+      'Infynix Solutions provides comprehensive SEO for Sharjah businesses, from technical fixes to content creation and link building.',
     ],
     servicesHeading: 'SEO Services in Sharjah',
     services: [
@@ -88,12 +88,12 @@ export const sharjahPages = [
     service: 'Web Design',
     category: 'technology',
     title: 'Web Design Company in Sharjah | Infynix Solutions',
-    description: 'Professional web design in Sharjah — responsive websites and UI/UX design by Infynix Solutions UAE.',
+    description: 'Professional web design in Sharjah, responsive websites and UI/UX design by Infynix Solutions UAE.',
     h1: 'Web Design Company in Sharjah',
     heroSubtitle: 'Professional, mobile-first websites for Sharjah businesses by Infynix Solutions.',
     intro: [
       'Your website is your most visible digital asset. In Sharjah\'s growing market, a professional, fast-loading website sets you apart from competitors.',
-      'Infynix Solutions designs and builds custom websites for Sharjah businesses — responsive, SEO-optimised and built for conversions.',
+      'Infynix Solutions designs and builds custom websites for Sharjah businesses, responsive, SEO-optimised and built for conversions.',
     ],
     servicesHeading: 'Web Design Services in Sharjah',
     services: [
@@ -127,12 +127,12 @@ export const sharjahPages = [
     service: 'Software Development',
     category: 'technology',
     title: 'Software Development Company in Sharjah | Infynix Solutions',
-    description: 'Custom software development in Sharjah — web apps, mobile apps and enterprise systems by Infynix Solutions UAE.',
+    description: 'Custom software development in Sharjah, web apps, mobile apps and enterprise systems by Infynix Solutions UAE.',
     h1: 'Software Development Company in Sharjah',
     heroSubtitle: 'Custom software, mobile apps and enterprise platforms for Sharjah businesses.',
     intro: [
       'Sharjah businesses need software that fits their exact workflows. Off-the-shelf tools cannot compete with custom-built systems.',
-      'Infynix Solutions builds custom software for Sharjah organisations — web applications, mobile apps, AI solutions and enterprise integrations.',
+      'Infynix Solutions builds custom software for Sharjah organisations, web applications, mobile apps, AI solutions and enterprise integrations.',
     ],
     servicesHeading: 'Software Development Services in Sharjah',
     services: [

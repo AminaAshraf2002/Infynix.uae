@@ -20,8 +20,8 @@ const marqueeItems = [
 ];
 
 const stats = [
-  { num: '7Ã—',   label: 'Stage Method' },
-  { num: '3Ã—',   label: 'Avg. Revenue Lift' },
+  { num: '7Ã, ',   label: 'Stage Method' },
+  { num: '3Ã, ',   label: 'Avg. Revenue Lift' },
   { num: '98%',  label: 'Client Retention' },
   { num: '150+', label: 'Systems Built' },
 ];
@@ -143,7 +143,7 @@ const GrowthEngineering = () => {
     <>
       <SEOManager
         title="Growth Engineering Company | Infynix"
-        description="Businesses don't struggle because they lack ambition. They struggle because technology, marketing, operations and data operate independently. Infynix engineers these into one system."
+        description="Businesses don't struggle because they lack ambition. They struggle because technology, marketing, operations and data operate independently."
         canonicalUrl="/growth-engineering"
         schemaData={schema}
       />

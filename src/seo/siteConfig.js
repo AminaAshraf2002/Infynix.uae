@@ -9,7 +9,7 @@ export const DEFAULT_TITLE =
   'Growth Engineering Agency Dubai | Infynix Solutions';
 
 export const DEFAULT_DESCRIPTION =
-  'Infynix is a growth engineering agency serving Dubai and the UAE — web development, AI automation, CRM integration and performance marketing.';
+  'Infynix is a growth engineering agency serving Dubai and the UAE, web development, AI automation, CRM integration and performance marketing.';
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 

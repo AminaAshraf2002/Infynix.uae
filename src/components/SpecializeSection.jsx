@@ -82,7 +82,7 @@ const SpecializeSection = () => {
           maxWidth: '1000px',
           lineHeight: 1.7
         }}>
-          Infynix Solutions delivers end-to-end Growth Engineering — combining custom software development, AI-driven automation, performance marketing, and enterprise-grade systems architecture into one connected growth engine. We help healthcare providers, educational institutions, real estate firms, manufacturers, and retail brands replace fragmented tools with intelligent, integrated systems that reduce operational overhead and accelerate measurable business outcomes. From AI Surveillance and Attendance Systems to custom CRM/ERP development, cloud infrastructure, and technical SEO, our engineering-first approach ensures every solution is built to scale alongside your business — not just today, but for the next stage of growth.
+          Infynix Solutions delivers end-to-end Growth Engineering, combining custom software development, AI-driven automation, performance marketing, and enterprise-grade systems architecture into one connected growth engine. We help healthcare providers, educational institutions, real estate firms, manufacturers, and retail brands replace fragmented tools with intelligent, integrated systems that reduce operational overhead and accelerate measurable business outcomes. From AI Surveillance and Attendance Systems to custom CRM/ERP development, cloud infrastructure, and technical SEO, our engineering-first approach ensures every solution is built to scale alongside your business, not just today, but for the next stage of growth.
         </p> */}
 
         {/* <div data-aos-delay="250" data-aos="fade-up" style={{

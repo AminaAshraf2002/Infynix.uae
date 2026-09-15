@@ -21,7 +21,7 @@ const featured = {
   icon: '🤖',
   tag: 'AI & Future of Software',
   title: 'How Generative AI Is Reshaping Enterprise Software Development in 2025',
-  desc: 'From AI pair-programmers to fully autonomous agents, we examine the tectonic shift happening inside engineering teams — and what it means for business leaders who want to stay ahead.',
+  desc: 'From AI pair-programmers to fully autonomous agents, we examine the tectonic shift happening inside engineering teams, and what it means for business leaders who want to stay ahead.',
   meta: 'June 2025 · 8 min read',
 };
 

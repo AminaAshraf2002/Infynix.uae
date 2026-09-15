@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   InfynixDesign.css  —  "Digital Momentum" Design System
+   InfynixDesign.css ,  "Digital Momentum" Design System
    Primary: #007A5E  |  Accent: #00a87a  |  Dark: #0d2318
    ═══════════════════════════════════════════════════════════ */
 
@@ -7,7 +7,7 @@
 
 /* ── TOKENS ── */
 :root {
-  /* Primary palette — teal-green focused */
+  /* Primary palette, teal-green focused */
   --ix-primary:     #007A5E;
   --ix-primary-dk:  #005c47;
   --ix-primary-lt:  #00a87a;
@@ -22,7 +22,7 @@
   --ix-border:  rgba(0, 122, 94, 0.12);
   --ix-border-n: rgba(0,0,0,0.08);
 
-  /* Dark — used selectively for hero / CTA only */
+  /* Dark, used selectively for hero / CTA only */
   --ix-dark:   #0d2318;         /* deep teal-black */
   --ix-dark-2: #142d20;
   --ix-dark-border: rgba(255,255,255,0.1);
@@ -136,7 +136,7 @@
   overflow: hidden;
 }
 
-/* Glass card — for dark sections */
+/* Glass card, for dark sections */
 .ix-glass {
   background: rgba(255,255,255,0.05);
   border: 1px solid var(--ix-dark-border);
@@ -145,7 +145,7 @@
   border-radius: 20px;
 }
 
-/* Soft card — for light sections */
+/* Soft card, for light sections */
 .ix-soft-card {
   background: var(--ix-white);
   border: 1px solid var(--ix-border-n);

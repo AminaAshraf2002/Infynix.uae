@@ -114,13 +114,13 @@
 /* ============================================================
    FULL RESPONSIVE
    Breakpoints:
-     xs  : < 480px        (Mobile S — iPhone SE)
-     sm  : 480px–639px    (Mobile L — iPhone Pro Max)
-     md  : 640px–767px    (Tablet S — iPad mini portrait)
-     lg  : 768px–1023px   (Tablet L — iPad landscape)
-     xl  : 1024px–1279px  (Desktop — 13" MacBook)
-     2xl : 1280px–1535px  (Large desktop — 1440p iMac)
-     3xl : 1536px+        (Ultra-wide — 4K)
+     xs  : < 480px        (Mobile S, iPhone SE)
+     sm  : 480px-639px    (Mobile L, iPhone Pro Max)
+     md  : 640px-767px    (Tablet S, iPad mini portrait)
+     lg  : 768px-1023px   (Tablet L, iPad landscape)
+     xl  : 1024px-1279px  (Desktop, 13" MacBook)
+     2xl : 1280px-1535px  (Large desktop, 1440p iMac)
+     3xl : 1536px+        (Ultra-wide, 4K)
    ============================================================ */
 
 /* ======================================================
@@ -165,7 +165,7 @@
 }
 
 /* ======================================================
-   LARGE DESKTOP  2xl  1280px–1535px
+   LARGE DESKTOP  2xl  1280px-1535px
    ====================================================== */
 @media (min-width: 1280px) and (max-width: 1535px) {
     .news-layout {
@@ -198,7 +198,7 @@
 }
 
 /* ======================================================
-   DESKTOP  xl  1024px–1279px
+   DESKTOP  xl  1024px-1279px
    ====================================================== */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .news-layout {
@@ -238,7 +238,7 @@
 }
 
 /* ======================================================
-   TABLET L  lg  768px–1023px
+   TABLET L  lg  768px-1023px
    ====================================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
     .news-layout {
@@ -285,7 +285,7 @@
 }
 
 /* ======================================================
-   TABLET S  md  640px–767px
+   TABLET S  md  640px-767px
    ====================================================== */
 @media (min-width: 640px) and (max-width: 767px) {
     .news-layout {
@@ -337,7 +337,7 @@
 }
 
 /* ======================================================
-   MOBILE L  sm  480px–639px
+   MOBILE L  sm  480px-639px
    ====================================================== */
 @media (min-width: 480px) and (max-width: 639px) {
     .news-layout {

@@ -65,7 +65,7 @@
   box-shadow: 0 4px 15px rgba(204, 255, 0, 0.4);
 }
 
-/* Track wrapper — matches .timeline-container exactly, no independent width */
+/* Track wrapper, matches .timeline-container exactly, no independent width */
 .timeline-track-wrapper {
   position: absolute;
   top: 0;

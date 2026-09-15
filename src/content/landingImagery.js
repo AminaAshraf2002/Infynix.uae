@@ -1,4 +1,4 @@
-// Imagery for the location landing pages — UAE edition.
+// Imagery for the location landing pages. UAE edition.
 // Reusing the same optimised WebP images from the shared asset pool.
 
 import marketing from '../assets/lp/lp-marketing.webp';

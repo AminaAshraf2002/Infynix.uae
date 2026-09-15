@@ -22,7 +22,7 @@ const About = () => {
 
   const features = [
     'Agile delivery with sprint-based execution and continuous feedback loops',
-    'Dedicated senior engineers — no juniors on critical paths',
+    'Dedicated senior engineers, no juniors on critical paths',
     'Transparent communication with real-time dashboards and weekly demos',
     'Post-launch support, monitoring, and iterative optimisation',
   ];
@@ -37,7 +37,7 @@ const About = () => {
   return (
     <section className="about-section section--white" id="about" ref={ref} aria-labelledby="about-heading">
       <div className="container">
-        {/* Block 1 — image left, text right */}
+        {/* Block 1, image left, text right */}
         <div className="about-inner">
           <div className="about-visual" data-aos="fade-left">
             <div className="about-img-placeholder">
@@ -77,7 +77,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Block 2 — text left, image right */}
+        {/* Block 2, text left, image right */}
         <div className="about-inner" style={{ marginTop: '100px' }}>
           <div className="about-content" data-aos="fade-left">
             <span className="micro-label">Our Approach</span>

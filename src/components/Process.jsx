@@ -26,7 +26,7 @@ const steps = [
   {
     num: '02',
     title: 'Design',
-    desc: 'Our architects and UX designers create a detailed blueprint — system design, data models, API contracts, and interactive prototypes for stakeholder sign-off.',
+    desc: 'Our architects and UX designers create a detailed blueprint, system design, data models, API contracts, and interactive prototypes for stakeholder sign-off.',
   },
   {
     num: '03',
@@ -52,7 +52,7 @@ const Process = () => {
             Our Engagement <span>Model</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            A proven, repeatable process honed over 12 years and 150+ projects — designed to reduce risk and maximise value at every stage.
+            A proven, repeatable process honed over 12 years and 150+ projects, designed to reduce risk and maximise value at every stage.
           </p>
         </div>
 

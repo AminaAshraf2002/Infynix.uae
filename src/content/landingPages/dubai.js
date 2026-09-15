@@ -1,4 +1,4 @@
-// Dubai Landing Pages — UAE
+// Dubai Landing Pages, UAE
 
 export const dubaiPages = [
   {
@@ -53,12 +53,12 @@ export const dubaiPages = [
     service: 'Software Development',
     category: 'technology',
     title: 'Software Development Company in Dubai | Infynix Solutions',
-    description: 'Custom software development in Dubai — web applications, mobile apps, AI systems and enterprise platforms by Infynix Solutions.',
+    description: 'Custom software development in Dubai, web applications, mobile apps, AI systems and enterprise platforms by Infynix Solutions.',
     h1: 'Software Development Company in Dubai',
     heroSubtitle: 'Custom web applications, mobile apps, AI-powered systems and enterprise platforms engineered from our Dubai office for businesses across the UAE.',
     intro: [
       'Off-the-shelf software rarely fits. Dubai businesses operating at scale need systems that match their exact workflows, compliance requirements, and growth trajectory.',
-      'Infynix Solutions builds custom software from our Business Bay office in Dubai. We handle the full lifecycle — discovery, architecture, development, QA, deployment and ongoing support — so you get a system that works the way your business actually operates.',
+      'Infynix Solutions builds custom software from our Business Bay office in Dubai. We handle the full lifecycle, discovery, architecture, development, QA, deployment and ongoing support, so you get a system that works the way your business actually operates.',
       'Our engineering team serves retail chains, healthcare providers, real estate developers, logistics firms, and high-growth startups across the UAE.'
     ],
     servicesHeading: 'Software Development Services in Dubai',
@@ -97,7 +97,7 @@ export const dubaiPages = [
     service: 'SEO',
     category: 'marketing',
     title: 'SEO Company in Dubai | Infynix Solutions',
-    description: 'Expert SEO services in Dubai — technical SEO, local search, content strategy and link building by Infynix Solutions.',
+    description: 'Expert SEO services in Dubai, technical SEO, local search, content strategy and link building by Infynix Solutions.',
     h1: 'SEO Company in Dubai',
     heroSubtitle: 'Technical SEO, local search optimisation, content strategy and authority building for Dubai businesses looking to dominate Google search results.',
     intro: [
@@ -141,7 +141,7 @@ export const dubaiPages = [
     service: 'Web Design',
     category: 'technology',
     title: 'Web Design Company in Dubai | Infynix Solutions',
-    description: 'Premium web design in Dubai — responsive websites, UI/UX design, and conversion-optimised landing pages by Infynix Solutions.',
+    description: 'Premium web design in Dubai, responsive websites, UI/UX design, and conversion-optimised landing pages by Infynix Solutions.',
     h1: 'Web Design Company in Dubai',
     heroSubtitle: 'Premium, conversion-focused websites designed and built from our Business Bay studio for businesses across Dubai and the UAE.',
     intro: [

@@ -172,7 +172,7 @@ const SolutionsIndex = () => {
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '1400px', width: '100%' }}>
           <h1 className="solutions-index-h1" data-aos="fade-up" style={{ fontWeight: 400, margin: 0, lineHeight: 1.1, letterSpacing: '-0.03em' }}>
             Digital Agency Services in Dubai <br />
-            <span style={{ color: '#aaa' }}>Infynix Solutions — The Growth Engineering Company</span>
+            <span style={{ color: '#aaa' }}>Infynix Solutions, The Growth Engineering Company</span>
           </h1>
         </div>
       </section>
@@ -181,7 +181,7 @@ const SolutionsIndex = () => {
       <section style={{ padding: '120px 5%', borderBottom: '1px dashed #333' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <p data-aos="fade-up" data-aos-delay="100" style={{ fontSize: 'clamp(1.25rem, 3vw, 2rem)', fontWeight: 400, margin: 0, lineHeight: 1.4, letterSpacing: '-0.01em', color: '#fff' }}>
-            Infynix is a growth engineering and <Link to="/solutions/infynix-agency" style={{ color: '#00A880', textDecoration: 'none' }}>performance marketing agency Dubai</Link> built around three connected service divisions. Whether you need a <Link to="/solutions/infynix-agency" style={{ color: '#00A880', textDecoration: 'none' }}>performance marketing</Link> partner, a media production team, or a software engineering partner with <Link to="/solutions/infynix-growth-solutions" style={{ color: '#00A880', textDecoration: 'none' }}>CRM integration</Link> capabilities, our divisions work together — or independently — to move your business forward.
+            Infynix is a growth engineering and <Link to="/solutions/infynix-agency" style={{ color: '#00A880', textDecoration: 'none' }}>performance marketing agency Dubai</Link> built around three connected service divisions. Whether you need a <Link to="/solutions/infynix-agency" style={{ color: '#00A880', textDecoration: 'none' }}>performance marketing</Link> partner, a media production team, or a software engineering partner with <Link to="/solutions/infynix-growth-solutions" style={{ color: '#00A880', textDecoration: 'none' }}>CRM integration</Link> capabilities, our divisions work together, or independently, to move your business forward.
           </p>
         </div>
       </section>

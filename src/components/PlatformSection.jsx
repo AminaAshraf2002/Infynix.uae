@@ -46,8 +46,7 @@ const PlatformSection = () => {
             </span>
           </h2>
           <p className="platform-desc fade-up d3">
-            Our dedicated innovation team researches and integrates emerging technologies —
-            from generative AI to edge computing — so your products are built not just for today,
+            Our dedicated innovation team researches and integrates emerging technologies, from generative AI to edge computing, so your products are built not just for today,
             but for the future.
           </p>
 

@@ -522,7 +522,7 @@
   flex: 1;
 }
 
-/* Left circle — UNCHANGED */
+/* Left circle, UNCHANGED */
 .wwa-culture-left {
   display: flex;
   align-items: center;
@@ -579,7 +579,7 @@
   height: 100%;
 }
 
-/* Right cards — CARD ANIMATION UPDATED */
+/* Right cards, CARD ANIMATION UPDATED */
 .wwa-culture-cards {
   display: flex;
   flex-direction: column;
@@ -736,7 +736,7 @@ transform: translateY(0) scale(1);
   .kitchen-title h1 { font-size: 10rem; }
 }
 
-/* ── 2xl 1280px–1535px ── */
+/* ── 2xl 1280px-1535px ── */
 @media (min-width: 1280px) and (max-width: 1535px) {
   .wwa-hero { padding: 140px 100px 100px; }
   .wwa-hero-inner { margin-left: 80px; }
@@ -749,7 +749,7 @@ transform: translateY(0) scale(1);
   .wwa-stats-grid { margin-left: 120px; }
 }
 
-/* ── xl 1024px–1279px ── */
+/* ── xl 1024px-1279px ── */
 @media (min-width: 1024px) and (max-width: 1279px) {
   .wwa-hero { padding: 120px 60px 80px; }
   .wwa-hero-inner { margin-left: 40px; }
@@ -780,7 +780,7 @@ transform: translateY(0) scale(1);
   .wwa-cta-box { max-width: 880px; }
 }
 
-/* ── lg 768px–1023px ── */
+/* ── lg 768px-1023px ── */
 @media (min-width: 768px) and (max-width: 1023px) {
   .wwa-hero { padding: 100px 48px 72px; min-height: 90vh; align-items: flex-end; }
   .wwa-hero-inner { margin-left: 0; }
@@ -829,7 +829,7 @@ transform: translateY(0) scale(1);
   .wwa-cta-box { max-width: 720px; padding: 2.5rem 2rem; }
 }
 
-/* ── md 640px–767px ── */
+/* ── md 640px-767px ── */
 @media (min-width: 640px) and (max-width: 767px) {
   .wwa-hero { padding: 90px 36px 60px; min-height: 85vh; }
   .wwa-hero-inner { margin-left: 0; }
@@ -881,7 +881,7 @@ transform: translateY(0) scale(1);
   .wwa-cta-title { font-size: clamp(1.5rem, 5vw, 2.4rem); margin-bottom: 2rem; }
 }
 
-/* ── sm 480px–639px ── */
+/* ── sm 480px-639px ── */
 @media (min-width: 480px) and (max-width: 639px) {
   .wwa-hero { padding: 80px 24px 52px; min-height: 80vh; align-items: flex-start; padding-top: 100px; }
   .wwa-hero-inner { margin-left: 0; }

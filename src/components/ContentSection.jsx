@@ -4,7 +4,7 @@ const featured = {
   icon: '🤖',
   tag: 'AI & Engineering',
   title: 'How Generative AI Is Reshaping Enterprise Software Development',
-  desc: `From AI pair-programmers to autonomous agents — we examine the tectonic shift happening inside engineering teams and what it means for business leaders who want to stay ahead.`,
+  desc: `From AI pair-programmers to autonomous agents. We examine the tectonic shift happening inside engineering teams and what it means for business leaders who want to stay ahead.`,
   meta: 'June 2025 · 8 min read',
   bg: 'linear-gradient(135deg, #EBF4FF 0%, #DBEAFE 100%)',
 };
