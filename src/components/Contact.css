@@ -269,6 +269,35 @@ a.sidebar-query-val:hover { color: #007A5E; }
     border-color: #A7D600;
 }
 
+/* Contact page social icons */
+.contact-socials {
+    display: flex;
+    gap: 0.65rem;
+    margin-top: 0.5rem;
+}
+
+.contact-social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a5568;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.contact-social-link:hover {
+    background: #007A5E;
+    border-color: #007A5E;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 122, 94, 0.25);
+}
+
 /* Green discovery card */
 .sidebar-green {
     background: #007A5E;

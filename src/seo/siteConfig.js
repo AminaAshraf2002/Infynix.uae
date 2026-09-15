@@ -44,8 +44,9 @@ export const BUSINESS = {
 export const GOOGLE_BUSINESS_PROFILE = 'https://share.google/ey1Jfvouw3GLkRGzF';
 
 export const SOCIAL_PROFILES = [
-  'https://www.linkedin.com/company/infynix-solutions',
-  'https://www.instagram.com/infynixsolutions',
+  'https://www.linkedin.com/company/infynix-solutions-uae/',
+  'https://www.instagram.com/infynixsolutions.ae/',
+  'https://www.facebook.com/people/Infynix-Solutions-UAE/61584754534164/',
   GOOGLE_BUSINESS_PROFILE,
 ];
 

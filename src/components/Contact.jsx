@@ -28,8 +28,9 @@ const offices = [
     {
         city: "London",
         label: "UK Office",
-        desc: "1-75 Shelton St, London, WC2H 9JQ. Our European delivery and consulting center directing international operations and strategy.",
+        desc: "68 Endsleigh Gardens, Ilford IG1 3EG, United Kingdom. Our European delivery and consulting center directing international operations and strategy.",
         image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=900&q=80",
+        mapUrl: "https://maps.google.com/?q=68+Endsleigh+Gardens,+Ilford+IG1+3EG,+United+Kingdom"
     },
     {
         city: "Kochi",
@@ -188,6 +189,47 @@ export default function Contact() {
                                 <a href="mailto:careers@infynixsolutions.ae" className="sidebar-careers-btn">
                                     Careers <ArrowIcon />
                                 </a>
+                            </div>
+                            <div className="sidebar-divider" />
+                            <div className="sidebar-query-block">
+                                <p className="sidebar-query-title">Follow Us</p>
+                                <div className="contact-socials">
+                                    <a
+                                        href="https://www.linkedin.com/company/infynix-solutions-uae/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="LinkedIn"
+                                        className="contact-social-link"
+                                    >
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/infynixsolutions.ae/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Instagram"
+                                        className="contact-social-link"
+                                    >
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://www.facebook.com/people/Infynix-Solutions-UAE/61584754534164/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Facebook"
+                                        className="contact-social-link"
+                                    >
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
