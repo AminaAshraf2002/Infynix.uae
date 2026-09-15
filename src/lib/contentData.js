@@ -67,7 +67,7 @@ export const solutionsData = {
     outcome: 'Streamlined daily work, lower operating costs, and software built to scale with your business.',
     capabilities: [
       { title: 'Custom Web & Mobile Applications', desc: 'Fast React, Next.js, and mobile applications built for speed, security, and sub-second load times.' },
-      { title: 'AI Surveillance & Vision Systems', desc: 'Real-time threat detection, edge AI processing on local hardware, and smart CCTV camera integration.' },
+      { title: 'AI Surveillance & Vision Systems', desc: 'Real-time threat detection, edge AI processing on local hardware, and existing camera integration.' },
       { title: 'AI Agents & Automation', desc: 'Custom AI agents and API integrations connecting your CRM, communication, and internal tools.' },
       { title: 'API & Database Infrastructure', desc: 'Secure backend development and custom database management.' }
     ],
@@ -78,20 +78,20 @@ export const solutionsData = {
   'ai-surveillance': {
     title: 'AI Surveillance & Security Solutions',
     category: 'Surveillance',
-    keywords: ['AI Surveillance', 'Computer Vision Security', 'Smart CCTV Analytics', 'NVIDIA Jetson AI', 'Object Threat Detection', 'Edge AI Vision'],
+    keywords: ['AI Surveillance', 'Computer Vision Security', 'Video Analytics', 'NVIDIA Jetson AI', 'Object Threat Detection', 'Edge AI Vision'],
     description: 'Real-time AI computer vision security, local edge processing, and automated threat alerts for commercial facilities.',
-    challenge: 'Traditional CCTV requires constant human monitoring and usually only records incidents after they happen.',
+    challenge: 'Traditional video surveillance requires constant human monitoring and usually only records incidents after they happen.',
     insight: 'Active security uses AI computer vision to detect threats automatically and alert your team in real time.',
-    solution: 'We deploy custom AI vision models on local edge hardware (like NVIDIA Jetson) connected directly to your existing CCTV cameras.',
+    solution: 'We deploy custom AI vision models on local edge hardware (like NVIDIA Jetson) connected directly to your existing IP cameras.',
     outcome: 'Instant threat alerts, lower monitoring costs, and private, local video processing.',
     capabilities: [
       { title: 'Real-Time Threat Detection', desc: 'Automated perimeter monitoring, intrusion alerts, and motion anomaly detection.' },
       { title: 'Edge Hardware Processing', desc: 'Running vision AI locally on NVIDIA Jetson hardware for zero latency and complete privacy.' },
-      { title: 'CCTV Camera Integration', desc: 'Connecting directly to existing IP and CCTV cameras without replacing hardware.' },
+      { title: 'Camera Integration', desc: 'Connecting directly to existing existing IP cameras without replacing hardware.' },
       { title: 'Instant Mobile Alerts', desc: 'Real-time SMS and app notifications when security boundaries are crossed.' }
     ],
     faqs: [
-      { q: 'Does this work with existing cameras?', a: 'Yes, our vision software connects directly to standard CCTV and IP camera streams.' },
+      { q: 'Does this work with existing cameras?', a: 'Yes, our vision software connects directly to standard video surveillance and IP camera streams.' },
       { q: 'Is video sent to external servers?', a: 'No. Video analytics process locally on your on-site edge hardware for privacy.' }
     ]
   },
@@ -582,9 +582,9 @@ export const insightsData = [
     slug: 'ai-surveillance-computer-vision-security',
     title: 'How Real-Time AI Computer Vision Improves Facility Security',
     category: 'AI Surveillance',
-    summary: 'Discover how edge-processed AI computer vision on local devices turns CCTV into active security.',
+    summary: 'Discover how edge-processed AI computer vision on local devices turns video surveillance into active security.',
     content: `
-      Traditional CCTV cameras only record video. Security teams usually review footage after an incident has already happened.
+      Traditional video surveillance cameras only record video. Security teams usually review footage after an incident has already happened.
       
       AI computer vision changes this. By running AI vision models on local edge hardware like NVIDIA Jetson, your cameras process video streams in real time.
       

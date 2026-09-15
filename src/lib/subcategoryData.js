@@ -77,15 +77,15 @@ export const subcategoryData = {
     title: 'AI Surveillance & Security Solutions',
     category: 'Surveillance',
     keywords: ['AI Surveillance', 'Computer Vision', 'Edge AI Security', 'NVIDIA Jetson'],
-    description: 'Real-time AI computer vision security, boundary threat alerts, and smart CCTV camera integration.',
-    challenge: 'Traditional CCTV requires constant manual monitoring and only records video after incidents occur.',
+    description: 'Real-time AI computer vision security, boundary threat alerts, and existing camera integration.',
+    challenge: 'Traditional video surveillance requires constant manual monitoring and only records video after incidents occur.',
     insight: 'Active security uses AI computer vision to detect threat events automatically in real time.',
-    solution: 'We deploy custom AI vision models on local edge hardware connected to your existing CCTV cameras.',
+    solution: 'We deploy custom AI vision models on local edge hardware connected to your existing IP cameras.',
     outcome: 'Instant boundary breach alerts, lower monitoring costs, and private on-site processing.',
     capabilities: [
       { title: 'Intrusion Threat Detection', desc: 'Automated perimeter monitoring, boundary breach alerts, and motion detection.' },
       { title: 'Local Edge Processing', desc: 'Running vision AI on NVIDIA Jetson hardware for zero latency and privacy.' },
-      { title: 'CCTV Camera Integration', desc: 'Connecting directly to existing IP cameras without hardware replacement.' },
+      { title: 'Camera Integration', desc: 'Connecting directly to existing IP cameras without hardware replacement.' },
       { title: 'Real-Time App Alerts', desc: 'Instant mobile notifications and security management dashboards.' }
     ],
     workingSteps: [
