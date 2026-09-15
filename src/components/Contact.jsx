@@ -28,7 +28,7 @@ const offices = [
     {
         city: "London",
         label: "UK Office",
-        desc: "68 Endsleigh Gardens, Ilford, London IG1 3EG. Our European delivery and consulting center directing international operations and strategy.",
+        desc: "39 Becontree Avenue, Dagenham, London RM8 2UH. Our European delivery and consulting center directing international operations and strategy.",
         image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=900&q=80",
     },
     {
