@@ -4,7 +4,7 @@ import { solutionsData, caseStudiesData } from '../lib/contentData';
 import Seo from '../seo/Seo';
 import { divisionForSlug, isDivision, getDivision, servicesInDivision } from '../content/divisions';
 import { SITE_URL } from '../seo/siteConfig';
-import { organizationSchema, serviceSchema, breadcrumbSchema } from '../seo/schema';
+import { organizationSchema, serviceSchema, breadcrumbSchema, faqSchema } from '../seo/schema';
 import defaultHeroBg from '../assets/hero_bg_abstract.jpg';
 import capImg1 from '../assets/cap_img_1.jpg';
 import capImg2 from '../assets/cap_img_2.jpg';
@@ -294,8 +294,36 @@ const SolutionsPage = () => {
                   { name: data.title, path: `/solutions/${activeSlug}` },
                 ]
           ),
+          // FAQPage is only valid when the answers are visible on the page, so
+          // this is emitted alongside the rendered section below, never on its own.
+          data.faqs && data.faqs.length
+            ? faqSchema(data.faqs.map((f) => ({ question: f.q, answer: f.a })))
+            : null,
         ]}
       />
+
+      {data.faqs && data.faqs.length > 0 && (
+        <section style={{ background: '#fff', padding: '90px 5%', borderTop: '1px solid #e5e7eb' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 'clamp(1.5rem, 3vw, 2.1rem)', fontWeight: 800, letterSpacing: '-0.02em', margin: '0 0 28px', color: '#10201a' }}>
+              {data.title} questions
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {data.faqs.map((faq, i) => (
+                <details key={i} style={{ border: '1px solid #e5e7eb', borderRadius: '12px', padding: '18px 22px', background: '#fff' }}>
+                  {/* The answer stays in the DOM whether or not the item is open,
+                      so crawlers read it and the FAQPage markup matches what is
+                      visible. */}
+                  <summary style={{ cursor: 'pointer', listStyle: 'none', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#10201a' }}>
+                    <h3 style={{ display: 'inline', fontSize: '1rem', margin: 0, fontWeight: 700 }}>{faq.q}</h3>
+                  </summary>
+                  <p style={{ margin: '14px 0 0', color: '#4b5563', lineHeight: 1.7, fontSize: '0.95rem' }}>{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Division context. A service page names the business unit it belongs to;
           a hub page lists the services it owns. Without this the site reads as
