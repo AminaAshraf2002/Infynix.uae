@@ -45,7 +45,10 @@ export const GOOGLE_BUSINESS_PROFILE = 'https://share.google/ey1Jfvouw3GLkRGzF';
 
 export const SOCIAL_PROFILES = [
   'https://www.linkedin.com/company/infynix-solutions',
-  'https://www.instagram.com/infynixsolutions',
+  'https://www.instagram.com/infynix_growth_solutions',
+  // The UAE entity's own Facebook page. Listed here rather than on the India
+  // or UK sites, because sameAs should describe the entity the site is about.
+  'https://www.facebook.com/profile.php?id=61584754534164',
   GOOGLE_BUSINESS_PROFILE,
 ];
 
