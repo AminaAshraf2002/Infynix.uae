@@ -185,7 +185,7 @@ export default function Contact() {
                             <div className="sidebar-query-block">
                                 <p className="sidebar-query-title">General Queries &amp; Support</p>
                                 <a href="mailto:office@infynixsolutions.ae" className="sidebar-query-val">office@infynixsolutions.ae</a>
-                                <a href="mailto:careers@infynixsolutions.ae" className="sidebar-careers-btn">
+                                <a href="mailto:office@infynixsolutions.ae" className="sidebar-careers-btn">
                                     Careers <ArrowIcon />
                                 </a>
                             </div>
