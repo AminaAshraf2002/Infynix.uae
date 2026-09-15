@@ -172,7 +172,14 @@ const Navbar = () => {
                             <img src={item.icon} alt={item.title} style={{ width: 40, height: 40, borderRadius: '10px', objectFit: 'cover' }} />
                             <div>
                               <div style={{ fontSize: '15px', fontFamily: "'Montserrat', sans-serif", fontWeight: 600, color: '#111', marginBottom: '4px' }}>{item.title}</div>
-                              <div style={{ fontSize: '14px', color: '#000', lineHeight: 1.4 }}>{item.desc}</div>
+                              {/* Rendered only while the menu is open. These eight
+                                  descriptions sat in the DOM on every page, so the
+                                  first ~780 characters any crawler or language model
+                                  read were navigation copy rather than positioning.
+                                  The links and titles stay, so nothing loses crawl. */}
+                              {dropdownOpen && (
+                                <div style={{ fontSize: '14px', color: '#000', lineHeight: 1.4 }}>{item.desc}</div>
+                              )}
                             </div>
                           </Link>
                         ))}
@@ -184,7 +191,14 @@ const Navbar = () => {
                             <img src={item.icon} alt={item.title} style={{ width: 40, height: 40, borderRadius: '10px', objectFit: 'cover' }} />
                             <div>
                               <div style={{ fontSize: '15px', fontFamily: "'Montserrat', sans-serif", fontWeight: 600, color: '#111', marginBottom: '4px' }}>{item.title}</div>
-                              <div style={{ fontSize: '14px', color: '#000', lineHeight: 1.4 }}>{item.desc}</div>
+                              {/* Rendered only while the menu is open. These eight
+                                  descriptions sat in the DOM on every page, so the
+                                  first ~780 characters any crawler or language model
+                                  read were navigation copy rather than positioning.
+                                  The links and titles stay, so nothing loses crawl. */}
+                              {dropdownOpen && (
+                                <div style={{ fontSize: '14px', color: '#000', lineHeight: 1.4 }}>{item.desc}</div>
+                              )}
                             </div>
                           </Link>
                         ))}

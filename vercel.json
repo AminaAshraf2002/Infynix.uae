@@ -62,6 +62,101 @@
       "source": "/solutions/marketing-business-automation",
       "destination": "/solutions/business-automation",
       "permanent": true
+    },
+    {
+      "source": "/pages/E-Commerce/erp-integration.html",
+      "destination": "/solutions/crm-erp-development",
+      "permanent": true
+    },
+    {
+      "source": "/pages/E-Commerce/:slug*",
+      "destination": "/solutions/website-development",
+      "permanent": true
+    },
+    {
+      "source": "/pages/ERP/:slug*",
+      "destination": "/solutions/crm-erp-development",
+      "permanent": true
+    },
+    {
+      "source": "/pages/CRM/:slug*",
+      "destination": "/solutions/crm-erp-development",
+      "permanent": true
+    },
+    {
+      "source": "/pages/Web/:slug*",
+      "destination": "/solutions/website-development",
+      "permanent": true
+    },
+    {
+      "source": "/pages/Mobile/:slug*",
+      "destination": "/solutions/mobile-app-development",
+      "permanent": true
+    },
+    {
+      "source": "/pages/Marketing/:slug*",
+      "destination": "/solutions/performance-marketing",
+      "permanent": true
+    },
+    {
+      "source": "/pages/SEO/:slug*",
+      "destination": "/solutions/seo-services",
+      "permanent": true
+    },
+    {
+      "source": "/pages/Cloud/:slug*",
+      "destination": "/solutions/cloud-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/pages/AI/:slug*",
+      "destination": "/solutions/artificial-intelligence",
+      "permanent": true
+    },
+    {
+      "source": "/pages/:slug*",
+      "destination": "/solutions",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:slug*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:slug*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:slug*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug*",
+      "destination": "/insights",
+      "permanent": true
     }
   ],
   "headers": [
