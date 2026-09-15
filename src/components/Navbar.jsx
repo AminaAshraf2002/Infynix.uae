@@ -30,13 +30,18 @@ const Navbar = () => {
   const [visible, setVisible] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileIndOpen, setMobileIndOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  // Guarded for the prerender pass, which renders this component in Node where
+  // there is no window. Corrected on mount by the resize effect below.
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth <= 1024 : false
+  );
   const hoverTimeout = useRef(null);
   const lastScrollY = useRef(0);
   const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);

@@ -435,7 +435,7 @@ const GrowthEngineering = () => {
               letterSpacing: '-0.02em',
               lineHeight: 1.1,
             }}>
-              The Infynix Growth<br />
+              The Infynix Growth{' '}<br />
               <em style={{ fontFamily: 'var(--ix-font-serif)', fontStyle: 'italic', fontWeight: 400 }}>Engineering Method</em>
             </h2>
             <p data-aos="fade-up" data-aos-delay="100" style={{ fontFamily: 'var(--ix-font-body)', fontSize: '1.05rem', color: '#555', marginTop: '1rem', maxWidth: '750px', lineHeight: 1.6 }}>

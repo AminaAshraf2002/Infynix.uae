@@ -11,7 +11,7 @@ export const PrivacyPolicy = () => {
       <div style={{ position: 'absolute', left: 'clamp(20px, 4vw, 60px)', top: 0, bottom: 0, borderLeft: '1.5px dashed rgba(0,0,0,0.11)', pointerEvents: 'none', zIndex: 1 }} />
       <div style={{ position: 'absolute', right: 'clamp(20px, 4vw, 60px)', top: 0, bottom: 0, borderRight: '1.5px dashed rgba(0,0,0,0.11)', pointerEvents: 'none', zIndex: 1 }} />
 
-      <SEOManager title="Privacy Policy | Infynix" description="Learn how Infynix handles and protects your user and operational data." />
+      <SEOManager title="Privacy Policy | Infynix Solutions" description="How Infynix Solutions handles and protects your user and operational data." canonicalUrl="/privacy-policy" noindex />
       <div className="news-article" style={{ position: 'relative', zIndex: 2, maxWidth: '860px', margin: '0 auto' }}>
         <h1 className="news-title" style={{ marginTop: 0 }}>Privacy Policy</h1>
         <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '30px' }}>Last updated: June 30, 2026</p>
@@ -66,7 +66,7 @@ export const TermsOfService = () => {
       <div style={{ position: 'absolute', left: 'clamp(20px, 4vw, 60px)', top: 0, bottom: 0, borderLeft: '1.5px dashed rgba(0,0,0,0.11)', pointerEvents: 'none', zIndex: 1 }} />
       <div style={{ position: 'absolute', right: 'clamp(20px, 4vw, 60px)', top: 0, bottom: 0, borderRight: '1.5px dashed rgba(0,0,0,0.11)', pointerEvents: 'none', zIndex: 1 }} />
 
-      <SEOManager title="Terms of Service | Infynix" description="Read the terms and conditions governing the use of Infynix web services." />
+      <SEOManager title="Terms of Service | Infynix Solutions" description="The terms and conditions governing use of Infynix Solutions web services." canonicalUrl="/terms-of-service" noindex />
       <div className="news-article" style={{ position: 'relative', zIndex: 2, maxWidth: '860px', margin: '0 auto' }}>
         <h1 className="news-title" style={{ marginTop: 0 }}>Terms of Service</h1>
         <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '30px' }}>Last updated: June 30, 2026</p>
@@ -108,7 +108,7 @@ export const TermsOfService = () => {
 export const NotFoundPage = () => {
   return (
     <div className="news-page" style={{ position: 'relative', background: '#fff', color: '#333', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '100px 80px' }}>
-      <SEOManager title="Page Not Found | Infynix" description="The page you are looking for does not exist." />
+      <SEOManager title="Page Not Found | Infynix Solutions" description="The page you are looking for does not exist." noindex />
       <h1 style={{ fontSize: '6rem', color: '#007A5E', fontWeight: 'bold', margin: 0, fontFamily: "'Albert Sans', sans-serif" }}>404</h1>
       <h2 style={{ fontSize: '2rem', color: '#1F2937', margin: '10px 0 20px', fontFamily: "'Albert Sans', sans-serif" }}>Systems Check: Path Not Found</h2>
       <p style={{ color: '#666', maxWidth: '400px', lineHeight: '1.6', marginBottom: '30px' }}>

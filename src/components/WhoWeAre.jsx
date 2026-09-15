@@ -121,7 +121,7 @@ export default function WhoWeAre() {
           <div style={{ marginBottom: "clamp(2rem, 5vw, 4rem)" }}>
             <span className="ix-teal-bar" />
             <h2 data-aos="fade-up" style={{ fontFamily: "var(--ix-font-display)", fontWeight: 600, fontSize: "clamp(2rem, 3.5vw, 3rem)", color: "var(--ix-text)", lineHeight: 1.1, letterSpacing: "-0.02em" }}>
-              Our<br />
+              Our{' '}<br />
               <em style={{ fontFamily: "var(--ix-font-serif)", fontStyle: "italic", fontWeight: 400, color: "var(--ix-primary)" }}>Methodology</em>
             </h2>
           </div>
@@ -161,7 +161,7 @@ export default function WhoWeAre() {
         }}>
           <span className="ix-eyebrow" data-aos="fade-up">Our Story</span>
           <h2 data-aos-delay="100" data-aos="fade-up" style={{ fontFamily: "var(--ix-font-display)", fontWeight: 600, fontSize: "clamp(2rem, 3.5vw, 3.5rem)", lineHeight: 1.05, color: "var(--ix-text)", letterSpacing: "-0.02em", marginBottom: "1.5rem" }}>
-            How We<br />
+            How We{' '}<br />
             <em style={{ fontFamily: "var(--ix-font-serif)", fontStyle: "italic", fontWeight: 400, color: "var(--ix-primary)" }}>Started</em>
           </h2>
           <p data-aos-delay="200" data-aos="fade-up" style={{ fontFamily: "var(--ix-font-body)", fontSize: "0.97rem", color: "var(--ix-muted)", lineHeight: 1.8, marginBottom: "1rem" }}>
@@ -279,7 +279,7 @@ export default function WhoWeAre() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <span className="ix-teal-bar" />
           <h2 data-aos="fade-up" style={{ fontFamily: "var(--ix-font-display)", fontWeight: 600, fontSize: "clamp(2rem, 3.5vw, 3rem)", color: "var(--ix-text)", letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: "clamp(2rem, 5vw, 4rem)" }}>
-            Culture that<br />
+            Culture that{' '}<br />
             <em style={{ fontFamily: "var(--ix-font-serif)", fontStyle: "italic", fontWeight: 400, color: "var(--ix-primary)" }}>Drives Excellence</em>
           </h2>
 

@@ -33,12 +33,22 @@ export default function Seo({
       <title>{resolvedTitle}</title>
       <meta name="description" content={resolvedDescription} />
       <link rel="canonical" href={canonical} />
-
-      {/* hreflang: regional alternate versions */}
-      <link rel="alternate" hreflang="en-AE" href="https://www.infynixsolutions.ae/" />
-      <link rel="alternate" hreflang="en-GB" href="https://www.infynixsolutions.co.uk/" />
-      <link rel="alternate" hreflang="en-IN" href="https://www.infynix-solutions.com/" />
-      <link rel="alternate" hreflang="x-default" href="https://www.infynixsolutions.ae/" />
+      {/* hreflang, homepage only. These three URLs are equivalents of each
+          other, so the annotation is valid here. It is NOT valid on inner
+          pages, where hreflang must point at the corresponding page. All three
+          domains carry the same set, which is what makes it reciprocal. */}
+      {path === '/' && (
+        <link rel="alternate" hrefLang="en-IN" href="https://www.infynix-solutions.com/" />
+      )}
+      {path === '/' && (
+        <link rel="alternate" hrefLang="en-AE" href="https://www.infynixsolutions.ae/" />
+      )}
+      {path === '/' && (
+        <link rel="alternate" hrefLang="en-GB" href="https://www.infynixsolutions.co.uk/" />
+      )}
+      {path === '/' && (
+        <link rel="alternate" hrefLang="x-default" href="https://www.infynix-solutions.com/" />
+      )}
 
       <meta
         name="robots"

@@ -1,6 +1,20 @@
 // Centralized data repository for solutions, industries, case studies, insights, and FAQs
 import { subcategoryData } from './subcategoryData.js';
 
+// Six slugs were exact aliases of another slug: identical title, identical
+// description, identical body. Two URLs for one service means two pages
+// competing for the same query and neither ranking. Listed here and removed
+// after the merge below, with matching 301s in vercel.json so the old URLs
+// still resolve.
+export const SOLUTION_ALIASES = {
+  'performance-advertising': 'performance-marketing',
+  'seo-content-marketing': 'seo-services',
+  'ai-native-product-development': 'artificial-intelligence',
+  'custom-web-app-development': 'website-development',
+  'ai-surveillance-security-solutions': 'ai-surveillance',
+  'marketing-business-automation': 'business-automation',
+};
+
 export const solutionsData = {
   ...subcategoryData,
   'infynix-agency': {
@@ -201,9 +215,7 @@ export const solutionsData = {
   }
 };
 
-// Aliases for seamless subcategory routing
-solutionsData['ai-surveillance-security-solutions'] = solutionsData['ai-surveillance'] || subcategoryData['ai-surveillance'];
-solutionsData['marketing-business-automation'] = solutionsData['business-automation'] || solutionsData['marketing-automation-crm'];
+
 solutionsData['custom-web-app-development'] = solutionsData['website-development'] || subcategoryData['custom-web-app-development'];
 solutionsData['ai-native-product-development'] = solutionsData['artificial-intelligence'] || subcategoryData['ai-native-product-development'];
 solutionsData['performance-advertising'] = solutionsData['performance-marketing'] || subcategoryData['performance-advertising'];
@@ -221,6 +233,14 @@ solutionsData['iot-connected-systems'] = subcategoryData['iot-connected-systems'
 solutionsData['api-systems-integration'] = subcategoryData['api-systems-integration'] || solutionsData['infynix-growth-solutions'];
 solutionsData['data-platforms-dashboards'] = subcategoryData['data-platforms-dashboards'] || solutionsData['infynix-growth-solutions'];
 solutionsData['podcast-audio-production'] = subcategoryData['podcast-audio-production'] || solutionsData['infynix-media'];
+
+// Alias slugs are deliberately NOT registered. Each of these was an exact copy
+// of another slug, so the site shipped two URLs per service competing for the
+// same query and neither ranking. vercel.json 301s each alias to the slug it
+// duplicated. This runs after every assignment above, so nothing re-adds one.
+for (const alias of Object.keys(SOLUTION_ALIASES)) {
+  delete solutionsData[alias];
+}
 
 export const industriesData = {
   'healthcare': {

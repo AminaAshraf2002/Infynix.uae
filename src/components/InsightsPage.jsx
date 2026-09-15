@@ -34,16 +34,19 @@ const InsightsPage = () => {
     summary: 'Our latest deep dive into bridging the gap between decades-old hardware and modern cloud architectures. Discover the protocols and middleware...'
   };
 
-  const baseArticles = [
-    { slug: '1', title: 'Optimizing Latency in High-Frequency Edge Nodes', category: 'SYSTEMS', date: 'Oct 22, 2024', summary: 'How reducing nanoseconds at the edge translates into millions in operational savings...', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
-    { slug: '2', title: 'Zero-Trust Protocols for Distributed Global Teams', category: 'SECURITY', date: 'Sep 28, 2024', summary: 'Securing the perimeter when the perimeter is everywhere. A framework for the modern...', img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80' },
-    { slug: '3', title: 'The Sustainability Paradox of Cloud Integration', category: 'INFRASTRUCTURE', date: 'Sep 20, 2024', summary: 'Analyzing the energy footprint of rapid digital transformation and how to engineer for a...', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80' },
-    { slug: '4', title: 'Next-Gen Fiber: Beyond Terabit Boundaries', category: 'CONNECTIVITY', date: 'Aug 18, 2024', summary: 'Breaking down the breakthroughs in photonic transmission and what it means for enterprise...', img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80' },
-    { slug: '5', title: 'Modular Thinking: Building Future-Proof Stacks', category: 'ENGINEERING', date: 'Aug 12, 2024', summary: 'Why composability is the ultimate competitive advantage in rapidly shifting technological...', img: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=600&q=80' },
-    { slug: '6', title: 'Manufacturing Precision at Global Scale', category: 'SCALE', date: 'Jul 29, 2024', summary: 'Maintaining 0.001mm tolerances across distributed production lines using AI-driven...', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80' },
-  ];
+  // Was a hardcoded placeholder list with numeric slugs ('1'...'6'), so the
+  // index linked to /insights/1 through /insights/6, none of which are ever
+  // built: six internal links to 404s, while the real posts went unlinked.
+  const baseArticles = insightsData.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    category: (post.category || 'INSIGHTS').toUpperCase(),
+    date: post.date,
+    summary: post.summary,
+    img: insightImages[post.slug],
+  }));
 
-  const allCategories = ['ALL POSTS', 'SYSTEMS', 'INFRASTRUCTURE', 'SECURITY', 'CONNECTIVITY', 'ENGINEERING', 'SCALE'];
+  const allCategories = ['ALL POSTS', ...new Set(baseArticles.map((a) => a.category))];
   
   const filteredArticles = useMemo(() => {
     if (activeFilter === 'ALL POSTS') return baseArticles;

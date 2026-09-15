@@ -7,10 +7,10 @@ const InitiativesSection = () => {
       <div className="initiatives-inner">
         {/* Left Side */}
         <div className="init-left" data-aos="fade-up">
-          <h1 className="init-h1">
-            Strategic<br />
+          <h2 className="init-h1">
+            Strategic{' '}<br />
             <em>Pillars</em>
-          </h1>
+          </h2>
           <p className="init-desc">
             We are pioneering the next frontier of growth engineering, focusing on conversion-driven architectures, automated marketing systems, and intelligent digital experiences.
           </p>

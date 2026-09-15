@@ -1,7 +1,7 @@
 import './index.css';
 import './App.css';
 
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter, StaticRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
 import AOS from 'aos';
@@ -153,16 +153,26 @@ function AppContent() {
   );
 }
 
-function App() {
+/**
+ * `location` is supplied only by the prerenderer, which needs a StaticRouter.
+ * `helmetContext` is how the prerenderer reads back the head tags each route
+ * rendered, so title, meta, canonical and JSON-LD end up in the static HTML
+ * rather than being applied after hydration.
+ */
+function App({ helmetContext = {}, location }) {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
+  const content = <AppContent />;
+
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
+    <HelmetProvider context={helmetContext}>
+      {location ? (
+        <StaticRouter location={location}>{content}</StaticRouter>
+      ) : (
+        <BrowserRouter>{content}</BrowserRouter>
+      )}
     </HelmetProvider>
   );
 }

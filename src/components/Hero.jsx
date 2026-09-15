@@ -221,7 +221,7 @@ const Hero = () => {
           — GROWTH ENGINEERING COMPANY
         </p>
         <h1 ref={subtitleRef} className="hero-title" style={{ fontSize: 'clamp(38px, 5.5vw, 76px)', margin: '0 0 20px', color: '#1F2937', fontFamily: "'Montserrat', Arial, sans-serif", fontWeight: '700', lineHeight: '1.12', letterSpacing: '-0.02em', textAlign: 'left' }}>
-          The Growth <span style={{ color: '#007A5E' }}>Engineering</span><br />
+          The Growth <span style={{ color: '#007A5E' }}>Engineering</span>{' '}<br />
           Company for UAE Businesses
         </h1>
         <p ref={descRef} className="hero-subtitle" style={{ color: '#4B5563', maxWidth: '620px', margin: '0 0 32px', fontSize: 'clamp(16px, 1.8vw, 20px)', lineHeight: '1.6', fontFamily: "var(--ix-font-body, 'Montserrat', Arial, sans-serif)", textAlign: 'left' }}>

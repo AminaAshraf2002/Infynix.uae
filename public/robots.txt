@@ -1,5 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
 
-Sitemap: https://infynix.com/sitemap.xml
+Sitemap: https://www.infynixsolutions.ae/sitemap.xml
