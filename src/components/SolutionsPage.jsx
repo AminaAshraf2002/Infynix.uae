@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { solutionsData, caseStudiesData } from '../lib/contentData';
 import Seo from '../seo/Seo';
+import { divisionForSlug, isDivision, getDivision, servicesInDivision } from '../content/divisions';
+import { SITE_URL } from '../seo/siteConfig';
 import { organizationSchema, serviceSchema, breadcrumbSchema } from '../seo/schema';
 import defaultHeroBg from '../assets/hero_bg_abstract.jpg';
 import capImg1 from '../assets/cap_img_1.jpg';
@@ -171,27 +173,14 @@ const SolutionsPage = () => {
     window.scrollTo(0, 0);
   }, [activeSlug]);
 
-  const normalizeSlug = (s) => (s || '').toLowerCase().trim().replace(/[^a-z0-9]/g, '');
-
-  let data = solutionsData[activeSlug];
-  if (!data) {
-    const normActive = normalizeSlug(activeSlug);
-    const matchedKey = Object.keys(solutionsData).find(k => normalizeSlug(k) === normActive);
-    if (matchedKey) {
-      data = solutionsData[matchedKey];
-    } else {
-      const partialKey = Object.keys(solutionsData).find(k => {
-        const nk = normalizeSlug(k);
-        return nk.length > 3 && (normActive.includes(nk) || nk.includes(normActive));
-      });
-      if (partialKey) data = solutionsData[partialKey];
-    }
-  }
-
-  // Fallback if still not found
-  if (!data) {
-    data = solutionsData['website-development'] || Object.values(solutionsData)[0];
-  }
+  const data = solutionsData[activeSlug];
+  // Division context: either this page is one of the three hubs, or it sits
+  // inside one. Flat service lists gave visitors and language models no way to
+  // tell that Infynix is three business units.
+  const parentDivision = divisionForSlug(activeSlug);
+  const thisDivision = isDivision(activeSlug) ? getDivision(activeSlug) : null;
+  const childServices = thisDivision ? servicesInDivision(activeSlug) : [];
+  if (!data) return <div style={{ padding: '20vh 5%', textAlign: 'center', fontSize: '2rem' }}>Solution not found.</div>;
 
   const currentHeroBg = bgMap[activeSlug] || defaultHeroBg;
 
@@ -261,19 +250,91 @@ const SolutionsPage = () => {
         path={`/solutions/${activeSlug}`}
         schema={[
           organizationSchema(),
-          serviceSchema({
-            name: data.title,
-            description: data.description || data.subtitle,
-            path: `/solutions/${activeSlug}`,
-            areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'United Arab Emirates', 'Middle East'],
-          }),
-          breadcrumbSchema([
-            { name: 'Home', path: '/' },
-            { name: 'Solutions', path: '/solutions' },
-            { name: data.title, path: `/solutions/${activeSlug}` },
-          ]),
+          {
+            ...serviceSchema({
+              name: data.title,
+              description: data.description || data.subtitle,
+              path: `/solutions/${activeSlug}`,
+              areaServed: ['Kerala', 'India', 'United Arab Emirates', 'United Kingdom'],
+            }),
+            // A hub advertises the services it owns; a service points back at
+            // its hub. That is what turns a flat list into an entity hierarchy
+            // a machine can follow.
+            ...(childServices.length
+              ? {
+                  hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: `${data.title} services`,
+                    itemListElement: childServices.map((c) => ({
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: c.title,
+                        url: `${SITE_URL}/solutions/${c.slug}`,
+                      },
+                    })),
+                  },
+                }
+              : {}),
+            ...(parentDivision
+              ? { isRelatedTo: { '@id': `${SITE_URL}/solutions/${parentDivision.slug}#service` } }
+              : {}),
+          },
+          breadcrumbSchema(
+            parentDivision
+              ? [
+                  { name: 'Home', path: '/' },
+                  { name: 'Solutions', path: '/solutions' },
+                  { name: parentDivision.name, path: `/solutions/${parentDivision.slug}` },
+                  { name: data.title, path: `/solutions/${activeSlug}` },
+                ]
+              : [
+                  { name: 'Home', path: '/' },
+                  { name: 'Solutions', path: '/solutions' },
+                  { name: data.title, path: `/solutions/${activeSlug}` },
+                ]
+          ),
         ]}
       />
+
+      {/* Division context. A service page names the business unit it belongs to;
+          a hub page lists the services it owns. Without this the site reads as
+          one flat catalogue of ~26 services rather than three divisions. */}
+      {parentDivision && (
+        <div style={{ background: '#0a0a0a', color: '#fff', padding: '14px 5%', fontSize: '0.82rem', letterSpacing: '0.04em' }}>
+          <span style={{ opacity: 0.6, textTransform: 'uppercase', fontWeight: 600, fontSize: '0.72rem' }}>Part of</span>{' '}
+          <Link to={`/solutions/${parentDivision.slug}`} style={{ color: 'rgb(198, 232, 74)', textDecoration: 'none', fontWeight: 700 }}>
+            {parentDivision.name}
+          </Link>
+          <span style={{ opacity: 0.55 }}>{' '}&middot; {parentDivision.tagline}</span>
+        </div>
+      )}
+
+      {thisDivision && childServices.length > 0 && (
+        <section style={{ background: '#f7f8f7', padding: '72px 5%' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#00654e', margin: '0 0 10px' }}>
+              {thisDivision.tagline}
+            </p>
+            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 'clamp(1.5rem, 3vw, 2.1rem)', fontWeight: 800, letterSpacing: '-0.02em', margin: '0 0 14px', color: '#10201a' }}>
+              What {thisDivision.name} delivers
+            </h2>
+            <p style={{ maxWidth: '68ch', color: '#4b5563', lineHeight: 1.7, margin: '0 0 30px' }}>
+              {thisDivision.summary}
+            </p>
+            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px', listStyle: 'none', margin: 0, padding: 0 }}>
+              {childServices.map((c) => (
+                <li key={c.slug}>
+                  <Link to={`/solutions/${c.slug}`} style={{ display: 'block', padding: '18px 20px', background: '#fff', border: '1px solid #e5e7eb', borderLeft: '3px solid #00654e', borderRadius: '12px', textDecoration: 'none', color: '#10201a' }}>
+                    <span style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: '0.96rem', marginBottom: '6px' }}>{c.title}</span>
+                    <span style={{ display: 'block', fontSize: '0.86rem', color: '#6b7c74', lineHeight: 1.55 }}>{(c.description || '').slice(0, 110)}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* ══ 1. HERO SECTION ══ */}
       <section className="solutions-hero-section" style={{
