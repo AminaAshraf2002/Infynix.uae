@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-location-card">
-            <a href="https://maps.google.com/?q=C1+Building,+Free+Zone,+Al+Butain,+Ajman,+UAE" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href="https://share.google/GeaxRIc5dl6JKegOr" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img loading="lazy" decoding="async" src={dubaiImage} alt="UAE Office" className="footer-location-svg" />
               <div className="footer-location-title">UAE ↗</div>
               <div className="footer-location-addr">
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-location-card">
-            <a href="https://maps.google.com/?q=1-75+Shelton+St,+London,+WC2H+9JQ" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href="https://share.google/nr3IR1BycI55dDqUs" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img loading="lazy" decoding="async" src={ukLImage} alt="UK London Office" className="footer-location-svg" />
               <div className="footer-location-title">UK - LONDON ↗</div>
               <div className="footer-location-addr">
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-location-card">
-            <a href="https://share.google/KX27eRrKxncrDFibN" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href="https://share.google/de6rHeKgl4nC3riaW" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img loading="lazy" decoding="async" src={kochiImage} alt="Kochi India Office" className="footer-location-svg" />
               <div className="footer-location-title">INDIA - KOCHI ↗</div>
               <div className="footer-location-addr">

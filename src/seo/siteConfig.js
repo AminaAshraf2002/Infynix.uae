@@ -41,7 +41,7 @@ export const BUSINESS = {
   ],
 };
 
-export const GOOGLE_BUSINESS_PROFILE = 'https://share.google/ey1Jfvouw3GLkRGzF';
+export const GOOGLE_BUSINESS_PROFILE = 'https://share.google/GeaxRIc5dl6JKegOr';
 
 export const SOCIAL_PROFILES = [
   'https://www.linkedin.com/company/infynix-solutions',

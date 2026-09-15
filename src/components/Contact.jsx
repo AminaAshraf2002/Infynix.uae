@@ -23,7 +23,7 @@ const offices = [
         label: "UAE Office",
         desc: "C1 Building - Office C1 1F-SF6540, Free Zone, Al Butain, Ajman, United Arab Emirates. Our client-facing and strategy headquarters working directly with UAE businesses on growth engineering, web development, and AI automation.",
         image: uaeOfficeImage,
-        mapUrl: "https://maps.google.com/?q=C1+Building,+Free+Zone,+Al+Butain,+Ajman,+UAE"
+        mapUrl: "https://share.google/GeaxRIc5dl6JKegOr"
     },
     {
         city: "London",
@@ -36,7 +36,7 @@ const offices = [
         label: "India Office",
         desc: "3rd Floor, Oberon Mall, Padivattom, Edappally, Ernakulam, Kochi, Kerala 682024. Our core engineering powerhouse delivering robust web, cloud, and AI systems.",
         image: kochiImage,
-        mapUrl: "https://share.google/KX27eRrKxncrDFibN"
+        mapUrl: "https://share.google/de6rHeKgl4nC3riaW"
     },
 ];
 
