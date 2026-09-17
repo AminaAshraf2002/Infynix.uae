@@ -64,8 +64,8 @@ export default function Contact() {
     return (
         <div className="contact-page">
             <Seo
-                title="Contact Infynix | Dubai Growth Engineering Agency"
-                description="Get in touch with Infynix's Dubai office to discuss web development, AI automation, or performance marketing for your UAE business."
+                title="Contact Infynix | UAE Growth Engineering Agency"
+                description="Get in touch with the Infynix UAE team in Ajman Free Zone to discuss web development, AI automation, or performance marketing for your UAE business."
                 path="/contact"
                 ogType="website"
                 schema={[

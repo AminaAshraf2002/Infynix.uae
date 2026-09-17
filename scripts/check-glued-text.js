@@ -24,7 +24,7 @@ const CAMEL_OK = [
   'WooCommerce', 'WhatsApp', 'SaaS', 'PaaS', 'IaaS', 'DevOps', 'GitHub',
   'GitLab', 'YouTube', 'LinkedIn', 'PostgreSQL', 'MySQL', 'MongoDB',
   'eCommerce', 'PowerPoint', 'OpenAI', 'ChatGPT', 'PageSpeed', 'BigQuery',
-  'HubSpot', 'ShipRocket', 'UI/UX', 'JavaScript SEO', 'GraphQL', 'GraphQL API', 'TikTok', 'YouTube Shorts',
+  'HubSpot', 'ShipRocket', 'UI/UX', 'JavaScript SEO', 'GraphQL', 'GraphQL API', 'TikTok', 'YouTube Shorts', 'DoH', 'ADGM', 'KIZAD',
 ];
 
 const mask = (s) => {

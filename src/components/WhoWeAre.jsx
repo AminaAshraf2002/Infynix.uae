@@ -97,7 +97,7 @@ export default function WhoWeAre() {
             A Growth Engineering Agency Built for UAE Businesses
           </h1>
           <p style={{ fontFamily: 'var(--ix-font-body)', fontSize: '1.05rem', color: '#111', lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: '580px' }}>
-            Infynix operates from our Dubai office in Business Bay, working directly with UAE businesses on growth engineering, web development, and AI automation. Our client-facing and strategy work is based in the UAE, supported by dedicated delivery teams in London (UK) and Kochi (India), giving UAE clients local accessibility with efficient, high-quality engineering behind it.
+            Infynix operates from Ajman Free Zone, working directly with businesses across Dubai, Abu Dhabi, Sharjah and the wider UAE on growth engineering, web development, and AI automation. Our client-facing and strategy work is based in the UAE, supported by dedicated delivery teams in London (UK) and Kochi (India), giving UAE clients local accessibility with efficient, high-quality engineering behind it.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link to="/contact" style={{ background: '#007A5E', color: '#ffffffff', padding: '0.9rem 1.8rem', borderRadius: '40px', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', transition: 'background 0.3s' }} onMouseEnter={e => e.currentTarget.style.background = '#0F5C4C'} onMouseLeave={e => e.currentTarget.style.background = '#007A5E'}>
