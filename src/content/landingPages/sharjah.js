@@ -135,7 +135,7 @@ export const sharjahPages = [
     ],
 
     faqs: [
-      { question: "How much does digital marketing cost in Sharjah?", answer: "Retainers for Sharjah businesses typically run from AED 4,000 to AED 12,000 per month depending on channels and production. Ad spend is separate. We state the minimum spend needed for a readable result before you commit, and we will say if the budget is too small to produce one." },
+      { question: "How much does digital marketing cost in Sharjah?", answer: "Ad spend is separate. We state the minimum spend needed for a readable result before you commit, and we will say if the budget is too small to produce one." },
       { question: "Do you work with manufacturers and B2B companies in Sharjah?", answer: "Yes. Industrial and trading businesses in the Industrial Areas, SAIF Zone and Hamriyah are a large part of our Sharjah work, with search, LinkedIn and CRM programmes measured on enquiries, quotes and orders." },
       { question: "Can you run campaigns in Arabic?", answer: "Yes. Arabic campaigns and pages are written by native speakers and reported separately, because Arabic search and social behaviour in Sharjah differ from English." },
       { question: "Do you track WhatsApp enquiries?", answer: "Yes. Click-to-WhatsApp ads and website buttons are tracked as conversions and routed into the CRM, so every conversation is attributed to the campaign that produced it." },
@@ -143,6 +143,7 @@ export const sharjahPages = [
       { question: "Do you work with clinics and schools in Sharjah?", answer: "Yes. Healthcare campaigns are checked against the relevant advertising rules before launch, and education campaigns are planned around the admissions calendar." },
       { question: "How do you report?", answer: "A short weekly note on what changed, a monthly review with spend, enquiries, qualified enquiries and revenue by channel, and a live dashboard." },
       { question: "Can you work with our in-house team?", answer: "Yes. We take one or more channels, or the measurement layer, and report into your existing tools. Accounts stay in your name." },
+      { question: "What do you need from us to start?", answer: "Access to your ad accounts, analytics, website and CRM, a clear picture of your margins and sales process, and someone on your side who can make decisions weekly. The first two to three weeks go on measurement and foundations, and spend begins once the numbers can be trusted." },
     ],
 
     related: [
@@ -294,7 +295,7 @@ export const sharjahPages = [
     ],
 
     faqs: [
-      { question: "How much does SEO cost in Sharjah?", answer: "SEO retainers for Sharjah businesses typically run from AED 3,000 to AED 10,000 per month depending on competition, languages and the amount of technical and content work. A fixed-scope technical audit is quoted separately." },
+      { question: "How much does SEO cost in Sharjah?", answer: "We do not quote from a rate card. A discovery session establishes the scope, the systems involved and the outcome you are working towards, and the proposal that follows is a fixed price or a monthly retainer for exactly that. If a smaller first phase would answer the question, we say so." },
       { question: "How long does SEO take in Sharjah?", answer: "Technical fixes show within weeks, local search improvements in 8 to 12 weeks, and competitive terms in 6 to 12 months. Sharjah product and local terms are often less contested than Dubai equivalents, so positions can move faster." },
       { question: "Do you do Arabic SEO?", answer: "Yes. Arabic research, native-written content and correct language markup run as a separate track with separate reporting." },
       { question: "Can you help a manufacturer rank for product searches?", answer: "Yes. Product and specification term coverage for manufacturers and traders is a core part of our Sharjah work, including catalogue pages, product schema and GCC targeting." },
@@ -324,7 +325,7 @@ export const sharjahPages = [
     category: "technology",
     title: "Web Design Company in Sharjah | Infynix Solutions",
     description:
-      "Web design company serving Sharjah: bilingual, mobile-first websites, product catalogues and e-commerce for manufacturers, traders, clinics, schools and retailers, built to rank and convert, from AED 12,000.",
+      "Web design company serving Sharjah: bilingual, mobile-first websites, product catalogues and e-commerce for manufacturers, traders, clinics, schools and retailers, built to rank and convert.",
     h1: "Web Design Company in Sharjah",
     heroSubtitle:
       "Bilingual, mobile-first websites and product catalogues designed and built for Sharjah businesses by a UAE team based next door in Ajman, priced for the market and engineered to rank.",
@@ -355,15 +356,15 @@ export const sharjahPages = [
       { name: "Privacy handling", desc: "Cookie and privacy handling aligned with the UAE Personal Data Protection Law." },
     ],
 
-    specsHeading: "Typical projects, timelines and investment",
-    specsColumns: ["Project", "Timeline", "Indicative investment"],
+    specsHeading: "Typical projects and timelines",
+    specsColumns: ["Project", "Timeline"],
     specs: [
-      ["Business website, 5 to 10 pages", "3 to 5 weeks", "AED 12,000 to AED 30,000"],
-      ["Product catalogue site", "5 to 8 weeks", "AED 25,000 to AED 60,000"],
-      ["Bilingual corporate site", "6 to 10 weeks", "AED 28,000 to AED 65,000"],
-      ["E-commerce store", "8 to 14 weeks", "AED 35,000 to AED 120,000"],
-      ["Campaign landing pages", "1 to 2 weeks", "AED 3,500 to AED 10,000"],
-      ["Hosting, care and updates", "Monthly", "From AED 600 per month"],
+      ["Business website, 5 to 10 pages", "3 to 5 weeks"],
+      ["Product catalogue site", "5 to 8 weeks"],
+      ["Bilingual corporate site", "6 to 10 weeks"],
+      ["E-commerce store", "8 to 14 weeks"],
+      ["Campaign landing pages", "1 to 2 weeks"],
+      ["Hosting, care and updates", "Monthly"],
     ],
 
     useCasesHeading: "Who we design for in Sharjah",
@@ -444,12 +445,12 @@ export const sharjahPages = [
     ],
 
     faqs: [
-      { question: "How much does a website cost in Sharjah?", answer: "A focused business website runs from AED 12,000 to AED 30,000. Product catalogue sites sit between AED 25,000 and AED 60,000. Bilingual corporate sites run AED 28,000 to AED 65,000, and e-commerce from AED 35,000 to AED 120,000. Every project is quoted as a fixed price after discovery." },
+      { question: "How much does a website cost in Sharjah?", answer: "Every engagement is scoped individually after a discovery session, from the outcome you need and the work involved, and quoted before anything starts. Ad spend, where it applies, is separate and paid directly to the platforms, and we will say plainly if the budget on the table is too small to produce a usable result." },
       { question: "How long does a website take?", answer: "A business site takes 3 to 5 weeks. Catalogue and bilingual sites take 5 to 10 weeks. E-commerce takes 8 to 14 weeks. Content readiness is usually the biggest variable." },
       { question: "Do you build product catalogue websites for manufacturers?", answer: "Yes. Catalogue sites with specifications, downloads, quote requests and product schema are among our most common Sharjah projects." },
       { question: "Do you build bilingual Arabic and English websites?", answer: "Yes. Both languages are designed together with proper right-to-left layout, Arabic typography, correct language markup and a content workflow." },
       { question: "Will the site rank on Google?", answer: "It will be built to. Prerendered content, structure, structured data, performance and metadata are part of every build. Competitive rankings then depend on the content and authority programme, which our SEO team can run." },
-      { question: "Do you provide hosting and maintenance?", answer: "Yes. Care plans from AED 600 per month cover hosting, SSL, backups, monitoring, updates and a monthly allowance for content changes." },
+      { question: "Do you provide hosting and maintenance?", answer: "Every engagement is scoped individually after a discovery session, from the outcome you need and the work involved, and quoted before anything starts. Ad spend, where it applies, is separate and paid directly to the platforms, and we will say plainly if the budget on the table is too small to produce a usable result." },
       { question: "Can you redesign our old site without losing rankings?", answer: "Yes. Redesigns are planned with a redirect map, content migration and tracking continuity, and we monitor Search Console through and after launch." },
       { question: "Where are you based?", answer: "In Ajman Free Zone, next door to Sharjah. We work on site as often as the project needs." },
       { question: "Can you build a website that generates WhatsApp enquiries?", answer: "Yes. Click-to-WhatsApp is built into every Sharjah site we design, visible on every screen, tracked as a conversion in GA4 and routed into your CRM where you use one, so you can see which pages produce conversations." },
@@ -506,15 +507,15 @@ export const sharjahPages = [
       { name: "Full handover", desc: "Code, infrastructure, documentation and credentials in your name." },
     ],
 
-    specsHeading: "Typical scope, timeline and investment",
-    specsColumns: ["Engagement", "Timeline", "Indicative investment"],
+    specsHeading: "Typical scope and timeline",
+    specsColumns: ["Engagement", "Timeline"],
     specs: [
-      ["Discovery and specification", "2 to 3 weeks", "AED 12,000 to AED 30,000"],
-      ["Odoo or ERP implementation", "8 to 18 weeks", "AED 50,000 to AED 200,000"],
-      ["CRM and quoting system", "4 to 10 weeks", "AED 20,000 to AED 80,000"],
-      ["Custom application", "8 to 16 weeks", "AED 45,000 to AED 150,000"],
-      ["Integration project", "3 to 8 weeks", "AED 15,000 to AED 60,000"],
-      ["Support and maintenance", "Monthly", "From AED 3,000 per month"],
+      ["Discovery and specification", "2 to 3 weeks"],
+      ["Odoo or ERP implementation", "8 to 18 weeks"],
+      ["CRM and quoting system", "4 to 10 weeks"],
+      ["Custom application", "8 to 16 weeks"],
+      ["Integration project", "3 to 8 weeks"],
+      ["Support and maintenance", "Monthly"],
     ],
 
     useCasesHeading: "Systems we build for Sharjah",
@@ -595,7 +596,7 @@ export const sharjahPages = [
     ],
 
     faqs: [
-      { question: "How much does an ERP or inventory system cost in Sharjah?", answer: "Odoo and ERP implementations for Sharjah businesses typically run from AED 50,000 to AED 200,000 depending on modules, warehouses and data migration. CRM and quoting systems run AED 20,000 to AED 80,000. Every project is scoped from a paid discovery." },
+      { question: "How much does an ERP or inventory system cost in Sharjah?", answer: "Every engagement is scoped individually after a discovery session, from the outcome you need and the work involved, and quoted before anything starts. Ad spend, where it applies, is separate and paid directly to the platforms, and we will say plainly if the budget on the table is too small to produce a usable result." },
       { question: "Do you implement Odoo?", answer: "Yes. Odoo is our default recommendation for manufacturers and traders who need standard ERP modules with UAE localisation, and we build bespoke modules where it does not fit." },
       { question: "Will the system handle UAE VAT and e-invoicing?", answer: "Yes. FTA-compliant invoices, VAT return data, a corporate tax audit trail and integration points for the e-invoicing programme are part of the standard data model." },
       { question: "Can you integrate with our accounting software?", answer: "Yes. Most Sharjah builds keep the existing package, whether Zoho Books, QuickBooks, Tally, Xero or Odoo, and feed it from the operational system." },
@@ -605,7 +606,7 @@ export const sharjahPages = [
       { question: "Who owns the code?", answer: "You do. Source, infrastructure, documentation and credentials are handed over in your name." },
       { question: "Can the system work in a warehouse with poor connectivity?", answer: "Yes. Mobile apps for receiving, picking and counting are built to work offline and sync when the connection returns, which matters in metal-clad warehouses and industrial units where signal drops." },
       { question: "How do you handle training for staff who are not comfortable with software?", answer: "By designing screens around the task, in Arabic and English, with as few steps as the process allows, then training by role on the floor rather than in a meeting room. The first month live is supported daily." },
-      { question: "Do you provide ongoing support after go-live?", answer: "Yes. Support runs on a service level agreement from AED 3,000 per month with named response times, monitoring, backups and a monthly allowance for improvements." },
+      { question: "Do you provide ongoing support after go-live?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "Can the system print labels, barcodes and delivery notes?", answer: "Yes. Barcode and QR labels, delivery notes, packing lists and FTA-compliant invoices are generated from the system and printed on standard thermal and office printers, in Arabic and English as required." },
     ],
 

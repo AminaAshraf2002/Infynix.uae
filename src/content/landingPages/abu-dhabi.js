@@ -123,7 +123,7 @@ export const abuDhabiPages = [
     ],
 
     faqs: [
-      { question: "How much does digital marketing cost in Abu Dhabi?", answer: "Retainers for Abu Dhabi businesses typically run from AED 5,000 to AED 15,000 per month depending on channel mix, production needs and technical complexity. Ad spend is separate. B2B programmes with LinkedIn and account-based work tend to sit in the upper half of that range because the creative and content load is higher." },
+      { question: "How much does digital marketing cost in Abu Dhabi?", answer: "Ad spend is separate. B2B programmes with LinkedIn and account-based work tend to sit in the upper half of that range because the creative and content load is higher." },
       { question: "Do you run LinkedIn campaigns for B2B companies in Abu Dhabi?", answer: "Yes. LinkedIn is a primary channel for suppliers, consultancies and technology firms selling to Abu Dhabi enterprises and government-linked buyers. We run account-based campaigns measured on meetings and pipeline, integrated with your CRM." },
       { question: "Do you understand Department of Health advertising rules?", answer: "Yes. Healthcare creative for Abu Dhabi is checked against Department of Health guidance on claims, imagery and promotions before launch, and we keep the checklist current as the rules change." },
       { question: "Can you run campaigns in Arabic?", answer: "Yes. Arabic campaigns, copy and landing pages are written by native speakers and run as a separate track with separate reporting, because Arabic search and social behaviour in Abu Dhabi differ from English." },
@@ -181,15 +181,15 @@ export const abuDhabiPages = [
       { name: "Full handover", desc: "Code, infrastructure, documentation and credentials in your name." },
     ],
 
-    specsHeading: "Typical scope, timeline and investment",
-    specsColumns: ["Engagement", "Timeline", "Indicative investment"],
+    specsHeading: "Typical scope and timeline",
+    specsColumns: ["Engagement", "Timeline"],
     specs: [
-      ["Discovery and specification", "2 to 3 weeks", "AED 15,000 to AED 35,000"],
-      ["MVP application", "8 to 12 weeks", "AED 50,000 to AED 150,000"],
-      ["ERP implementation", "10 to 20 weeks", "AED 60,000 to AED 250,000"],
-      ["CRM implementation", "4 to 10 weeks", "AED 25,000 to AED 90,000"],
-      ["Enterprise platform", "4 to 8 months", "AED 250,000 and above"],
-      ["Support and maintenance", "Monthly", "From AED 3,500 per month"],
+      ["Discovery and specification", "2 to 3 weeks"],
+      ["MVP application", "8 to 12 weeks"],
+      ["ERP implementation", "10 to 20 weeks"],
+      ["CRM implementation", "4 to 10 weeks"],
+      ["Enterprise platform", "4 to 8 months"],
+      ["Support and maintenance", "Monthly"],
     ],
 
     useCasesHeading: "Systems we build for Abu Dhabi",
@@ -257,7 +257,7 @@ export const abuDhabiPages = [
     ],
 
     faqs: [
-      { question: "How much does custom software cost in Abu Dhabi?", answer: "Focused applications run from AED 50,000. ERP and CRM implementations sit between AED 25,000 and AED 250,000 depending on modules, data migration and integrations. Enterprise platforms run from AED 250,000. Every project is scoped from a paid discovery so the estimate reflects your requirements." },
+      { question: "How much does custom software cost in Abu Dhabi?", answer: "We do not quote from a rate card. A discovery session establishes the scope, the systems involved and the outcome you are working towards, and the proposal that follows is a fixed price or a monthly retainer for exactly that. If a smaller first phase would answer the question, we say so." },
       { question: "Do you build systems that support vendor registration and ICV?", answer: "Yes. Compliance record management, certificate expiry tracking, tender tracking and the reporting that vendor portals and In-Country Value audits ask for are common requirements in our Abu Dhabi builds, usually integrated with the ERP." },
       { question: "Can you handle ADGM data protection requirements?", answer: "Yes. Where a firm is licensed in ADGM we apply the ADGM Data Protection Regulations rather than the federal PDPL, and where a group has both we design for both. The mapping is done and documented in discovery." },
       { question: "Do you implement Odoo in Abu Dhabi?", answer: "Yes. Odoo is our default recommendation for standard ERP needs with UAE localisation, and we build bespoke modules where it does not fit. Implementation includes VAT, corporate tax and e-invoicing readiness." },
@@ -406,7 +406,7 @@ export const abuDhabiPages = [
     ],
 
     faqs: [
-      { question: "How much does SEO cost in Abu Dhabi?", answer: "SEO retainers for Abu Dhabi businesses typically run from AED 3,000 to AED 12,000 per month depending on competition, languages and the amount of technical and content work. A fixed-scope technical audit is quoted separately." },
+      { question: "How much does SEO cost in Abu Dhabi?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "How long does SEO take in Abu Dhabi?", answer: "Technical fixes show within weeks. Local search improvements usually appear in 8 to 12 weeks. Competitive terms take 6 to 12 months, though in less contested Abu Dhabi sectors and in Arabic, positions can move faster than in Dubai." },
       { question: "Do you do Arabic SEO?", answer: "Yes. Arabic keyword research, native-written content and correct language markup run as a separate track with separate reporting." },
       { question: "Can you write healthcare content that complies with Department of Health rules?", answer: "Yes. Healthcare content for Abu Dhabi is written with your clinicians and checked against Department of Health advertising guidance before publication." },
@@ -466,15 +466,15 @@ export const abuDhabiPages = [
       { name: "UAE hosting and care", desc: "Hosting in UAE or nearby regions, SSL, backups, monitoring and updates." },
     ],
 
-    specsHeading: "Typical projects, timelines and investment",
-    specsColumns: ["Project", "Timeline", "Indicative investment"],
+    specsHeading: "Typical projects and timelines",
+    specsColumns: ["Project", "Timeline"],
     specs: [
-      ["Business website, 5 to 10 pages", "4 to 6 weeks", "AED 15,000 to AED 35,000"],
-      ["Bilingual corporate or institutional site", "6 to 10 weeks", "AED 30,000 to AED 70,000"],
-      ["Portal or web application", "8 to 16 weeks", "Scoped from requirements"],
-      ["E-commerce store", "8 to 16 weeks", "AED 40,000 to AED 150,000"],
-      ["Campaign landing pages", "1 to 2 weeks", "AED 4,000 to AED 12,000"],
-      ["Hosting, care and updates", "Monthly", "From AED 750 per month"],
+      ["Business website, 5 to 10 pages", "4 to 6 weeks"],
+      ["Bilingual corporate or institutional site", "6 to 10 weeks"],
+      ["Portal or web application", "8 to 16 weeks"],
+      ["E-commerce store", "8 to 16 weeks"],
+      ["Campaign landing pages", "1 to 2 weeks"],
+      ["Hosting, care and updates", "Monthly"],
     ],
 
     useCasesHeading: "Who we design for in Abu Dhabi",
@@ -555,13 +555,13 @@ export const abuDhabiPages = [
     ],
 
     faqs: [
-      { question: "How much does a website cost in Abu Dhabi?", answer: "A focused business website runs from AED 15,000 to AED 35,000. Bilingual corporate and institutional sites sit between AED 30,000 and AED 70,000. Portals and e-commerce are scoped from requirements, with e-commerce typically AED 40,000 to AED 150,000. Every project is quoted as a fixed price after discovery." },
+      { question: "How much does a website cost in Abu Dhabi?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "How long does a website take?", answer: "A business site takes 4 to 6 weeks. Bilingual institutional sites take 6 to 10 weeks. Portals and e-commerce take 8 to 16 weeks. Content readiness on the client side is usually the biggest variable." },
       { question: "Do you build bilingual Arabic and English websites?", answer: "Yes. Both languages are designed together with proper right-to-left layout, Arabic typography, correct language markup and a content workflow that keeps both versions current." },
       { question: "Do you build school and clinic websites?", answer: "Yes. Education and healthcare are among our most common Abu Dhabi projects, including admissions journeys, parent and patient portals, and content that respects the relevant regulatory rules." },
       { question: "Will the site rank on Google?", answer: "It will be built to. Prerendered content, structure, structured data, performance and metadata are part of every build. Ranking for competitive terms then depends on the content and authority programme, which our SEO team can run." },
       { question: "Can you build a portal integrated with our existing systems?", answer: "Yes. Portals are built on our software engineering practice and integrated with student, patient, ERP or CRM systems so they remove work rather than duplicate it." },
-      { question: "Do you provide hosting and maintenance?", answer: "Yes. Care plans from AED 750 per month cover hosting, SSL, backups, monitoring, updates and a monthly allowance for content changes." },
+      { question: "Do you provide hosting and maintenance?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "Can you redesign our site without losing rankings?", answer: "Yes. Redesigns are planned with a redirect map, content migration and tracking continuity, and we monitor Search Console through and after launch." },
       { question: "Do you design for government-adjacent organisations with accessibility requirements?", answer: "Yes. Accessible markup, contrast and keyboard navigation are part of every build, and we can design and test to a stated accessibility standard where the organisation requires it." },
       { question: "Can you provide Arabic content, not just layout?", answer: "Yes. Arabic copy is written by native speakers, not translated, and we set up the CMS workflow so both languages stay current after launch." },

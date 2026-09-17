@@ -21,7 +21,7 @@ export const dubaiPages = [
     category: "marketing",
     title: "Digital Marketing Agency in Dubai | Infynix Solutions",
     description:
-      "Digital marketing agency for Dubai businesses: SEO, Google Ads, Meta and LinkedIn campaigns, CRM automation and attribution, built as one measured system with AED pricing.",
+      "Digital marketing agency for Dubai businesses: SEO, Google Ads, Meta and LinkedIn campaigns, CRM automation and attribution, built as one measured system.",
     h1: "Digital Marketing Agency in Dubai",
     heroSubtitle:
       "Performance marketing, SEO and automation built as one connected system, run for businesses across Dubai from our UAE base in Ajman Free Zone, with in-person work in Business Bay, DIFC, JLT and Dubai Marina.",
@@ -183,7 +183,7 @@ export const dubaiPages = [
     ],
 
     faqs: [
-      { question: "How much does digital marketing cost in Dubai?", answer: "Retainers for Dubai businesses typically run from AED 5,000 to AED 15,000 per month depending on channel mix, technical complexity and the amount of creative production involved. Ad spend is separate and paid directly to the platforms. We scope from your target cost per acquisition and revenue goal rather than from a fixed package, and we will tell you if the budget is too small to produce a usable signal." },
+      { question: "How much does digital marketing cost in Dubai?", answer: "Ad spend is separate and paid directly to the platforms. We scope from your target cost per acquisition and revenue goal rather than from a fixed package, and we will tell you if the budget is too small to produce a usable signal." },
       { question: "How long before we see results from SEO in Dubai?", answer: "Local search and map pack improvements usually appear within 8 to 12 weeks of the technical fixes, Business Profile work and citation cleanup. Competitive city-wide and sector terms need 6 to 9 months of consistent content and authority building. Paid search produces leads in the first fortnight, which is why most clients run both." },
       { question: "Do you produce the ad creative, video and Arabic copy?", answer: "Yes. Infynix Media produces short-form video, static creative and photography in the UAE, and our Arabic copy is written by native speakers rather than translated. Creative is planned on a testing cadence so new hooks and formats go live every few weeks." },
       { question: "Can you connect campaigns to our existing CRM?", answer: "Yes. We regularly wire Google, Meta, TikTok and LinkedIn lead flows into HubSpot, Zoho, Salesforce, Bitrix24 and custom systems, with source and campaign data carried through so revenue reporting works end to end. WhatsApp Business API is integrated where the sales process runs there." },
@@ -251,16 +251,16 @@ export const dubaiPages = [
       { name: "Full handover", desc: "Source code, infrastructure, documentation and credentials in your name. You are never locked to us to run what you paid for." },
     ],
 
-    specsHeading: "Typical scope, timeline and investment",
-    specsColumns: ["Engagement", "Typical timeline", "Indicative investment"],
+    specsHeading: "Typical scope and timeline",
+    specsColumns: ["Engagement", "Typical timeline"],
     specs: [
-      ["Discovery and technical specification", "2 to 3 weeks", "AED 15,000 to AED 35,000"],
-      ["MVP web or mobile application", "8 to 12 weeks", "AED 50,000 to AED 150,000"],
-      ["Odoo or ERP implementation", "10 to 20 weeks", "AED 60,000 to AED 250,000"],
-      ["CRM implementation and integration", "4 to 10 weeks", "AED 25,000 to AED 90,000"],
-      ["E-commerce platform", "8 to 16 weeks", "AED 40,000 to AED 200,000"],
-      ["Enterprise platform", "4 to 8 months", "AED 250,000 to AED 500,000 and above"],
-      ["Support and maintenance", "Monthly", "From AED 3,500 per month"],
+      ["Discovery and technical specification", "2 to 3 weeks"],
+      ["MVP web or mobile application", "8 to 12 weeks"],
+      ["Odoo or ERP implementation", "10 to 20 weeks"],
+      ["CRM implementation and integration", "4 to 10 weeks"],
+      ["E-commerce platform", "8 to 16 weeks"],
+      ["Enterprise platform", "4 to 8 months"],
+      ["Support and maintenance", "Monthly"],
     ],
 
     useCasesHeading: "Systems we build most often in Dubai",
@@ -396,7 +396,7 @@ export const dubaiPages = [
     ],
 
     faqs: [
-      { question: "How much does custom software development cost in Dubai?", answer: "Focused MVPs and single-purpose applications typically run from AED 50,000. ERP and CRM implementations sit between AED 25,000 and AED 250,000 depending on modules and integrations. Enterprise platforms run from AED 250,000 to AED 500,000 and beyond. Every project is scoped individually from a paid discovery, so the estimate reflects your requirements rather than a package." },
+      { question: "How much does custom software development cost in Dubai?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "How long does a typical software project take?", answer: "An MVP takes 8 to 12 weeks. An ERP or CRM implementation runs 4 to 20 weeks depending on scope and data migration. Enterprise platforms take 4 to 8 months, delivered in releases so value arrives before the final milestone." },
       { question: "Do you build systems that comply with UAE VAT and e-invoicing?", answer: "Yes. Tax invoice and credit note formats that meet Federal Tax Authority requirements, VAT return data and a corporate tax audit trail are part of the standard data model. Integration points for the e-invoicing programme, which is being phased in from 2026, are designed in so the system can connect to an accredited service provider when the business is required to." },
       { question: "Can you build in Arabic with right-to-left layout?", answer: "Yes. Bilingual interfaces with proper RTL layout, Arabic typography and localised formats are a standard requirement in our UAE builds, applied to internal screens as well as customer-facing ones." },
@@ -534,7 +534,7 @@ export const dubaiPages = [
     ],
 
     faqs: [
-      { question: "How much does SEO cost in Dubai?", answer: "SEO retainers for Dubai businesses typically run from AED 3,000 to AED 12,000 per month depending on competition, the number of languages and markets, and the amount of technical and content work required. A fixed-scope technical audit and fix is quoted separately. We scope from where the site is and where it needs to get to." },
+      { question: "How much does SEO cost in Dubai?", answer: "Every engagement is scoped individually after a discovery session, from the outcome you need and the work involved, and quoted before anything starts. Ad spend, where it applies, is separate and paid directly to the platforms, and we will say plainly if the budget on the table is too small to produce a usable result." },
       { question: "How long does SEO take to show results in Dubai?", answer: "Technical fixes show in Search Console within weeks. Local search and map pack improvements typically appear within 8 to 12 weeks. Competitive city-wide terms need 6 to 12 months of sustained content and authority work. We report leading indicators monthly so progress is visible before rankings move." },
       { question: "Do you guarantee first page rankings?", answer: "No. No honest SEO company does, because nobody controls Google. What we commit to is a sound technical foundation, content built from real demand, defensible authority work and transparent monthly reporting on leads as well as rankings." },
       { question: "Do you do Arabic SEO?", answer: "Yes. Arabic keyword research, native-written content and correct language markup run as a separate track with separate reporting, so you can see what each language produces." },
@@ -562,7 +562,7 @@ export const dubaiPages = [
     category: "technology",
     title: "Web Design Company in Dubai | Infynix Solutions",
     description:
-      "Web design company serving Dubai: custom, bilingual, mobile-first websites and e-commerce stores built to rank and convert, with UAE hosting, payments and compliance handled, from AED 15,000.",
+      "Web design company serving Dubai: custom, bilingual, mobile-first websites and e-commerce stores built to rank and convert, with UAE hosting, payments and compliance handled.",
     h1: "Web Design Company in Dubai",
     heroSubtitle:
       "Custom, bilingual, conversion-focused websites designed and built for businesses across Dubai, with performance, search and UAE compliance treated as part of the design rather than an afterthought.",
@@ -593,15 +593,15 @@ export const dubaiPages = [
       { name: "Accessibility and compliance", desc: "Accessible markup, cookie and privacy handling aligned with the UAE Personal Data Protection Law." },
     ],
 
-    specsHeading: "Typical projects, timelines and investment",
-    specsColumns: ["Project", "Timeline", "Indicative investment"],
+    specsHeading: "Typical projects and timelines",
+    specsColumns: ["Project", "Timeline"],
     specs: [
-      ["Business website, 5 to 10 pages", "4 to 6 weeks", "AED 15,000 to AED 35,000"],
-      ["Bilingual corporate site", "6 to 10 weeks", "AED 30,000 to AED 70,000"],
-      ["E-commerce store", "8 to 16 weeks", "AED 40,000 to AED 150,000"],
-      ["Campaign landing pages", "1 to 2 weeks", "AED 4,000 to AED 12,000"],
-      ["Redesign and migration", "6 to 12 weeks", "Scoped from the existing site"],
-      ["Hosting, care and updates", "Monthly", "From AED 750 per month"],
+      ["Business website, 5 to 10 pages", "4 to 6 weeks"],
+      ["Bilingual corporate site", "6 to 10 weeks"],
+      ["E-commerce store", "8 to 16 weeks"],
+      ["Campaign landing pages", "1 to 2 weeks"],
+      ["Redesign and migration", "6 to 12 weeks"],
+      ["Hosting, care and updates", "Monthly"],
     ],
 
     useCasesHeading: "Who we design for in Dubai",
@@ -669,11 +669,11 @@ export const dubaiPages = [
     ],
 
     faqs: [
-      { question: "How much does a website cost in Dubai?", answer: "A focused business website typically runs from AED 15,000 to AED 35,000. Bilingual corporate sites sit between AED 30,000 and AED 70,000. E-commerce stores run from AED 40,000 to AED 150,000 depending on catalogue size, integrations and design complexity. Every project is scoped individually and quoted as a fixed price." },
+      { question: "How much does a website cost in Dubai?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "How long does it take to build a website?", answer: "A business website takes 4 to 6 weeks from kickoff to launch. Bilingual corporate sites take 6 to 10 weeks. E-commerce and complex platforms take 8 to 16 weeks. Content readiness on the client side is usually the biggest variable." },
       { question: "Do you design bilingual English and Arabic websites?", answer: "Yes. Both languages are designed together with proper right-to-left layout, Arabic typography, correct language markup for search and a content workflow that keeps both versions current." },
       { question: "Will the site rank on Google?", answer: "It will be built to. Prerendered content, clean structure, structured data, performance and metadata are part of every build, so the site is search-ready at launch. Ranking for competitive terms then depends on the content and authority programme that follows, which our SEO team can run." },
-      { question: "Do you provide hosting and maintenance?", answer: "Yes. Care plans from AED 750 per month cover hosting in UAE or nearby regions, SSL, backups, monitoring, updates and a monthly allowance for content changes." },
+      { question: "Do you provide hosting and maintenance?", answer: "Scope drives the number, so the honest answer comes after a short discovery rather than before it. What we commit to in advance is that the quote is fixed for the agreed scope, that there are no surprise extras, and that we tell you when a cheaper route would serve you better." },
       { question: "Can you redesign our site without losing our Google rankings?", answer: "Yes. Redesigns are planned with a redirect map, content migration and tracking continuity so search equity is preserved. We monitor Search Console through and after launch to catch anything that moves." },
       { question: "Which e-commerce platform do you recommend for the UAE?", answer: "Shopify for most retailers who want a managed platform with UAE gateway support. WooCommerce where content and commerce need to live together on WordPress. Headless builds where the catalogue, integrations or performance demands justify the engineering. We recommend from your requirements, not from a preference." },
       { question: "Do you take photographs and video for the site?", answer: "Yes. Infynix Media shoots photography and video in the UAE for the sites we build, which is the single biggest visual upgrade over a template site with stock imagery." },
