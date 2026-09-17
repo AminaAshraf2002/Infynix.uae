@@ -4,6 +4,7 @@ import logo from '../assets/footer.png';
 import ukLImage from '../assets/UKL.svg';
 import dubaiImage from '../assets/dubai.svg';
 import kochiImage from '../assets/kochi.svg';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
@@ -145,6 +146,7 @@ const Footer = () => {
 
         <div className="footer-bottom" style={{ borderTop: '1px solid rgba(204, 191, 191, 0.28)', marginTop: '40px', paddingTop: '30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
           <p style={{ fontSize: '0.8rem', color: '#ffffff' }}>© 2026 Infynix Solutions. All Rights Reserved.</p>
+          <SocialLinks />
         </div>
       </div>
     </footer>

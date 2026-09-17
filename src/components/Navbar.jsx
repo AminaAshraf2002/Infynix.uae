@@ -315,9 +315,9 @@ const Navbar = () => {
                 Start a Project <span style={{ marginLeft: '8px' }}>→</span>
               </Link>
               <div className="mobile-socials">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+                <a href="https://www.linkedin.com/company/infynix-solutions-uae/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.instagram.com/infynixsolutions.ae/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/people/Infynix-Solutions-UAE/61584754534164/" target="_blank" rel="noopener noreferrer">Facebook</a>
               </div>
             </div>
           </div>
