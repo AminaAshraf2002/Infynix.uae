@@ -31,6 +31,7 @@ const offices = [
         label: "UK Office",
         desc: "39 Becontree Avenue, Dagenham, London RM8 2UH. Our European delivery and consulting center directing international operations and strategy.",
         image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=900&q=80",
+        mapUrl: "https://share.google/nr3IR1BycI55dDqUs"
     },
     {
         city: "Kochi",

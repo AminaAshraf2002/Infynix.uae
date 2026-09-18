@@ -6,6 +6,7 @@ import logo from '../assets/footer.png';
 import ukLImage from '../assets/UKL.svg';
 import dubaiImage from '../assets/dubai.svg';
 import kochiImage from '../assets/kochi.svg';
+import SocialLinks from './SocialLinks';
 
 const ClientsSection = () => {
   useIxReveal();
@@ -119,12 +120,14 @@ const ClientsSection = () => {
             </div>
 
             <div className="footer-location-card">
-              <img src={ukLImage} alt="UK London Office" className="footer-location-svg" />
-              <div className="footer-location-title">UK - LONDON</div>
-              <div className="footer-location-addr">
-                39 Becontree Avenue,<br />
-                Dagenham, London RM8 2UH
-              </div>
+              <a href="https://share.google/nr3IR1BycI55dDqUs" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <img src={ukLImage} alt="UK London Office" className="footer-location-svg" />
+                <div className="footer-location-title">UK - LONDON ↗</div>
+                <div className="footer-location-addr">
+                  39 Becontree Avenue,<br />
+                  Dagenham, London RM8 2UH
+                </div>
+              </a>
             </div>
 
             <div className="footer-location-card">
@@ -195,6 +198,7 @@ const ClientsSection = () => {
 
           <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '30px', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
             <p style={{ fontSize: '0.8rem', color: '#ffffff' }}>© 2026 Infynix Solutions. Engineered for Excellence.</p>
+            <SocialLinks />
           </div>
         </div>
       </footer>

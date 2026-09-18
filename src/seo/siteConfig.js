@@ -47,6 +47,7 @@ export const SOCIAL_PROFILES = [
   'https://www.linkedin.com/company/infynix-solutions-uae/',
   'https://www.instagram.com/infynixsolutions.ae/',
   'https://www.facebook.com/people/Infynix-Solutions-UAE/61584754534164/',
+  'https://wa.me/971542575702',
   GOOGLE_BUSINESS_PROFILE,
 ];
 
