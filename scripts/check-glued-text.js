@@ -23,7 +23,7 @@ const CAMEL_OK = [
   'IoT', 'iOS', 'iPadOS', 'macOS', 'JavaScript', 'TypeScript', 'WordPress',
   'WooCommerce', 'WhatsApp', 'SaaS', 'PaaS', 'IaaS', 'DevOps', 'GitHub',
   'GitLab', 'YouTube', 'LinkedIn', 'PostgreSQL', 'MySQL', 'MongoDB',
-  'eCommerce', 'PowerPoint', 'OpenAI', 'ChatGPT', 'PageSpeed', 'BigQuery',
+  'eCommerce', 'PowerPoint', 'OpenAI', 'ChatGPT', 'PageSpeed', 'BigQuery', 'QuickBooks', 'PayTabs',
   'HubSpot', 'ShipRocket', 'UI/UX', 'JavaScript SEO', 'GraphQL', 'GraphQL API', 'TikTok', 'YouTube Shorts', 'DoH', 'ADGM', 'KIZAD',
 ];
 
