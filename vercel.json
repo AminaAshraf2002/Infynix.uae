@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "_comment_cleanUrls": "Deliberately NOT set. cleanUrls:true makes Vercel 308 any /x.html to /x, which breaks Google Search Console HTML-file verification: Google fetches /googleXXXX.html and requires a 200, not a redirect.",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "trailingSlash": false,
   "redirects": [
     {
