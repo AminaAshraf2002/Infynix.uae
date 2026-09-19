@@ -9,20 +9,21 @@ import manufacturingIcon from '../assets/manufacturing.png';
 import retailIcon from '../assets/retail.png';
 import hospitalityIcon from '../assets/hospitality.png';
 import professionalServicesIcon from '../assets/professional-services.png';
+import { industriesData } from '../lib/contentData';
 
 const indLeft = [
   { path: '/industries/healthcare', icon: healthcareIcon, title: 'Healthcare', desc: 'Automate care, records, and compliance workflows.' },
   { path: '/industries/education', icon: educationIcon, title: 'Education', desc: 'Modernize enrollment, learning, and communication.' },
   { path: '/industries/construction', icon: constructionIcon, title: 'Construction', desc: 'Centralize project data, budgets, and site tracking.' },
   { path: '/industries/real-estate', icon: realEstateIcon, title: 'Real Estate', desc: 'CRM and automation built for faster deal closing.' }
-];
+].filter((item) => industriesData[item.path.split('/').pop()]);
 
 const indRight = [
   { path: '/industries/manufacturing', icon: manufacturingIcon, title: 'Manufacturing', desc: 'Connect production, inventory, and supply chain data.' },
   { path: '/industries/retail', icon: retailIcon, title: 'Retail & Commerce', desc: 'Unify inventory, customers, and channels.' },
   { path: '/industries/hospitality', icon: hospitalityIcon, title: 'Hospitality', desc: 'Automate bookings, guest service, and operations.' },
   { path: '/industries/professional-services', icon: professionalServicesIcon, title: 'Professional Services', desc: 'Systems for billing, projects, and client experience.' }
-];
+].filter((item) => industriesData[item.path.split('/').pop()]);
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

@@ -6,6 +6,8 @@ import { divisionForSlug, isDivision, getDivision, servicesInDivision } from '..
 import { SITE_URL } from '../seo/siteConfig';
 import { organizationSchema, serviceSchema, breadcrumbSchema, faqSchema } from '../seo/schema';
 import ServiceDepth from './ServiceDepth';
+import ServiceCrossLinks from './ServiceCrossLinks';
+import { solutionSlugForTitle } from '../content/crossLinks.js';
 import { serviceDepth } from '../content/serviceDepth/index.js';
 import defaultHeroBg from '../assets/hero_bg_abstract.jpg';
 import capImg1 from '../assets/cap_img_1.jpg';
@@ -213,18 +215,12 @@ const SolutionsPage = () => {
   // Get 3 random case studies or first 3
   const relatedCases = caseStudiesData.slice(0, 3);
   
-  const agencyServices = [
-    "Performance Advertising", "SEO & Content Marketing", "Social Media Management",
-    "Marketing Automation & CRM", "Analytics & Reporting", "Brand Strategy & Positioning"
-  ];
-  const mediaServices = [
-    "Photography & Videography", "Short-Form & Social Content", "Brand Films & Commercials",
-    "AI-Assisted Production", "Motion Graphics & Animation", "Podcast & Audio Production"
-  ];
-  const growthServices = [
-    "Custom Web & App Development", "AI-Native Product Development", "Marketing & Business Automation",
-    "IoT & Connected Systems", "Data Platforms & Dashboards", "API & Systems Integration"
-  ];
+  // Sibling services are read from the catalogue rather than a hand-typed
+  // list, so a site never advertises a service page it does not have.
+  const titlesIn = (division) => servicesInDivision(division).map((svc) => svc.title);
+  const agencyServices = titlesIn('infynix-agency');
+  const mediaServices = titlesIn('infynix-media');
+  const growthServices = titlesIn('infynix-growth-solutions');
 
   let displayServices = mediaServices;
   if (data.category === 'Agency' || data.category === 'Marketing' || data.category === 'Branding') {
@@ -475,6 +471,7 @@ const SolutionsPage = () => {
       </section>
 
       <ServiceDepth depth={depth} title={data.title} />
+      <ServiceCrossLinks slug={activeSlug} title={data.title} />
 
       {allFaqs.length > 0 && (
         <section style={{ background: '#fff', padding: '90px 5%', borderTop: '1px solid #e5e7eb' }}>
@@ -630,7 +627,7 @@ const SolutionsPage = () => {
                       {svcTitle}
                     </h3>
                     
-                    <Link to={`/solutions/${svcTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)', borderBottom: '1px solid #111', paddingBottom: '4px', width: 'fit-content', textTransform: 'uppercase', textDecoration: 'none', color: '#111', marginTop: 'auto' }}>
+                    <Link to={`/solutions/${solutionSlugForTitle(svcTitle) || ''}`} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: 600, fontFamily: 'var(--ix-font-body)', borderBottom: '1px solid #111', paddingBottom: '4px', width: 'fit-content', textTransform: 'uppercase', textDecoration: 'none', color: '#111', marginTop: 'auto' }}>
                       Learn More <ArrowUpRight />
                     </Link>
 
@@ -680,17 +677,11 @@ const SolutionsPage = () => {
           {/* We render the track twice for seamless infinite looping */}
           {[1, 2].map(trackIndex => (
             <div key={trackIndex} className="marquee-track" style={{ display: 'flex', animation: 'marquee 60s linear infinite' }}>
-              {[
-                "Performance Advertising", "SEO & Content Marketing", "Social Media Management",
-                "Marketing Automation & CRM", "Analytics & Reporting", "Brand Strategy & Positioning",
-                "Photography & Videography", "Short-Form & Social Content", "Brand Films & Commercials",
-                "AI-Assisted Production", "Motion Graphics & Animation", "Podcast & Audio Production",
-                "Custom Web & App Development", "AI-Native Product Development", "Marketing & Business Automation",
-                "IoT & Connected Systems", "Data Platforms & Dashboards", "API & Systems Integration"
-              ].map((title, i) => {
-                const titleSlug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                return <MarqueeCard key={`m${trackIndex}-${i}`} title={title} slug={titleSlug} />
-              })}
+              {Object.entries(solutionsData)
+                .filter(([slug]) => !isDivision(slug))
+                .map(([slug, entry], i) => (
+                  <MarqueeCard key={`m${trackIndex}-${i}`} title={entry.title} slug={slug} />
+                ))}
             </div>
           ))}
         </div>

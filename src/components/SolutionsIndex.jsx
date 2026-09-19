@@ -7,6 +7,7 @@ import capImg2 from '../assets/media.png';
 import capImg3 from '../assets/marketing.png';
 import heroBg from '../assets/hero_bg_solutions_index.jpg';
 import { solutionsData } from '../lib/contentData';
+import { solutionSlugForTitle } from '../content/crossLinks.js';
 import Seo from '../seo/Seo';
 import { organizationSchema, breadcrumbSchema } from '../seo/schema';
 
@@ -250,8 +251,8 @@ const SolutionsIndex = () => {
                 )}
 
                 <div data-aos="fade-up" data-aos-delay="200" style={{ display: 'flex', flexDirection: 'column', gap: '5px', flex: 1, justifyContent: 'center' }}>
-                  {layer.services.map((svc, sIdx) => {
-                    const svcSlug = svc.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                  {layer.services.filter((svc) => solutionSlugForTitle(svc)).map((svc, sIdx) => {
+                    const svcSlug = solutionSlugForTitle(svc);
                     return (
                     <Link to={`/solutions/${svcSlug}`} key={sIdx} style={{
                       display: 'flex',
@@ -291,7 +292,7 @@ const SolutionsIndex = () => {
         >
           {[1, 2].map(trackIndex => (
             <div key={trackIndex} className="marquee-track" style={{ display: 'flex', animation: 'marquee 60s linear infinite' }}>
-              {allSubCategories.map((title, i) => (
+              {allSubCategories.filter((title) => solutionSlugForTitle(title)).map((title, i) => (
                 <MarqueeCard key={`m${trackIndex}-${i}`} title={title} />
               ))}
             </div>
