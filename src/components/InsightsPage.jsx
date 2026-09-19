@@ -2,12 +2,24 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { insightsData } from '../lib/contentData';
 import SEOManager from './SEOManager';
+import { SITE_URL } from '../seo/siteConfig';
 
 const OFF_WHITE = "#F5F5F3";
 const CHARCOAL = "#1A1A1A";
 const GREEN = "#0A4A33";
 const GREEN_LITE = "#EBF1ED";
 const BORDER = "#E5E5E5";
+
+// Content dates are authored as "September 6, 2026" for display. Schema.org
+// needs ISO 8601, so convert rather than emitting a string Google discards.
+const toIsoDate = (value) => {
+  if (!value) return undefined;
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return undefined;
+  // Build from local parts. toISOString() shifts to UTC and can move the date.
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${parsed.getFullYear()}-${pad(parsed.getMonth() + 1)}-${pad(parsed.getDate())}`;
+};
 
 const insightImages = {
   'what-is-growth-engineering': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
@@ -84,9 +96,15 @@ const InsightsPage = () => {
             '@type': 'Article',
             'headline': article.title,
             'description': article.summary,
-            'author': { '@type': 'Organization', 'name': article.author || 'Infynix' },
-            'publisher': { '@type': 'Organization', 'name': 'Infynix' },
-            'datePublished': article.date
+            'author': { '@type': 'Organization', 'name': article.author || 'Infynix Solutions' },
+            // Reference the Organization node by @id rather than restating a bare
+            // name, so the article attaches to the same entity as the rest of the site.
+            'publisher': { '@id': `${SITE_URL}/#organization` },
+            // Schema.org requires ISO 8601. "September 6, 2026" is ignored by Google.
+            'datePublished': toIsoDate(article.date),
+            'dateModified': toIsoDate(article.date),
+            'citation': (article.sources || []).map((source) => source.url),
+            'mainEntityOfPage': `${SITE_URL}/insights/${article.slug}`
           }}
         />
 
@@ -127,37 +145,38 @@ const InsightsPage = () => {
                 </p>
               ))}
 
-              <div style={{ background: '#EAEAEA', padding: '30px', margin: '50px 0', borderLeft: `3px solid ${GREEN}` }} data-aos="fade-right">
-                <p style={{ fontStyle: 'italic', fontFamily: "'Montserrat', sans-serif", fontSize: '1.15rem', lineHeight: '1.6', color: '#333', margin: 0 }}>
-                  "Engineering is not the art of building complex things, but the science of making complexity invisible to the user."
-                </p>
-              </div>
+              {(article.sections || []).map((section, sIdx) => (
+                <React.Fragment key={sIdx}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Montserrat', sans-serif", margin: '50px 0 20px', color: CHARCOAL }} data-aos="fade-up">
+                    {section.heading}
+                  </h2>
+                  {section.paragraphs.map((para, pIdx) => (
+                    <p key={pIdx} style={{ marginBottom: '30px' }} data-aos="fade-up">
+                      {para}
+                    </p>
+                  ))}
+                </React.Fragment>
+              ))}
 
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Montserrat', sans-serif", margin: '50px 0 20px', color: CHARCOAL }} data-aos="fade-up">
-                Defining the New Blueprint
-              </h3>
-              <p style={{ marginBottom: '40px' }} data-aos="fade-up">
-                The blueprint for 2025 relies on three fundamental pillars: modularity, observability, and self-healing logic. Traditional fixed-state configurations are being replaced by dynamic environments that respond to telemetry in real-time. This isn't just automation; it's autonomous integration.
-              </p>
-
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '40px' }}>
-                <div style={{ border: `1px dotted #ccc`, padding: '20px' }} data-aos="zoom-in" data-aos-delay="100">
-                  <div style={{ color: GREEN, fontSize: '0.75rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px', fontFamily: "'Montserrat', sans-serif" }}>
-                    01 / MODULARITY
-                  </div>
-                  <p style={{ margin: 0, fontSize: '0.9rem', lineHeight: 1.6, fontFamily: "'Montserrat', sans-serif" }}>
-                    Components must be swappable without interrupting the global state.
-                  </p>
+              {/* Outbound citations: the primary documents the article relies on.
+                  Linked plainly so a reader (or a crawler) can check the claims. */}
+              {Array.isArray(article.sources) && article.sources.length > 0 && (
+                <div style={{ marginTop: '50px', borderTop: `1px dotted ${BORDER}`, paddingTop: '30px' }} data-aos="fade-up">
+                  <h2 style={{ fontSize: '1.1rem', fontWeight: 800, fontFamily: "'Montserrat', sans-serif", margin: '0 0 16px', color: CHARCOAL, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Sources and further reading
+                  </h2>
+                  <ol style={{ paddingLeft: '20px', margin: 0, fontSize: '0.95rem', lineHeight: 1.7 }}>
+                    {article.sources.map((source, idx) => (
+                      <li key={idx} style={{ marginBottom: '10px' }}>
+                        <a href={source.url} target="_blank" rel="noopener noreferrer" style={{ color: GREEN, textDecoration: 'underline' }}>
+                          {source.label}
+                        </a>
+                        {source.note ? ` (${source.note})` : ''}
+                      </li>
+                    ))}
+                  </ol>
                 </div>
-                <div style={{ border: `1px dotted #ccc`, padding: '20px' }} data-aos="zoom-in" data-aos-delay="200">
-                  <div style={{ color: GREEN, fontSize: '0.75rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px', fontFamily: "'Montserrat', sans-serif" }}>
-                    02 / OBSERVABILITY
-                  </div>
-                  <p style={{ margin: 0, fontSize: '0.9rem', lineHeight: 1.6, fontFamily: "'Montserrat', sans-serif" }}>
-                    Granular data collection at every trace node for predictive maintenance.
-                  </p>
-                </div>
-              </div>
+              )}
 
             </div>
 

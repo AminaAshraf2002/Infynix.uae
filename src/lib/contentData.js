@@ -562,35 +562,6 @@ export const caseStudiesData = [
   }
 ];
 
-export const insightsData = [
-  {
-    slug: 'what-is-growth-engineering',
-    title: 'What is Growth Engineering and Why Your Business Needs It',
-    category: 'Growth Engineering',
-    summary: 'Learn why disconnected marketing tools fail and how connected search, media, and software build reliable growth.',
-    content: `
-      Businesses rarely struggle from a lack of effort. They struggle because their website, search strategy, paid ads, and software tools work separately.
-      
-      Growth Engineering fixes this. At Infynix Solutions, we build unified digital systems where search pre-rendering, fast web apps, paid ads, and daily software tools work together cleanly.
-      
-      When your website loads in less than a second, ranks high on Google, and sends inquiries straight to your CRM, getting new clients becomes straightforward and predictable.
-    `,
-    date: 'September 6, 2026',
-    author: 'Infynix Tech Lab'
-  },
-  {
-    slug: 'ai-surveillance-computer-vision-security',
-    title: 'How Real-Time AI Computer Vision Improves Facility Security',
-    category: 'AI Surveillance',
-    summary: 'Discover how edge-processed AI computer vision on local devices turns video surveillance into active security.',
-    content: `
-      Traditional video surveillance cameras only record video. Security teams usually review footage after an incident has already happened.
-      
-      AI computer vision changes this. By running AI vision models on local edge hardware like NVIDIA Jetson, your cameras process video streams in real time.
-      
-      Intrusions and boundary breaches are detected instantly, alerting your security team before issues escalate. Because processing happens on-site, your video data remains completely private.
-    `,
-    date: 'September 6, 2026',
-    author: 'Infynix AI Team'
-  }
-];
+// Insights live in src/content/insights.js (articles with sections and
+// cited sources); re-exported here so existing imports keep working.
+export { insightsData } from '../content/insights.js';
