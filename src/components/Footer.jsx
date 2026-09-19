@@ -133,12 +133,12 @@ const Footer = () => {
                 🇬🇧 UK, infynixsolutions.co.uk
               </a>
               <a
-                href="https://www.infynix-solutions.com"
+                href="https://www.infynixgrowthsolutions.com"
                 target="_blank"
                 rel="noopener"
                 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
               >
-                🇮🇳 India, infynix-solutions.com
+                🇮🇳 India, infynixgrowthsolutions.com
               </a>
             </div>
           </div>

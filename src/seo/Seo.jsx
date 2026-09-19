@@ -38,7 +38,7 @@ export default function Seo({
           pages, where hreflang must point at the corresponding page. All three
           domains carry the same set, which is what makes it reciprocal. */}
       {path === '/' && (
-        <link rel="alternate" hrefLang="en-IN" href="https://www.infynix-solutions.com/" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.infynixgrowthsolutions.com/" />
       )}
       {path === '/' && (
         <link rel="alternate" hrefLang="en-AE" href="https://www.infynixsolutions.ae/" />
@@ -47,7 +47,7 @@ export default function Seo({
         <link rel="alternate" hrefLang="en-GB" href="https://www.infynixsolutions.co.uk/" />
       )}
       {path === '/' && (
-        <link rel="alternate" hrefLang="x-default" href="https://www.infynix-solutions.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.infynixgrowthsolutions.com/" />
       )}
 
       <meta

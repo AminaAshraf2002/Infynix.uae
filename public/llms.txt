@@ -1,0 +1,107 @@
+# Infynix Solutions (United Arab Emirates)
+
+> Infynix Solutions is a Growth Engineering company: three divisions that build the marketing, media and business systems a company needs to attract, convert and scale. This file describes the United Arab Emirates site at https://www.infynixsolutions.ae.
+
+## Business
+- Legal name: Infynix Solutions
+- Office: C1 Building - Office C1 1F-SF6540, Free Zone, Al Butain, Ajman, AE
+- Telephone: +971 54 257 5702
+- Email: office@infynixsolutions.ae
+- Areas served: United Arab Emirates, Dubai, Abu Dhabi, Sharjah, United Kingdom, India
+- Contact page: https://www.infynixsolutions.ae/contact
+
+## Divisions
+### Infynix Agency (Performance and digital marketing)
+Paid media, search, social and the measurement underneath them. The side of the business that creates demand and proves where it came from.
+- Hub: https://www.infynixsolutions.ae/solutions/infynix-agency
+- [Social Media Management](https://www.infynixsolutions.ae/solutions/social-media-management): Building active social profiles and brand authority on social channels.
+- [Marketing Automation & CRM](https://www.infynixsolutions.ae/solutions/marketing-automation-crm): Automating lead follow-ups, email drips, and CRM synchronization.
+- [UI/UX Design & Brand Styling](https://www.infynixsolutions.ae/solutions/ui-ux-design): We design digital product layouts and visual brand styles that look modern and guide users to buy.
+- [Analytics & Reporting](https://www.infynixsolutions.ae/solutions/analytics-reporting): Custom analytics dashboards and reporting systems that turn your data into clear, actionable business intelligence.
+- [Brand Strategy & Positioning](https://www.infynixsolutions.ae/solutions/brand-strategy-positioning): Clear brand strategy and market positioning for UAE businesses, defining who you are, who you serve, and why they should choose you.
+- [SEO Services & Search Infrastructure](https://www.infynixsolutions.ae/solutions/seo-services): We engineer technical search pre-rendering, clean HTML tags, and keyword content to help your business rank at the top of search engine results.
+- [Performance Marketing & Paid Ads](https://www.infynixsolutions.ae/solutions/performance-marketing): We manage targeted ad campaigns on Google, Meta, and LinkedIn focused on customer acquisition and return on ad spend.
+
+### Infynix Growth Solutions (Software, ERP and business systems)
+Custom web applications, CRM and ERP development, business automation, cloud infrastructure and AI vision systems. The engineering practice.
+- Hub: https://www.infynixsolutions.ae/solutions/infynix-growth-solutions
+- [AI Surveillance & Security Solutions](https://www.infynixsolutions.ae/solutions/ai-surveillance): Real-time AI computer vision security, local edge processing, and automated threat alerts for commercial facilities.
+- [Website Development Services](https://www.infynixsolutions.ae/solutions/website-development): We build fast, secure web platforms using React 19 and Next.js designed to convert visitors into clients.
+- [Mobile App Development](https://www.infynixsolutions.ae/solutions/mobile-app-development): We develop custom mobile applications for iOS and Android built for speed, offline usability, and clear navigation.
+- [Artificial Intelligence & AI Integration](https://www.infynixsolutions.ae/solutions/artificial-intelligence): We build custom AI agents and workflow tools that automate daily administrative tasks.
+- [Business Automation Solutions](https://www.infynixsolutions.ae/solutions/business-automation): We connect your software tools with automated APIs so your team spends zero time copying data by hand.
+- [Custom CRM & ERP Software](https://www.infynixsolutions.ae/solutions/crm-erp-development): We build custom CRM and business management software designed around how your company actually operates.
+- [Cloud Infrastructure & Hosting](https://www.infynixsolutions.ae/solutions/cloud-solutions): We set up and manage secure cloud hosting on AWS, Google Cloud, and Vercel.
+- [IoT & Connected Systems](https://www.infynixsolutions.ae/solutions/iot-connected-systems): IoT system design and development for UAE businesses, connecting physical devices to cloud dashboards, automation workflows, and real-time monitoring.
+- [API & Systems Integration](https://www.infynixsolutions.ae/solutions/api-systems-integration): API development and systems integration for UAE businesses, connecting your tools, platforms, and databases into a single, coherent operational system.
+- [Data Platforms & Dashboards](https://www.infynixsolutions.ae/solutions/data-platforms-dashboards): Custom data platforms and business intelligence dashboards for UAE companies, turning raw data into clear, actionable insights.
+- [AI-Assisted Production](https://www.infynixsolutions.ae/solutions/ai-assisted-production): AI-assisted video and creative production pipelines designed to accelerate asset generation while maintaining premium studio quality.
+
+### Infynix Media (Content, film and production)
+Brand films, photography, motion graphics and short-form social content, produced in house.
+- Hub: https://www.infynixsolutions.ae/solutions/infynix-media
+- [Photography & Videography](https://www.infynixsolutions.ae/solutions/photography-videography): Professional photography and videography services for UAE brands, product shoots, corporate headshots, brand campaigns, and commercial video production.
+- [Short-Form & Social Content](https://www.infynixsolutions.ae/solutions/short-form-social-content): High-impact short-form video content for Instagram Reels, TikTok, YouTube Shorts, and LinkedIn, produced and optimised for maximum reach and engagement.
+- [Brand Films & Commercials](https://www.infynixsolutions.ae/solutions/brand-films-commercials): Cinematic brand films and commercial video production for UAE businesses, from concept and scripting through to final broadcast-ready delivery.
+- [Motion Graphics & Animation](https://www.infynixsolutions.ae/solutions/motion-graphics-animation): Professional motion graphics and animation for UAE brands, explainer videos, animated logos, product demos, and 3D renders.
+- [Podcast & Audio Production](https://www.infynixsolutions.ae/solutions/podcast-audio-production): End-to-end studio podcast recording, sound engineering, mastering, and multi-channel audio distribution.
+
+## Location and service pages
+- [Digital Marketing Agency in Dubai](https://www.infynixsolutions.ae/digital-marketing-agency-in-dubai)
+- [Software Development Company in Dubai](https://www.infynixsolutions.ae/software-development-company-in-dubai)
+- [SEO Company in Dubai](https://www.infynixsolutions.ae/seo-company-in-dubai)
+- [Web Design Company in Dubai](https://www.infynixsolutions.ae/web-design-company-in-dubai)
+- [Digital Marketing Agency in Abu Dhabi](https://www.infynixsolutions.ae/digital-marketing-agency-in-abu-dhabi)
+- [Software Development Company in Abu Dhabi](https://www.infynixsolutions.ae/software-development-company-in-abu-dhabi)
+- [SEO Company in Abu Dhabi](https://www.infynixsolutions.ae/seo-company-in-abu-dhabi)
+- [Web Design Company in Abu Dhabi](https://www.infynixsolutions.ae/web-design-company-in-abu-dhabi)
+- [Digital Marketing Agency in Sharjah](https://www.infynixsolutions.ae/digital-marketing-agency-in-sharjah)
+- [SEO Company in Sharjah](https://www.infynixsolutions.ae/seo-company-in-sharjah)
+- [Web Design Company in Sharjah](https://www.infynixsolutions.ae/web-design-company-in-sharjah)
+- [Software Development Company in Sharjah](https://www.infynixsolutions.ae/software-development-company-in-sharjah)
+
+## Industries
+- [Healthcare](https://www.infynixsolutions.ae/industries/healthcare)
+- [Education](https://www.infynixsolutions.ae/industries/education)
+- [Construction](https://www.infynixsolutions.ae/industries/construction)
+- [Real Estate](https://www.infynixsolutions.ae/industries/real-estate)
+- [Manufacturing](https://www.infynixsolutions.ae/industries/manufacturing)
+- [Retail & Commerce](https://www.infynixsolutions.ae/industries/retail)
+- [Hospitality](https://www.infynixsolutions.ae/industries/hospitality)
+- [Professional Services](https://www.infynixsolutions.ae/industries/professional-services)
+
+## Case studies
+- [Salon Procurement & Multi-Branch Inventory System](https://www.infynixsolutions.ae/case-studies/beyond-demands)
+- [Multi-Role SaaS Platform for Field Team & Task Operations](https://www.infynixsolutions.ae/case-studies/task-management-system)
+- [Client Onboarding & Project Management Operating System](https://www.infynixsolutions.ae/case-studies/agency-os)
+- [AI Face Recognition & Surveillance System](https://www.infynixsolutions.ae/case-studies/ai-surveillance)
+- [Salon Service Menu & Beauty Brand Visual Identity](https://www.infynixsolutions.ae/case-studies/salon-branding-menucard)
+- [Salon Visiting Card & Corporate Visual Identity](https://www.infynixsolutions.ae/case-studies/corporate-brand-identity)
+- [Multi-Channel Paid Ads & ROI Scaling Campaign](https://www.infynixsolutions.ae/case-studies/performance-ad-campaign)
+
+## Insights
+- [What is Growth Engineering and Why Your Business Needs It](https://www.infynixsolutions.ae/insights/what-is-growth-engineering)
+- [How Real-Time AI Computer Vision Improves Facility Security](https://www.infynixsolutions.ae/insights/ai-surveillance-computer-vision-security)
+
+## Site directory
+- Home: https://www.infynixsolutions.ae/
+- Growth Engineering: https://www.infynixsolutions.ae/growth-engineering
+- Solutions: https://www.infynixsolutions.ae/solutions
+- Industries: https://www.infynixsolutions.ae/industries
+- Case studies: https://www.infynixsolutions.ae/case-studies
+- Insights: https://www.infynixsolutions.ae/insights
+- About: https://www.infynixsolutions.ae/about
+- Contact: https://www.infynixsolutions.ae/contact
+- Sitemap: https://www.infynixsolutions.ae/sitemap.xml
+
+## Sister sites
+Infynix Solutions is registered separately in India, the United Kingdom and the United Arab Emirates. Each site describes the services and office of that entity.
+- India: https://www.infynixgrowthsolutions.com/
+- United Kingdom: https://www.infynixsolutions.co.uk/
+
+## Profiles
+- https://www.linkedin.com/company/infynix-solutions-uae/
+- https://www.instagram.com/infynixsolutions.ae/
+- https://www.facebook.com/people/Infynix-Solutions-UAE/61584754534164/
+- https://share.google/GeaxRIc5dl6JKegOr
+
