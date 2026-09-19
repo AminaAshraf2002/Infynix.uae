@@ -4,6 +4,7 @@ import './LandingPage.css';
 
 import Seo from '../seo/Seo';
 import { getLandingPage, landingPageBySlug } from '../content/landingPages';
+import { sameCityPages, solutionsForService, sisterServiceLinks } from '../content/crossLinks.js';
 import { BUSINESS, GOOGLE_BUSINESS_PROFILE } from '../seo/siteConfig';
 import {
   organizationSchema,
@@ -317,6 +318,57 @@ export default function LandingPage({ slug: slugProp }) {
           </ul>
         </section>
       )}
+
+      {/* Same-city cluster, the service page this page sells, and the same
+          service on the sister sites. Every landing page therefore links to and
+          is linked from its city and its service, not only from a hand-picked
+          related list. */}
+      {(() => {
+        const cityPages = sameCityPages(page, page.related || []);
+        const services = solutionsForService(page.service);
+        const sisters = services.length ? sisterServiceLinks(services[0].slug) : [];
+        if (!cityPages.length && !services.length && !sisters.length) return null;
+        return (
+          <section className="lp-section">
+            {cityPages.length > 0 && (
+              <>
+                <h2 className="lp-h2">More from Infynix in {page.city}</h2>
+                <ul className="lp-related">
+                  {cityPages.map((p) => (
+                    <li key={p.slug}>
+                      <Link to={`/${p.slug}`}>{p.h1}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {services.length > 0 && (
+              <>
+                <h2 className="lp-h2">The service behind this page</h2>
+                <ul className="lp-related">
+                  {services.map((svc) => (
+                    <li key={svc.slug}>
+                      <Link to={`/solutions/${svc.slug}`}>{svc.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {sisters.length > 0 && (
+              <>
+                <h2 className="lp-h2">{page.service} in our other markets</h2>
+                <ul className="lp-related">
+                  {sisters.map((sis) => (
+                    <li key={sis.url}>
+                      <a href={sis.url}>{services[0].title} in {sis.market}</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </section>
+        );
+      })()}
 
       <section className="lp-section lp-cta">
         <h2 className="lp-h2">Talk to Infynix About {page.service} in {page.city}</h2>

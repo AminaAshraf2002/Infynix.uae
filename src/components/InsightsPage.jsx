@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { insightsData } from '../lib/contentData';
 import SEOManager from './SEOManager';
+import { sisterArticleLinks } from '../content/crossLinks.js';
 import { SITE_URL } from '../seo/siteConfig';
 
 const OFF_WHITE = "#F5F5F3";
@@ -157,6 +158,32 @@ const InsightsPage = () => {
                   ))}
                 </React.Fragment>
               ))}
+
+              {Array.isArray(article.related) && article.related.length > 0 && (
+                <div style={{ marginTop: '50px', borderTop: `1px dotted ${BORDER}`, paddingTop: '30px' }} data-aos="fade-up">
+                  <h2 style={{ fontSize: '1.1rem', fontWeight: 800, fontFamily: "'Montserrat', sans-serif", margin: '0 0 16px', color: CHARCOAL, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Related services
+                  </h2>
+                  <ul style={{ paddingLeft: '20px', margin: 0, fontSize: '0.95rem', lineHeight: 1.7 }}>
+                    {article.related.map((item) => (
+                      <li key={item.path} style={{ marginBottom: '8px' }}>
+                        <Link to={item.path} style={{ color: GREEN, textDecoration: 'underline' }}>{item.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* The same article written for the other two markets. */}
+              <div style={{ marginTop: '30px', fontSize: '0.95rem', lineHeight: 1.7 }} data-aos="fade-up">
+                <span style={{ color: '#666' }}>This article for our other markets: </span>
+                {sisterArticleLinks(article.slug).map((s, i) => (
+                  <span key={s.url}>
+                    {i > 0 ? ' · ' : ''}
+                    <a href={s.url} style={{ color: GREEN, textDecoration: 'underline' }}>{s.market}</a>
+                  </span>
+                ))}
+              </div>
 
               {/* Outbound citations: the primary documents the article relies on.
                   Linked plainly so a reader (or a crawler) can check the claims. */}
