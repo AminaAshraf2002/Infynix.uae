@@ -318,6 +318,7 @@ const Navbar = () => {
                 <a href="https://www.linkedin.com/company/infynix-solutions-uae/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://www.instagram.com/infynixsolutions.ae/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.facebook.com/people/Infynix-Solutions-UAE/61584754534164/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://wa.me/971542575702" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
             </div>
           </div>

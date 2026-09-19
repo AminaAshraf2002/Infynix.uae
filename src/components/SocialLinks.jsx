@@ -7,6 +7,8 @@ const ICONS = [
   ['linkedin.com', 'fa-brands fa-linkedin-in', 'LinkedIn'],
   ['instagram.com', 'fa-brands fa-instagram', 'Instagram'],
   ['facebook.com', 'fa-brands fa-facebook-f', 'Facebook'],
+  ['wa.me', 'fa-brands fa-whatsapp', 'WhatsApp'],
+  ['whatsapp.com', 'fa-brands fa-whatsapp', 'WhatsApp'],
   ['youtube.com', 'fa-brands fa-youtube', 'YouTube'],
   ['x.com', 'fa-brands fa-x-twitter', 'X'],
 ];
