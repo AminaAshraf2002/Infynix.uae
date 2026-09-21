@@ -35,6 +35,7 @@ import SolutionsIndex from './components/SolutionsIndex';
 import IndustriesPage from './components/IndustriesPage';
 import CaseStudiesPage from './components/CaseStudiesPage';
 import InsightsPage from './components/InsightsPage';
+import BlogPage from './components/BlogPage';
 import { PrivacyPolicy, TermsOfService, NotFoundPage } from './components/UtilityPages';
 
 // Location + service landing pages (SEO)
@@ -127,6 +128,8 @@ function AppContent() {
             <Route path="/case-studies"      element={<CaseStudiesPage />} />
             <Route path="/insights/:slug"    element={<InsightsPage />} />
             <Route path="/insights"          element={<InsightsPage />} />
+            <Route path="/blog/:id"          element={<BlogPage />} />
+            <Route path="/blog"              element={<BlogPage />} />
             <Route path="/about"             element={<WhoWeAre />} />
             <Route path="/who-we-are"        element={<Navigate to="/about" replace />} />
             <Route path="/contact"           element={<Contact />} />

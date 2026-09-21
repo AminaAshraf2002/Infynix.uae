@@ -72,6 +72,7 @@ const Footer = () => {
               <Link to="/about">Company</Link>
               <Link to="/case-studies">Featured Work</Link>
               <Link to="/insights">Insights</Link>
+              <Link to="/blog">Blog</Link>
             </div>
             <div className="footer-nav-col">
               <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '8px' }}>SERVICES</span>

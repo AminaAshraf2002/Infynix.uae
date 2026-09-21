@@ -21,6 +21,7 @@ export const staticRoutes = [
   entry('/industries', { priority: 0.7 }),
   entry('/case-studies', { priority: 0.7 }),
   entry('/insights', { priority: 0.7, changefreq: 'weekly' }),
+  entry('/blog', { priority: 0.8, changefreq: 'weekly' }),
   entry('/about', { priority: 0.6 }),
   entry('/contact', { priority: 0.8 }),
 ];

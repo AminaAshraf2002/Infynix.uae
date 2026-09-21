@@ -220,6 +220,7 @@ const Navbar = () => {
                 </li>
                 <li><Link to="/case-studies" className="nav-link" onClick={() => setMenuOpen(false)}>Case Studies</Link></li>
                 <li><Link to="/insights" className="nav-link" onClick={() => setMenuOpen(false)}>Insights</Link></li>
+                <li><Link to="/blog" className="nav-link" onClick={() => setMenuOpen(false)}>Blog</Link></li>
                 <li><Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>About</Link></li>
               </ul>
             </div>
@@ -300,9 +301,18 @@ const Navbar = () => {
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </span>
               </Link>
-              <Link to="/about" className="mobile-menu-link stagger-6" onClick={() => setMenuOpen(false)}>
+              <Link to="/blog" className="mobile-menu-link stagger-6" onClick={() => setMenuOpen(false)}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                   <span className="mobile-link-num">06</span>
+                  <span className="mobile-link-text">Blog</span>
+                </div>
+                <span className="mobile-link-arrow">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </Link>
+              <Link to="/about" className="mobile-menu-link stagger-7" onClick={() => setMenuOpen(false)}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <span className="mobile-link-num">07</span>
                   <span className="mobile-link-text">About Us</span>
                 </div>
                 <span className="mobile-link-arrow">
@@ -311,7 +321,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="mobile-menu-footer stagger-7">
+            <div className="mobile-menu-footer stagger-8">
               <Link to="/contact" className="mobile-menu-cta" onClick={() => setMenuOpen(false)}>
                 Start a Project <span style={{ marginLeft: '8px' }}>→</span>
               </Link>
