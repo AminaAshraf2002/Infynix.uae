@@ -229,7 +229,7 @@ export const INITIAL_POSTS = [
     updated: '2026-09-21T04:15:00.000-07:00',
     categories: ['Development', 'AI Automation', 'UAE Business', 'Infynix Solutions'],
     author: 'Infynix',
-    thumbnail: '/ai_automation_uae.png',
+    thumbnail: '/ai_automation_uae.jpg',
     bloggerUrl: 'https://infynixsolutionsuae.blogspot.com',
   },
   {
