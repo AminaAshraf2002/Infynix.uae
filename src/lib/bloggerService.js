@@ -42,24 +42,36 @@ export const extractThumbnail = (htmlContent, categories = [], title = '') => {
     }
   }
 
-  // Title-based distinct image matching (ensures all 6 posts get completely different images)
+  // Title-based distinct image matching (ensures each of the 6 posts gets its exact unique image)
   const t = (title || '').toLowerCase();
-  if (t.includes('ai') || t.includes('crm') || t.includes('automation') || t.includes('manual work')) {
-    return '/ai_automation_uae.jpg';
-  }
-  if (t.includes('lead') || t.includes('luxury') || t.includes('real estate') || t.includes('high-ticket')) {
+
+  // 1. High-Ticket Lead Generation (Real Estate & Luxury) -> Dubai Downtown Skyline
+  if (t.includes('lead generation') || t.includes('high-ticket') || t.includes('luxury real estate') || t.includes('luxury services')) {
     return '/lead_generation_uae.jpg';
   }
-  if (t.includes('video') || t.includes('cinematic') || t.includes('production') || t.includes('cac')) {
-    return '/media_production_uae.jpg';
-  }
-  if (t.includes('vanity') || t.includes('performance marketing') || t.includes('roi')) {
+
+  // 2. Performance Marketing & SEO (Agency) -> Analytics Executive Suite
+  if (t.includes('performance marketing') || t.includes('vanity metrics') || t.includes('marketing in dubai')) {
     return '/agency_marketing_uae.jpg';
   }
-  if (t.includes('engineering for conversion') || t.includes('web platform') || t.includes('template')) {
+
+  // 3. Commercial Video Production (Media) -> Cinema Production Rig
+  if (t.includes('video production') || t.includes('cinematic') || t.includes('commercial video') || t.includes('cuts cac')) {
+    return '/media_production_uae.jpg';
+  }
+
+  // 4. Custom Web Development & Engineering (Development) -> Code & Engineering Workstation
+  if (t.includes('engineering for conversion') || t.includes('custom web') || t.includes('generic templates') || t.includes('web platforms')) {
     return '/dev_engineering_uae.jpg';
   }
-  if (t.includes('unified growth') || t.includes('three separate vendors') || t.includes('under one roof')) {
+
+  // 5. AI Automation & Intelligent CRMs -> Enterprise Global Neural Network
+  if (/\bai\b/i.test(title) || t.includes('automation') || t.includes('intelligent crm') || t.includes('manual work')) {
+    return '/ai_automation_uae.jpg';
+  }
+
+  // 6. Unified Growth Model -> Infynix Team Office
+  if (t.includes('unified growth') || t.includes('growth model') || t.includes('three separate vendors') || t.includes('under one roof')) {
     return '/unified_growth_model.jpg';
   }
 
