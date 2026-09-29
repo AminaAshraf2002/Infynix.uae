@@ -7,6 +7,8 @@ import ukLImage from '../assets/UKL.svg';
 import dubaiImage from '../assets/dubai.svg';
 import kochiImage from '../assets/kochi.svg';
 import SocialLinks from './SocialLinks';
+import BrandContactBlocks from './BrandContactBlocks';
+import SisterWebsitesSection from './SisterWebsitesSection';
 
 const ClientsSection = () => {
   useIxReveal();
@@ -78,7 +80,7 @@ const ClientsSection = () => {
   return (
     <section className="clients-section" id="clients" style={{ background: '#007A5E', paddingTop: '10px' }}>
       {/* CTA Card, "Let's create great things." */}
-      <div className="cta-home-card" id="contact" style={{ margin: '20px auto 40px' }}>
+      <div className="cta-home-card" id="contact">
         <h2 className="cta-home-heading">
           Let's create <em>great things.</em>
         </h2>
@@ -194,6 +196,14 @@ const ClientsSection = () => {
                 <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">XML Sitemap</a>
               </div>
             </div>
+          </div>
+
+          <hr className="footer-divider" style={{ margin: '30px 0', borderColor: 'rgba(255,255,255,0.15)' }} />
+
+          {/* 3 columns in ONE ROW on desktop */}
+          <div className="footer-divisions-row">
+            <BrandContactBlocks theme="dark" displayContents />
+            <SisterWebsitesSection theme="dark" title="Global Presence" />
           </div>
 
           <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', marginTop: '30px', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>

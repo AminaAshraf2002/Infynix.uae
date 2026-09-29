@@ -14,6 +14,7 @@ import AboutInfynix from './components/AboutInfynix';
 import TimelineSection from './components/TimelineSection';
 import StatsSection from './components/StatsSection';
 import SpecializeSection from './components/SpecializeSection';
+import SolutionsMarquee from './components/SolutionsMarquee';
 import InitiativesSection from './components/InitiativesSection';
 import RiversideChatSection from './components/RiversideChatSection';
 import PartnersSection from './components/PartnersSection';
@@ -60,6 +61,10 @@ function HomePage() {
 
       {/* About Infynix Section */}
       <AboutInfynix />
+
+      {/* Solutions Marquee */}
+      <SolutionsMarquee showHeading={true} heading="What We Offer" />
+
       {/* 2. "We Specialize" + CTA card + Footer (all inside) */}
       <SpecializeSection />
 

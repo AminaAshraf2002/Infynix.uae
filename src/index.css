@@ -127,11 +127,13 @@
     grid-template-columns: 1fr !important;
   }
 }
-.clients-section,
-#services,
-#featured {
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+@media (min-width: 1025px) {
+  .clients-section,
+  #services,
+  #featured {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
 }
 
 *,
@@ -942,7 +944,10 @@ section[style*="var(--ix-primary)"]::after,
 
 /* CTA card inside clients section */
 .clients-section .cta-home-card {
-  margin: 4rem 3rem 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  box-sizing: border-box;
 }
 
 /* Footer inside clients section */
@@ -1886,18 +1891,22 @@ section[style*="var(--ix-primary)"]::after,
 .cta-home-card {
   background: rgb(167, 214, 0);
   border-radius: 24px;
-  padding: 3rem 3rem 2.5rem;
+  padding: 3.5rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 220px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .cta-home-heading {
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(2.1rem, 5vw, 4.2rem);
+  font-size: clamp(1.85rem, 4.2vw, 3.4rem);
   font-weight: 900;
   color: #111;
   line-height: 1.15;
@@ -1908,8 +1917,7 @@ section[style*="var(--ix-primary)"]::after,
 .cta-home-heading em {
   font-style: italic;
   font-weight: 400;
-  font-family: var(--font-display);
-
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 .cta-home-btn {
@@ -1940,12 +1948,12 @@ section[style*="var(--ix-primary)"]::after,
 
 @media (max-width: 768px) {
   .cta-home {
-    padding: 0 1.5rem 2rem;
+    padding: 0 1rem 1.5rem;
   }
 
   .cta-home-card {
-    padding: 4rem 2rem 3.5rem;
-    min-height: 260px;
+    padding: 2.2rem 1.25rem 2rem;
+    min-height: auto;
     border-radius: 18px;
   }
 }
@@ -2048,6 +2056,23 @@ section[style*="var(--ix-primary)"]::after,
 
 .footer-socials a:hover {
   background: #ffffff;
+}
+
+/* Footer Divisions & Sister Websites Row */
+.footer-divisions-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 0;
+  align-items: start;
+  width: 100%;
+}
+
+@media (max-width: 868px) {
+  .footer-divisions-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 /* Footer responsive */
@@ -3200,7 +3225,8 @@ section[style*="var(--ix-primary)"]::after,
   }
 
   .cta-home-card {
-    padding: 3rem 1.75rem 2.5rem;
+    padding: 2.2rem 1.25rem 2rem;
+    min-height: auto;
     border-radius: 18px;
   }
 
@@ -3521,9 +3547,9 @@ section[style*="var(--ix-primary)"]::after,
   }
 
   .cta-home-card {
-    padding: 2.5rem 1.5rem 2rem;
+    padding: 2rem 1.25rem 1.8rem;
     border-radius: 16px;
-    min-height: 200px;
+    min-height: auto;
   }
 
   .cta-home-heading {
@@ -3952,9 +3978,9 @@ section[style*="var(--ix-primary)"]::after,
   }
 
   .cta-home-card {
-    padding: 2.5rem 1.25rem 2rem;
+    padding: 1.8rem 1rem 1.6rem;
     border-radius: 14px;
-    min-height: 180px;
+    min-height: auto;
   }
 
   .cta-home-heading {
@@ -4686,24 +4712,56 @@ video {
 }
 
 /* 10. CTA Banner */
-@media (max-width: 767px) {
-  .clients-section .cta-home-card {
-    margin: 3rem 16px 2rem !important;
+@media (max-width: 768px) {
+  .clients-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 15px !important;
   }
 
+  .clients-section .cta-home-card,
   .cta-home-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1.5rem auto 2.5rem !important;
+    padding: 2.2rem 1.25rem 2rem !important;
+    border-radius: 18px !important;
+    min-height: auto !important;
     text-align: center !important;
-    padding: 2.5rem 1.5rem !important;
+    box-sizing: border-box !important;
   }
 
   .cta-home-heading {
-    font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
-    margin-bottom: 2rem !important;
+    font-size: clamp(1.65rem, 6.5vw, 2.2rem) !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.18 !important;
   }
 
   .cta-home-btn {
-    width: 100% !important;
-    justify-content: center !important;
+    width: auto !important;
+    display: inline-flex !important;
+    padding: 0.75rem 1.6rem !important;
+    border-radius: 100px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    padding-top: 10px !important;
+  }
+
+  .clients-section .cta-home-card,
+  .cta-home-card {
+    padding: 1.8rem 1rem 1.6rem !important;
+    margin: 1rem auto 2rem !important;
+    border-radius: 16px !important;
+  }
+
+  .cta-home-heading {
+    font-size: clamp(1.45rem, 6.5vw, 1.85rem) !important;
+    margin-bottom: 1.2rem !important;
   }
 }
 

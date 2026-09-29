@@ -5,6 +5,8 @@ import "./Contact.css";
 import kochiImage from "../assets/kochi-office.jpg";
 import uaeOfficeImage from "../assets/lp/office.webp";
 import SocialLinks from './SocialLinks';
+import BrandContactBlocks from './BrandContactBlocks';
+import SisterWebsitesSection from './SisterWebsitesSection';
 
 const ArrowIcon = () => (
     <svg viewBox="0 0 14 14" fill="none" width="13" height="13">
@@ -210,6 +212,27 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            {/* ── BRAND DIVISIONS & SISTER WEBSITES ── */}
+            <section className="contact-brands-section" style={{ margin: '45px 0 15px 0' }}>
+              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                <div style={{ marginBottom: '28px' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '4px 12px', borderRadius: '9999px', background: 'rgba(0, 122, 94, 0.08)', border: '1px solid rgba(0, 122, 94, 0.2)', marginBottom: '10px' }}>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#007A5E', display: 'inline-block' }} />
+                    <span style={{ fontFamily: "'Albert Sans', sans-serif", fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: '#007A5E' }}>Direct Communication</span>
+                  </div>
+                  <h2 style={{ fontFamily: "'Albert Sans', sans-serif", fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', fontWeight: 800, color: '#0f172a', margin: '0 0 8px 0', letterSpacing: '-0.025em', lineHeight: 1.18 }}>
+                    Our Brand Divisions
+                  </h2>
+                  <p style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#64748b', fontSize: '0.95rem', maxWidth: '600px', margin: 0, lineHeight: 1.55 }}>
+                    Connect directly with our dedicated campaigns agency desk or media production studio.
+                  </p>
+                </div>
+                <BrandContactBlocks theme="light" variant="cards" style={{ marginBottom: '32px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '32px 0' }} />
+                <SisterWebsitesSection theme="light" variant="cards" title="Our Websites & Global Presence" />
+              </div>
             </section>
 
             {/* ── OUR OFFICES ── */}

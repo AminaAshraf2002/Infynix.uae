@@ -14,15 +14,11 @@ import { industriesData } from '../lib/contentData';
 const indLeft = [
   { path: '/industries/healthcare', icon: healthcareIcon, title: 'Healthcare', desc: 'Automate care, records, and compliance workflows.' },
   { path: '/industries/education', icon: educationIcon, title: 'Education', desc: 'Modernize enrollment, learning, and communication.' },
-  { path: '/industries/construction', icon: constructionIcon, title: 'Construction', desc: 'Centralize project data, budgets, and site tracking.' },
-  { path: '/industries/real-estate', icon: realEstateIcon, title: 'Real Estate', desc: 'CRM and automation built for faster deal closing.' }
 ].filter((item) => industriesData[item.path.split('/').pop()]);
 
 const indRight = [
-  { path: '/industries/manufacturing', icon: manufacturingIcon, title: 'Manufacturing', desc: 'Connect production, inventory, and supply chain data.' },
-  { path: '/industries/retail', icon: retailIcon, title: 'Retail & Commerce', desc: 'Unify inventory, customers, and channels.' },
-  { path: '/industries/hospitality', icon: hospitalityIcon, title: 'Hospitality', desc: 'Automate bookings, guest service, and operations.' },
-  { path: '/industries/professional-services', icon: professionalServicesIcon, title: 'Professional Services', desc: 'Systems for billing, projects, and client experience.' }
+  { path: '/industries/real-estate', icon: realEstateIcon, title: 'Real Estate', desc: 'CRM and automation built for faster deal closing.' },
+  { path: '/industries/retail', icon: retailIcon, title: 'Retail & E-commerce', desc: 'Unify inventory, customers, and omnichannel sales.' },
 ].filter((item) => industriesData[item.path.split('/').pop()]);
 
 const Navbar = () => {
@@ -151,11 +147,11 @@ const Navbar = () => {
                       top: '100%',
                       left: '50%',
                       transform: dropdownOpen ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(10px)',
-                      width: '1060px',
+                      width: '880px',
                       backgroundColor: '#ffffff',
                       borderRadius: '20px',
                       boxShadow: '0 20px 40px rgba(0,0,0,0.12)',
-                      padding: '40px 48px',
+                      padding: '28px 36px',
                       marginTop: '12px',
                       opacity: dropdownOpen ? 1 : 0,
                       visibility: dropdownOpen ? 'visible' : 'hidden',
@@ -163,7 +159,7 @@ const Navbar = () => {
                       pointerEvents: dropdownOpen ? 'auto' : 'none',
                       display: 'grid',
                       gridTemplateColumns: '1fr 1px 1fr',
-                      gap: '40px',
+                      gap: '32px',
                       cursor: 'default',
                       zIndex: 1000
                     }}>
