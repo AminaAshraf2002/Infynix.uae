@@ -13,6 +13,8 @@ export const SOLUTION_ALIASES = {
   'custom-web-app-development': 'website-development',
   'ai-surveillance-security-solutions': 'ai-surveillance',
   'marketing-business-automation': 'business-automation',
+  'ai-agents-automation': 'business-automation',
+  'cloud-infrastructure-security': 'cloud-solutions',
 };
 
 export const solutionsData = {

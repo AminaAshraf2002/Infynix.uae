@@ -1,0 +1,527 @@
+/* ═══════════════════════════════════════════════════════════════
+   WHAT WE OFFER — 3D INTERACTIVE SERVICE GRID
+   ═══════════════════════════════════════════════════════════════ */
+
+.what-we-offer-section {
+  position: relative;
+  background: #ffffff;
+  padding: clamp(70px, 8vw, 110px) 0 clamp(80px, 9vw, 120px) 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.what-we-offer-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* Horizontal container padding to ensure cards never touch vertical dashed lines */
+  padding-left: clamp(80px, 8vw, 160px);
+  padding-right: clamp(80px, 8vw, 160px);
+}
+
+@media (max-width: 640px) {
+  .what-we-offer-container {
+    /* Safely inside mobile vertical dashed lines at ~20px */
+    padding-left: clamp(24px, 6vw, 40px);
+    padding-right: clamp(24px, 6vw, 40px);
+  }
+}
+
+/* ── 1. SECTION HEADER ── */
+.what-we-offer-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto clamp(40px, 5vw, 60px) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-we-offer-eyebrow {
+  display: inline-block;
+  font-family: 'Albert Sans', var(--ix-font-display, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #007A5E;
+  margin-bottom: 12px;
+}
+
+.what-we-offer-title {
+  font-family: 'Albert Sans', var(--ix-font-display, sans-serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 600; /* Clean, elegant weight — not heavy/bold */
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 16px 0;
+  perspective: 1000px;
+}
+
+.heading-word {
+  display: inline-block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.what-we-offer-accent-line {
+  width: 80px;
+  height: 3.5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00A880, #005A46);
+  margin: 0 auto 20px auto;
+  transform-origin: center;
+}
+
+.what-we-offer-subtitle {
+  font-family: 'Montserrat', var(--ix-font-body, Arial, sans-serif);
+  font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+  color: #64748b;
+  max-width: 680px;
+  margin: 0 auto 32px auto;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ── 2. FILTER TABS & DIRECT CONTACTS ── */
+.what-we-offer-tabs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.what-we-offer-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.what-we-offer-tab-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #475569;
+  font-family: 'Montserrat', var(--ix-font-body, Arial, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  white-space: nowrap;
+}
+
+.what-we-offer-tab-btn:hover {
+  color: #007A5E;
+}
+
+.what-we-offer-tab-btn.is-active {
+  background: #007A5E;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 122, 94, 0.25);
+}
+
+/* Direct Department Contact Bar */
+.what-we-offer-contact-bar {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 18px;
+  background: rgba(0, 122, 94, 0.04);
+  border: 1px solid rgba(0, 122, 94, 0.2);
+  border-radius: 999px;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-bar-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #007A5E;
+}
+
+.contact-bar-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00A880;
+  box-shadow: 0 0 8px #00A880;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+}
+
+.contact-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-bar-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 122, 94, 0.25);
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.contact-bar-action-btn:hover {
+  background: #007A5E;
+  color: #ffffff;
+  border-color: #007A5E;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 94, 0.18);
+}
+
+.contact-bar-action-btn .contact-btn-icon {
+  color: #00A880;
+  transition: color 0.2s ease;
+}
+
+.contact-bar-action-btn:hover .contact-btn-icon {
+  color: #ffffff;
+}
+
+/* ── 3. RESPONSIVE 3D GRID ── */
+.what-we-offer-grid {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  gap: clamp(20px, 2.2vw, 32px);
+
+  /* Mobile default: 1 column */
+  grid-template-columns: 1fr;
+}
+
+/* Tablet (>=640px): 2 columns */
+@media (min-width: 640px) {
+  .what-we-offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (>=1024px): 3 columns */
+@media (min-width: 1024px) {
+  .what-we-offer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Screens (>=1360px up to 1920px): 4 columns */
+@media (min-width: 1360px) {
+  .what-we-offer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── CARD WRAPPER & FILTERING RULE (NO DISPLAY:NONE) ── */
+.service-card-wrapper {
+  perspective: 1000px;
+  position: relative;
+  display: flex;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.service-card-wrapper.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Strict SEO: Filtered cards remain in DOM for crawlers without display:none */
+.service-card-wrapper.is-filtered-out {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  transform: scale(0.95);
+}
+
+/* ── CARD STYLING & 3D INTERACTIVITY ── */
+.service-card {
+  position: relative;
+  width: 100%;
+  /* Crisp white background — DO NOT tint card body green */
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: clamp(24px, 2.2vw, 30px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+  /* Soft elevation shadow */
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  border-color: rgba(0, 168, 128, 0.35);
+  box-shadow: 0 16px 36px -4px rgba(0, 122, 94, 0.1), 0 6px 14px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Soft light specular glare reflection element */
+.card-specular-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Card Header: Icon + Category Badge */
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+/* Emerald to forest green gradient circle icon */
+.card-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00A880 0%, #005A46 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 122, 94, 0.22);
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .card-icon-circle {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.card-lucide-icon {
+  color: #ffffff;
+}
+
+/* Division category pill badge */
+.card-division-pill {
+  font-family: 'Albert Sans', var(--ix-font-display, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #007A5E;
+  background: rgba(0, 122, 94, 0.07);
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 122, 94, 0.16);
+  white-space: nowrap;
+}
+
+/* Card Title */
+.card-service-title {
+  font-family: 'Albert Sans', var(--ix-font-display, sans-serif);
+  font-size: clamp(1.15rem, 1.4vw, 1.28rem);
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.32;
+  margin: 0 0 10px 0;
+  transition: color 0.25s ease;
+}
+
+.service-card:hover .card-service-title {
+  color: #007A5E;
+}
+
+/* 1-2 line description */
+.card-service-desc {
+  font-family: 'Montserrat', var(--ix-font-body, Arial, sans-serif);
+  font-size: 0.91rem;
+  line-height: 1.58;
+  color: #64748b;
+  margin: 0 0 18px 0;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* In-Card Direct Contact Chips (Agency & Media) */
+.card-direct-contact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.07);
+}
+
+.card-contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.card-contact-chip:hover {
+  background: #007A5E;
+  color: #ffffff;
+  border-color: #007A5E;
+  transform: translateY(-1px);
+}
+
+.card-contact-chip .chip-icon {
+  color: #00A880;
+  transition: color 0.2s ease;
+}
+
+.card-contact-chip:hover .chip-icon {
+  color: #ffffff;
+}
+
+/* Card Footer: Learn more link with slide animation on hover */
+.card-footer-row {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.card-learn-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Montserrat', var(--ix-font-body, Arial, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #007A5E;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.learn-more-arrow {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #00A880;
+}
+
+.service-card:hover .learn-more-arrow,
+.card-learn-more-link:hover .learn-more-arrow {
+  transform: translateX(5px);
+}
+
+/* ── 4. BOTTOM CTA WITH MAGNETIC TRACKING ── */
+.what-we-offer-bottom-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(48px, 6vw, 72px);
+}
+
+.what-we-offer-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00A880 0%, #005A46 100%);
+  color: #ffffff;
+  font-family: 'Albert Sans', var(--ix-font-display, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 122, 94, 0.28);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.what-we-offer-cta-button:hover {
+  box-shadow: 0 12px 32px rgba(0, 122, 94, 0.38);
+}
+
+.cta-button-arrow {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.what-we-offer-cta-button:hover .cta-button-arrow {
+  transform: translateX(4px);
+}
+
+/* ── REDUCED MOTION ACCESSIBILITY ── */
+@media (prefers-reduced-motion: reduce) {
+  .heading-word,
+  .what-we-offer-accent-line,
+  .service-card,
+  .what-we-offer-cta-button,
+  .card-icon-circle,
+  .learn-more-arrow {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

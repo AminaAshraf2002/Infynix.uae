@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { solutionsData, caseStudiesData } from '../lib/contentData';
+import { solutionsData, caseStudiesData, SOLUTION_ALIASES } from '../lib/contentData';
 import Seo from '../seo/Seo';
 import { divisionForSlug, isDivision, getDivision, servicesInDivision } from '../content/divisions';
 import { BRAND_CONTACTS } from '../data/contact';
@@ -172,7 +172,8 @@ const MarqueeCard = ({ title, slug }) => {
 
 const SolutionsPage = () => {
   const { slug } = useParams();
-  const activeSlug = slug || 'website-development';
+  const resolvedSlug = (slug && SOLUTION_ALIASES[slug]) || slug;
+  const activeSlug = resolvedSlug || 'website-development';
 
   useEffect(() => {
     window.scrollTo(0, 0);
