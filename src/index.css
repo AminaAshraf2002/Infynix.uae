@@ -1423,44 +1423,101 @@ section[style*="var(--ix-primary)"]::after,
 
 }
 
-.partners-grid {
+.partners-marquee {
+  width: calc(100% - 5rem);
+  max-width: 1160px;
+  margin-inline: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-inline: 1.5rem;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
+}
+
+.partners-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5rem; /* Increased spacing between logos */
+  width: max-content;
+  animation: partners-marquee-scroll 34s linear infinite;
+  will-change: transform;
+}
+
+.partners-marquee:hover .partners-track {
+  animation-play-state: paused;
+}
+
+.partners-logo-set {
+  display: flex;
+  flex-shrink: 0;
   align-items: center;
-  justify-content: center;
+  gap: 3.25rem;
+  padding-right: 3.25rem;
 }
 
 .partner-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 180px;
-  width: 220px;
-  /* fixed width instead of max-width */
-  opacity: 0.8;
+  flex: 0 0 170px;
+  height: 110px;
+  opacity: 0.9;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .partner-logo:hover {
   opacity: 1;
-  transform: translateY(-2px);
+  transform: scale(1.04);
 }
 
 .partner-logo img {
-  max-height: 140px;
-  width: auto;
+  height: 86px;
+  max-width: 170px;
+  width: 100%;
+  object-fit: contain;
 }
 
-@media (max-width: 900px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
+@keyframes partners-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 600px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 767px) {
+  .partners-section {
+    padding-inline: 0;
+  }
+
+  .partners-marquee {
+    width: calc(100% - 2.5rem);
+    padding-inline: 0.75rem;
+  }
+
+  .partners-logo-set {
+    gap: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .partner-logo {
+    flex-basis: 125px;
+    height: 88px;
+  }
+
+  .partner-logo img {
+    height: 68px;
+    max-width: 125px;
+  }
+
+  .partners-track {
+    animation-duration: 24s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation-play-state: paused;
   }
 }
 
