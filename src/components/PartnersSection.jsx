@@ -10,7 +10,6 @@ import nluxLogo from '../assets/logosvgs/nlux.svg';
 import lstudioLogo from '../assets/logosvgs/L-STUDIO_LOGO-WHITE.svg';
 import insightBimLogo from '../assets/logosvgs/INSIGHT-BIM-LOGO.svg';
 import lumoraLogo from '../assets/logosvgs/lumora-LOGO-WHITE.svg';
-import mehraDesignsLogo from '../assets/logosvgs/Mehra-Designs 01.svg';
 import capricornLogo from '../assets/logosvgs/Capricorn-logo-02.svg';
 import eccLogo from '../assets/logosvgs/ECC-LOGO.svg';
 
@@ -27,7 +26,6 @@ const PartnersSection = () => {
     { name: 'L Studio', src: lstudioLogo },
     { name: 'Insight BIM', src: insightBimLogo },
     { name: 'Lumora', src: lumoraLogo },
-    { name: 'Mehra Designs', src: mehraDesignsLogo },
     { name: 'Capricorn', src: capricornLogo },
     { name: 'ECC', src: eccLogo }
   ];
